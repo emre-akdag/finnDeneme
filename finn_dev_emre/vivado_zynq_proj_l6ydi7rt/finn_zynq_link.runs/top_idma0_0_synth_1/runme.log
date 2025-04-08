@@ -1,0 +1,617 @@
+
+*** Running vivado
+    with args -log top_idma0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_idma0_0.tcl
+
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Wed Mar 26 22:58:45 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source top_idma0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_0_IODMA_hls_0_mklxso4z/project_StreamingDataflowPartition_0_IODMA_hls_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_emre/vivado_stitch_proj_61b0zrs7/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_MVAU_hls_0_vpjpp7ae/project_StreamingDataflowPartition_1_MVAU_hls_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_MVAU_hls_1_2hlhfuts/project_StreamingDataflowPartition_1_MVAU_hls_1/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_MVAU_hls_2_738qp6bw/project_StreamingDataflowPartition_1_MVAU_hls_2/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_emre/vivado_stitch_proj_xklav3le/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/emre/Documents/finn/finn-rtllib/memstream'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_2_IODMA_hls_0_8mzee8u5/project_StreamingDataflowPartition_2_IODMA_hls_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_emre/vivado_stitch_proj_95_s4omm/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2024.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_idma0_0
+Command: synth_design -top top_idma0_0 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 32482
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1918.504 ; gain = 418.797 ; free physical = 1288 ; free virtual = 4682
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_idma0_0' [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/synth/top_idma0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'StreamingDataflowPartition_0' [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ipshared/3c79/src/StreamingDataflowPartition_0.v:13]
+INFO: [Synth 8-6157] synthesizing module 'StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0' [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/synth/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0' [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0.v:9]
+INFO: [Synth 8-6157] synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_control_s_axi' [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_control_s_axi.v:9]
+INFO: [Synth 8-155] case statement is not full and has no default [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_control_s_axi.v:214]
+INFO: [Synth 8-6155] done synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_control_s_axi' (0#1) [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_control_s_axi.v:9]
+INFO: [Synth 8-6157] synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi' [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi.v:12]
+INFO: [Synth 8-6157] synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi_load' [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi.v:245]
+INFO: [Synth 8-6157] synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi_fifo' [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi.v:2501]
+INFO: [Synth 8-6157] synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi_srl' [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi.v:2679]
+INFO: [Synth 8-6155] done synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi_srl' (0#1) [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi.v:2679]
+INFO: [Synth 8-6155] done synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi_fifo' (0#1) [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi.v:2501]
+INFO: [Synth 8-6157] synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi_fifo__parameterized0' [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi.v:2501]
+INFO: [Synth 8-6157] synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi_mem' [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi.v:2733]
+INFO: [Synth 8-6155] done synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi_mem' (0#1) [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi.v:2733]
+INFO: [Synth 8-6155] done synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi_fifo__parameterized0' (0#1) [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi.v:2501]
+INFO: [Synth 8-6155] done synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi_load' (0#1) [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi.v:245]
+INFO: [Synth 8-6157] synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi_read' [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi.v:1355]
+INFO: [Synth 8-6157] synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi_burst_converter' [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi.v:1867]
+INFO: [Synth 8-6157] synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi_reg_slice' [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi.v:2399]
+INFO: [Synth 8-6155] done synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi_reg_slice' (0#1) [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi.v:2399]
+INFO: [Synth 8-6155] done synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi_burst_converter' (0#1) [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi.v:1867]
+INFO: [Synth 8-6157] synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi_reg_slice__parameterized0' [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi.v:2399]
+INFO: [Synth 8-6155] done synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi_reg_slice__parameterized0' (0#1) [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi.v:2399]
+INFO: [Synth 8-6157] synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi_fifo__parameterized1' [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi.v:2501]
+INFO: [Synth 8-6157] synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi_srl__parameterized0' [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi.v:2679]
+INFO: [Synth 8-6155] done synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi_srl__parameterized0' (0#1) [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi.v:2679]
+INFO: [Synth 8-6155] done synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi_fifo__parameterized1' (0#1) [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi.v:2501]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi.v:1539]
+INFO: [Synth 8-6155] done synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi_read' (0#1) [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi.v:1355]
+INFO: [Synth 8-6155] done synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi' (0#1) [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi.v:12]
+INFO: [Synth 8-6157] synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_s' [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_s.v:9]
+INFO: [Synth 8-6157] synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_11' [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_11.v:9]
+INFO: [Synth 8-6157] synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_flow_control_loop_pipe_sequential_init' [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_flow_control_loop_pipe_sequential_init' (0#1) [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_11' (0#1) [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_11.v:9]
+INFO: [Synth 8-6157] synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1' [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1' (0#1) [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_s' (0#1) [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_s.v:9]
+INFO: [Synth 8-6157] synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_StreamingDataWidthConverter_Batch_64u_8u_98u_s' [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_StreamingDataWidthConverter_Batch_64u_8u_98u_s.v:9]
+INFO: [Synth 8-6157] synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_StreamingDataWidthConverter_Batch_64u_8u_98u_Pipeline_VITIS_LOOP_526_1' [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_StreamingDataWidthConverter_Batch_64u_8u_98u_Pipeline_VITIS_LOOP_526_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_StreamingDataWidthConverter_Batch_64u_8u_98u_Pipeline_VITIS_LOOP_526_1' (0#1) [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_StreamingDataWidthConverter_Batch_64u_8u_98u_Pipeline_VITIS_LOOP_526_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_regslice_both' [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_regslice_both.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_regslice_both' (0#1) [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_regslice_both.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_StreamingDataWidthConverter_Batch_64u_8u_98u_s' (0#1) [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_StreamingDataWidthConverter_Batch_64u_8u_98u_s.v:9]
+INFO: [Synth 8-6157] synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_fifo_w64_d2_S' [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_fifo_w64_d2_S.v:11]
+INFO: [Synth 8-6157] synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_fifo_w64_d2_S_ShiftReg' [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_fifo_w64_d2_S.v:129]
+INFO: [Synth 8-6155] done synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_fifo_w64_d2_S_ShiftReg' (0#1) [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_fifo_w64_d2_S.v:129]
+INFO: [Synth 8-6155] done synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_fifo_w64_d2_S' (0#1) [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_fifo_w64_d2_S.v:11]
+INFO: [Synth 8-6157] synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_fifo_w32_d2_S' [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_fifo_w32_d2_S.v:11]
+INFO: [Synth 8-6157] synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_fifo_w32_d2_S_ShiftReg' [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_fifo_w32_d2_S.v:129]
+INFO: [Synth 8-6155] done synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_fifo_w32_d2_S_ShiftReg' (0#1) [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_fifo_w32_d2_S.v:129]
+INFO: [Synth 8-6155] done synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_fifo_w32_d2_S' (0#1) [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_fifo_w32_d2_S.v:11]
+INFO: [Synth 8-6157] synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_start_for_StreamingDataWidthConverter_Batch_64u_8u_98u_U0' [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_start_for_StreamingDataWidthConverter_Batch_64u_8u_98u_U0.v:11]
+INFO: [Synth 8-6157] synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_start_for_StreamingDataWidthConverter_Batch_64u_8u_98u_U0_ShiftReg' [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_start_for_StreamingDataWidthConverter_Batch_64u_8u_98u_U0.v:125]
+INFO: [Synth 8-6155] done synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_start_for_StreamingDataWidthConverter_Batch_64u_8u_98u_U0_ShiftReg' (0#1) [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_start_for_StreamingDataWidthConverter_Batch_64u_8u_98u_U0.v:125]
+INFO: [Synth 8-6155] done synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0_start_for_StreamingDataWidthConverter_Batch_64u_8u_98u_U0' (0#1) [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_start_for_StreamingDataWidthConverter_Batch_64u_8u_98u_U0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'StreamingDataflowPartition_0_IODMA_hls_0' (0#1) [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0' (0#1) [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/synth/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0.v:53]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0' is unconnected for instance 'StreamingDataflowPartition_0_IODMA_hls_0' [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ipshared/3c79/src/StreamingDataflowPartition_0.v:203]
+WARNING: [Synth 8-7023] instance 'StreamingDataflowPartition_0_IODMA_hls_0' of module 'StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0' has 63 connections declared, but only 62 given [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ipshared/3c79/src/StreamingDataflowPartition_0.v:203]
+INFO: [Synth 8-6155] done synthesizing module 'StreamingDataflowPartition_0' (0#1) [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ipshared/3c79/src/StreamingDataflowPartition_0.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'top_idma0_0' (0#1) [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/synth/top_idma0_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0/hdl/verilog/StreamingDataflowPartition_0_IODMA_hls_0_control_s_axi.v:282]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+WARNING: [Synth 8-7129] Port addr[1] in module StreamingDataflowPartition_0_IODMA_hls_0_fifo_w32_d2_S_ShiftReg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[1] in module StreamingDataflowPartition_0_IODMA_hls_0_fifo_w64_d2_S_ShiftReg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dma2dwc_num_data_valid[2] in module StreamingDataflowPartition_0_IODMA_hls_0_StreamingDataWidthConverter_Batch_64u_8u_98u_Pipeline_VITIS_LOOP_526_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dma2dwc_num_data_valid[1] in module StreamingDataflowPartition_0_IODMA_hls_0_StreamingDataWidthConverter_Batch_64u_8u_98u_Pipeline_VITIS_LOOP_526_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dma2dwc_num_data_valid[0] in module StreamingDataflowPartition_0_IODMA_hls_0_StreamingDataWidthConverter_Batch_64u_8u_98u_Pipeline_VITIS_LOOP_526_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dma2dwc_fifo_cap[2] in module StreamingDataflowPartition_0_IODMA_hls_0_StreamingDataWidthConverter_Batch_64u_8u_98u_Pipeline_VITIS_LOOP_526_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dma2dwc_fifo_cap[1] in module StreamingDataflowPartition_0_IODMA_hls_0_StreamingDataWidthConverter_Batch_64u_8u_98u_Pipeline_VITIS_LOOP_526_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dma2dwc_fifo_cap[0] in module StreamingDataflowPartition_0_IODMA_hls_0_StreamingDataWidthConverter_Batch_64u_8u_98u_Pipeline_VITIS_LOOP_526_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dma2dwc_num_data_valid[2] in module StreamingDataflowPartition_0_IODMA_hls_0_StreamingDataWidthConverter_Batch_64u_8u_98u_s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dma2dwc_num_data_valid[1] in module StreamingDataflowPartition_0_IODMA_hls_0_StreamingDataWidthConverter_Batch_64u_8u_98u_s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dma2dwc_num_data_valid[0] in module StreamingDataflowPartition_0_IODMA_hls_0_StreamingDataWidthConverter_Batch_64u_8u_98u_s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dma2dwc_fifo_cap[2] in module StreamingDataflowPartition_0_IODMA_hls_0_StreamingDataWidthConverter_Batch_64u_8u_98u_s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dma2dwc_fifo_cap[1] in module StreamingDataflowPartition_0_IODMA_hls_0_StreamingDataWidthConverter_Batch_64u_8u_98u_s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dma2dwc_fifo_cap[0] in module StreamingDataflowPartition_0_IODMA_hls_0_StreamingDataWidthConverter_Batch_64u_8u_98u_s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port numReps_num_data_valid[2] in module StreamingDataflowPartition_0_IODMA_hls_0_StreamingDataWidthConverter_Batch_64u_8u_98u_s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port numReps_num_data_valid[1] in module StreamingDataflowPartition_0_IODMA_hls_0_StreamingDataWidthConverter_Batch_64u_8u_98u_s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port numReps_num_data_valid[0] in module StreamingDataflowPartition_0_IODMA_hls_0_StreamingDataWidthConverter_Batch_64u_8u_98u_s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port numReps_fifo_cap[2] in module StreamingDataflowPartition_0_IODMA_hls_0_StreamingDataWidthConverter_Batch_64u_8u_98u_s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port numReps_fifo_cap[1] in module StreamingDataflowPartition_0_IODMA_hls_0_StreamingDataWidthConverter_Batch_64u_8u_98u_s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port numReps_fifo_cap[0] in module StreamingDataflowPartition_0_IODMA_hls_0_StreamingDataWidthConverter_Batch_64u_8u_98u_s is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_0_AWREADY in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_0_WREADY in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_0_ARREADY in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_0_RLAST in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_0_RID[0] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_0_RFIFONUM[8] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_0_RFIFONUM[7] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_0_RFIFONUM[6] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_0_RFIFONUM[5] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_0_RFIFONUM[4] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_0_RFIFONUM[3] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_0_RFIFONUM[2] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_0_RFIFONUM[1] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_0_RFIFONUM[0] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_0_RUSER[0] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_0_RRESP[1] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_0_RRESP[0] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_0_BVALID in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_0_BRESP[1] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_0_BRESP[0] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_0_BID[0] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_0_BUSER[0] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dma2dwc_num_data_valid[2] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dma2dwc_num_data_valid[1] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dma2dwc_num_data_valid[0] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dma2dwc_fifo_cap[2] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dma2dwc_fifo_cap[1] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dma2dwc_fifo_cap[0] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[60] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[59] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[58] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[57] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[56] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[55] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[54] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[53] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[52] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[51] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[50] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[49] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[48] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[47] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[46] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[45] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[44] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[43] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[42] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[41] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[40] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[39] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[38] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[37] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[36] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[35] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[34] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[33] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[32] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[31] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[30] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[29] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[28] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[27] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[26] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[25] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[24] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[23] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[22] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[21] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[20] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[19] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[18] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[17] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[16] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[15] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[14] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[13] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[12] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[11] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[10] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sext_ln140[9] in module StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2013.473 ; gain = 513.766 ; free physical = 1181 ; free virtual = 4575
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2028.316 ; gain = 528.609 ; free physical = 1169 ; free virtual = 4563
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2028.316 ; gain = 528.609 ; free physical = 1169 ; free virtual = 4563
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2028.316 ; gain = 0.000 ; free physical = 1169 ; free virtual = 4563
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/src/StreamingDataflowPartition_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/top_idma0_0_ooc.xdc] for cell 'inst'
+WARNING: [Constraints 18-619] A clock with name 'ap_clk' already exists, overwriting the previous clock with the same name. [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/top_idma0_0_ooc.xdc:55]
+Finished Parsing XDC File [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/top_idma0_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.runs/top_idma0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.runs/top_idma0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2188.066 ; gain = 0.000 ; free physical = 1087 ; free virtual = 4485
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2188.066 ; gain = 0.000 ; free physical = 1087 ; free virtual = 4485
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2188.066 ; gain = 688.359 ; free physical = 1088 ; free virtual = 4488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2196.070 ; gain = 696.363 ; free physical = 1088 ; free virtual = 4488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.runs/top_idma0_0_synth_1/dont_touch.xdc, line 14).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/StreamingDataflowPartition_0_IODMA_hls_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2196.070 ; gain = 696.363 ; free physical = 1088 ; free virtual = 4488
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'StreamingDataflowPartition_0_IODMA_hls_0_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'StreamingDataflowPartition_0_IODMA_hls_0_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi_reg_slice'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi_reg_slice__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'ap_CS_iter1_fsm_reg' in module 'StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_11'
+INFO: [Synth 8-802] inferred FSM for state register 'ap_CS_iter2_fsm_reg' in module 'StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_11'
+INFO: [Synth 8-802] inferred FSM for state register 'ap_CS_iter1_fsm_reg' in module 'StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1'
+INFO: [Synth 8-802] inferred FSM for state register 'ap_CS_iter2_fsm_reg' in module 'StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-802] inferred FSM for state register 'ap_CS_iter1_fsm_reg' in module 'StreamingDataflowPartition_0_IODMA_hls_0_StreamingDataWidthConverter_Batch_64u_8u_98u_Pipeline_VITIS_LOOP_526_1'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'StreamingDataflowPartition_0_IODMA_hls_0_regslice_both'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'StreamingDataflowPartition_0_IODMA_hls_0_control_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'StreamingDataflowPartition_0_IODMA_hls_0_control_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi_reg_slice'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi_reg_slice__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+  ap_ST_iter2_fsm_state0 |                               01 |                               01
+  ap_ST_iter2_fsm_state3 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'ap_CS_iter2_fsm_reg' in module 'StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_11'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+  ap_ST_iter1_fsm_state0 |                               01 |                               01
+  ap_ST_iter1_fsm_state2 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'ap_CS_iter1_fsm_reg' in module 'StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_11'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+  ap_ST_iter2_fsm_state0 |                               01 |                               01
+  ap_ST_iter2_fsm_state3 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'ap_CS_iter2_fsm_reg' in module 'StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+  ap_ST_iter1_fsm_state0 |                               01 |                               01
+  ap_ST_iter1_fsm_state2 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'ap_CS_iter1_fsm_reg' in module 'StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+  ap_ST_iter1_fsm_state0 |                               01 |                               01
+  ap_ST_iter1_fsm_state2 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'ap_CS_iter1_fsm_reg' in module 'StreamingDataflowPartition_0_IODMA_hls_0_StreamingDataWidthConverter_Batch_64u_8u_98u_Pipeline_VITIS_LOOP_526_1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 |                               00
+*
+                    ZERO |                               01 |                               10
+                     ONE |                               11 |                               11
+                     TWO |                               10 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'StreamingDataflowPartition_0_IODMA_hls_0_regslice_both'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2196.070 ; gain = 696.363 ; free physical = 1082 ; free virtual = 4482
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   64 Bit       Adders := 1     
+	   2 Input   52 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 4     
+	   4 Input   32 Bit       Adders := 2     
+	   2 Input   12 Bit       Adders := 2     
+	   2 Input   11 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 6     
+	   2 Input    4 Bit       Adders := 4     
+	   2 Input    3 Bit       Adders := 4     
+	   2 Input    2 Bit       Adders := 3     
+	   2 Input    1 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               96 Bit    Registers := 3     
+	               66 Bit    Registers := 1     
+	               65 Bit    Registers := 2     
+	               64 Bit    Registers := 8     
+	               61 Bit    Registers := 1     
+	               56 Bit    Registers := 1     
+	               52 Bit    Registers := 1     
+	               32 Bit    Registers := 12    
+	               20 Bit    Registers := 2     
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                9 Bit    Registers := 5     
+	                8 Bit    Registers := 6     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 5     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 7     
+	                1 Bit    Registers := 76    
++---RAMs : 
+	              16K Bit	(255 X 66 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   96 Bit        Muxes := 1     
+	   2 Input   65 Bit        Muxes := 1     
+	   2 Input   64 Bit        Muxes := 9     
+	   2 Input   52 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 5     
+	   2 Input   20 Bit        Muxes := 1     
+	   2 Input   13 Bit        Muxes := 1     
+	   4 Input   12 Bit        Muxes := 2     
+	   2 Input   12 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 5     
+	   2 Input    8 Bit        Muxes := 5     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 6     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 15    
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 10    
+	   2 Input    2 Bit        Muxes := 56    
+	   3 Input    2 Bit        Muxes := 11    
+	   4 Input    2 Bit        Muxes := 6     
+	   2 Input    1 Bit        Muxes := 80    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-3332] Sequential element (inst/control_s_axi_U/FSM_onehot_wstate_reg[0]) is unused and will be removed from module StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/control_s_axi_U/FSM_onehot_rstate_reg[0]) is unused and will be removed from module StreamingDataflowPartition_0_StreamingDataflowPartition_0_IODMA_hls_0_0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2196.070 ; gain = 696.363 ; free physical = 1069 ; free virtual = 4472
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++----------------------------------------------+-------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                   | RTL Object                                                  | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++----------------------------------------------+-------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst/StreamingDataflowPartition_0_IODMA_hls_0 | inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg | 255 x 66(READ_FIRST)   | W |   | 255 x 66(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
++----------------------------------------------+-------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-565] redefining clock 'ap_clk'
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2213.070 ; gain = 713.363 ; free physical = 1051 ; free virtual = 4453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2266.172 ; gain = 766.465 ; free physical = 1009 ; free virtual = 4411
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++----------------------------------------------+-------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                   | RTL Object                                                  | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++----------------------------------------------+-------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst/StreamingDataflowPartition_0_IODMA_hls_0 | inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg | 255 x 66(READ_FIRST)   | W |   | 255 x 66(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
++----------------------------------------------+-------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/StreamingDataflowPartition_0_IODMA_hls_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2282.188 ; gain = 782.480 ; free physical = 999 ; free virtual = 4401
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2408.000 ; gain = 908.293 ; free physical = 895 ; free virtual = 4297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2408.000 ; gain = 908.293 ; free physical = 895 ; free virtual = 4297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2408.000 ; gain = 908.293 ; free physical = 891 ; free virtual = 4293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2408.000 ; gain = 908.293 ; free physical = 891 ; free virtual = 4293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2411.969 ; gain = 912.262 ; free physical = 886 ; free virtual = 4289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2411.969 ; gain = 912.262 ; free physical = 886 ; free virtual = 4289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Dynamic Shift Register Report:
++------------+-------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name    | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+-------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | mem_reg[5]  | 96     | 96         | 96     | 0       | 0      | 0      | 0      | 
+|dsrl__1     | mem_reg[14] | 1      | 1          | 1      | 0       | 0      | 0      | 0      | 
++------------+-------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |   105|
+|2     |LUT1     |    21|
+|3     |LUT2     |   163|
+|4     |LUT3     |   457|
+|5     |LUT4     |   343|
+|6     |LUT5     |   170|
+|7     |LUT6     |   187|
+|8     |RAMB36E1 |     1|
+|9     |SRL16E   |    67|
+|10    |FDRE     |  1706|
+|11    |FDSE     |     9|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2411.969 ; gain = 912.262 ; free physical = 886 ; free virtual = 4289
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 231 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2411.969 ; gain = 752.512 ; free physical = 886 ; free virtual = 4289
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2411.977 ; gain = 912.262 ; free physical = 886 ; free virtual = 4289
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2411.977 ; gain = 0.000 ; free physical = 1046 ; free virtual = 4453
+INFO: [Netlist 29-17] Analyzing 106 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2467.996 ; gain = 0.000 ; free physical = 1040 ; free virtual = 4447
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: bde8fc47
+INFO: [Common 17-83] Releasing license: Synthesis
+120 Infos, 107 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2467.996 ; gain = 1117.895 ; free physical = 1040 ; free virtual = 4447
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1720.542; main = 1616.136; forked = 346.722
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3107.137; main = 2468.000; forked = 911.062
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2492.008 ; gain = 0.000 ; free physical = 1040 ; free virtual = 4447
+INFO: [Common 17-1381] The checkpoint '/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.runs/top_idma0_0_synth_1/top_idma0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP top_idma0_0, cache-ID = e00762b8a2c61af2
+INFO: [Coretcl 2-1174] Renamed 31 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2492.008 ; gain = 0.000 ; free physical = 1016 ; free virtual = 4427
+INFO: [Common 17-1381] The checkpoint '/tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/finn_zynq_link.runs/top_idma0_0_synth_1/top_idma0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file top_idma0_0_utilization_synth.rpt -pb top_idma0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 26 22:59:14 2025...

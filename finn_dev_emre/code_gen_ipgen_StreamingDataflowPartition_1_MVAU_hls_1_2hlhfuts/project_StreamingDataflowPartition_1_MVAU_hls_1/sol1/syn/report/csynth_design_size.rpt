@@ -1,0 +1,65 @@
+================================================================
+== Design Size Report
+================================================================
+
+* Total Instructions per Compilation Phase
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Phase         | Step                        | Instructions | Description                                                                            |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Compile/Link  |                             | 801          | After all functions are compiled and linked into a single design                       |
+|               |                             |              |                                                                                        |
+| Unroll/Inline |                             |              | After user unroll and inline pragmas are applied                                       |
+|               | (1) unroll                  | 328          | user unroll pragmas are applied                                                        |
+|               | (2) simplification          | 303          | simplification of applied user unroll pragmas                                          |
+|               | (3) inline                  | 245          | user inline pragmas are applied                                                        |
+|               | (4) simplification          | 137          | simplification of applied user inline pragmas                                          |
+|               |                             |              |                                                                                        |
+| Array/Struct  |                             |              | After user array partition and struct aggregate/disaggregate pragmas are applied       |
+|               | (1) array partition         | 607          | user array partition pragmas are applied                                               |
+|               | (2) simplification          | 329          | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
+|               | (3) aggregate/disaggregate  | 329          | user struct aggregate/disaggregate pragmas are applied                                 |
+|               | (4) array reshape           | 329          | apply array reshape pragmas                                                            |
+|               | (5) access patterns         | 329          | array access pattern optmizations                                                      |
+|               |                             |              |                                                                                        |
+| Performance   |                             |              | After transformations are applied to meet performance pragma targets                   |
+|               | (1) loop simplification     | 329          | loop and instruction simplification                                                    |
+|               | (2) parallelization         | 329          | loops are unrolled or pipelined to meet performance targets                            |
+|               | (3) array partition         | 329          | arrays are partitioned to meet performance targets                                     |
+|               | (4) simplification          | 329          | simplification of design after performance transformations                             |
+|               |                             |              |                                                                                        |
+| HW Transforms |                             |              | After hardware transfomations                                                          |
+|               | (1) lowering                | 336          | initial conversion to HW specific instructions                                         |
+|               | (2) optimizations           | 343          | high level synthesis optimizations                                                     |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+
+* Instructions per Function for each Compilation Phase
++-------------------------------------+----------------------------------------------------+--------------+---------------+--------------+-------------+---------------+
+| Function                            | Location                                           | Compile/Link | Unroll/Inline | Array/Struct | Performance | HW Transforms |
++-------------------------------------+----------------------------------------------------+--------------+---------------+--------------+-------------+---------------+
+| + StreamingDataflowPartition_1...   | top_StreamingDataflowPartition_1_MVAU_hls_1.cpp:25 | 801          | 137           | 329          | 329         | 343           |
+|  + Matrix_Vector_Activate_Strea...  | mvau.hpp:215                                       | 785          | 129           | 308          | 308         | 318           |
+|     init                            | activations.hpp:207                                |  17          |               |              |             |               |
+|   + operator()<ap_uint<4> >         | interpret.hpp:241                                  |   6          |               |              |             |               |
+|      Container                      | interpret.hpp:206                                  |   4          |               |              |             |               |
+|     operator[]                      | weights.hpp:156                                    |  81          |               |              |             |               |
+|     operator()<std::array<ap_int... | interpret.hpp:115                                  |   1          |               |              |             |               |
+|   + mac<1, ap_int<32>, std::arra... | mac.hpp:164                                        | 265          |               |              |             |               |
+|    + operator()                     | interpret.hpp:214                                  | 135          |               |              |             |               |
+|       cast<4>                       | interpret.hpp:181                                  |  31          |               |              |             |               |
+|      mul<ap_int<4>, ap_uint<4> >    | mac.hpp:88                                         |  86          |               |              |             |               |
+|   + operator()<ap_uint<4> >         | interpret.hpp:236                                  |   4          |               |              |             |               |
+|      Container                      | interpret.hpp:203                                  |   2          |               |              |             |               |
+|   + activate                        | activations.hpp:213                                |  85          |               |              |             |               |
+|      operator()                     | activations.hpp:107                                |  28          |               |              |             |               |
+|     operator()                      | interpret.hpp:210                                  |  19          |               |              |             |               |
+|     operator const ap_uint<4> &     | interpret.hpp:223                                  |   2          |               |              |             |               |
++-------------------------------------+----------------------------------------------------+--------------+---------------+--------------+-------------+---------------+
+
+* Design Size Message Settings
++---------------------------------------------+--------+------------------------------------------------------------------+
+| Message Setting                             | Value  | Description                                                      |
++---------------------------------------------+--------+------------------------------------------------------------------+
+| config_compile -design_size_maximum_warning | 100000 | Show a warning when total design instructions exceeds this value |
++---------------------------------------------+--------+------------------------------------------------------------------+
+
+

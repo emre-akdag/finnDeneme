@@ -1,0 +1,151 @@
+
+
+================================================================
+== Vitis HLS Report for 'Stream2Mem_Batch_8u_1u_Pipeline_VITIS_LOOP_153_1'
+================================================================
+* Date:           Wed Mar 26 22:52:04 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        project_StreamingDataflowPartition_2_IODMA_hls_0
+* Solution:       sol1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  |  20.00 ns|  14.600 ns|     5.40 ns|
+    +--------+----------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |       19|       19|  0.380 us|  0.380 us|   17|   17|  loop auto-rewind flp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_153_1  |       17|       17|         3|          1|          1|    16|  yes(flp)|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 1
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 1 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.95>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%i = alloca i32 1" [/home/emre/Documents/finn/deps/finn-hlslib/dma.h:153->/home/emre/Documents/finn/deps/finn-hlslib/dma.h:191]   --->   Operation 6 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %gmem, void @empty, i32 0, i32 0, void @empty_12, i32 0, i32 0, void @empty_0, void @empty_1, void @empty_12, i32 16, i32 16, i32 16, i32 16, void @empty_12, void @empty_12, i32 4294967295, i32 0, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %in0_V, void @empty_2, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_12, void @empty_12, void @empty_12, i32 0, i32 0, i32 0, i32 0, void @empty_12, void @empty_12, i32 4294967295, i32 0, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%out_1_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %out_1" [/home/emre/Documents/finn/deps/finn-hlslib/dma.h:182]   --->   Operation 9 'read' 'out_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (1.58ns)   --->   "%store_ln153 = store i5 0, i5 %i" [/home/emre/Documents/finn/deps/finn-hlslib/dma.h:153->/home/emre/Documents/finn/deps/finn-hlslib/dma.h:191]   --->   Operation 10 'store' 'store_ln153' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%br_ln153 = br void %for.inc.i" [/home/emre/Documents/finn/deps/finn-hlslib/dma.h:153->/home/emre/Documents/finn/deps/finn-hlslib/dma.h:191]   --->   Operation 11 'br' 'br_ln153' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%i_1 = load i5 %i" [/home/emre/Documents/finn/deps/finn-hlslib/dma.h:153->/home/emre/Documents/finn/deps/finn-hlslib/dma.h:191]   --->   Operation 12 'load' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (1.78ns)   --->   "%icmp_ln153 = icmp_eq  i5 %i_1, i5 16" [/home/emre/Documents/finn/deps/finn-hlslib/dma.h:153->/home/emre/Documents/finn/deps/finn-hlslib/dma.h:191]   --->   Operation 13 'icmp' 'icmp_ln153' <Predicate = true> <Delay = 1.78> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 14 [1/1] (1.78ns)   --->   "%add_ln153 = add i5 %i_1, i5 1" [/home/emre/Documents/finn/deps/finn-hlslib/dma.h:153->/home/emre/Documents/finn/deps/finn-hlslib/dma.h:191]   --->   Operation 14 'add' 'add_ln153' <Predicate = true> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%br_ln153 = br i1 %icmp_ln153, void %for.inc.i.split, void %_Z10Stream2MemILj8ELj16EEvRN3hls6streamI7ap_uintIXT_EELi0EEEPS3_.exit.exitStub" [/home/emre/Documents/finn/deps/finn-hlslib/dma.h:153->/home/emre/Documents/finn/deps/finn-hlslib/dma.h:191]   --->   Operation 15 'br' 'br_ln153' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%gmem_addr = getelementptr i8 %gmem, i64 %out_1_read" [/home/emre/Documents/finn/deps/finn-hlslib/dma.h:153->/home/emre/Documents/finn/deps/finn-hlslib/dma.h:191]   --->   Operation 16 'getelementptr' 'gmem_addr' <Predicate = (!icmp_ln153)> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (1.58ns)   --->   "%store_ln153 = store i5 %add_ln153, i5 %i" [/home/emre/Documents/finn/deps/finn-hlslib/dma.h:153->/home/emre/Documents/finn/deps/finn-hlslib/dma.h:191]   --->   Operation 17 'store' 'store_ln153' <Predicate = (!icmp_ln153)> <Delay = 1.58>
+
+State 2 <SV = 1> <Delay = 0.51>
+ST_2 : Operation 18 [1/1] (0.51ns)   --->   "%in0_V_read = read i8 @_ssdm_op_Read.axis.volatile.i8P128A, i8 %in0_V" [/home/emre/Documents/finn/deps/finn-hlslib/dma.h:155->/home/emre/Documents/finn/deps/finn-hlslib/dma.h:191]   --->   Operation 18 'read' 'in0_V_read' <Predicate = (!icmp_ln153)> <Delay = 0.51> <CoreInst = "regslice">   --->   Core 135 'regslice' <Latency = 0> <II = 1> <Delay = 2.22> <Adapter> <Opcode : 'read' 'write'>
+
+State 3 <SV = 2> <Delay = 14.6>
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%specpipeline_ln154 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 2, i32 0, i32 0, void @empty_12" [/home/emre/Documents/finn/deps/finn-hlslib/dma.h:154->/home/emre/Documents/finn/deps/finn-hlslib/dma.h:191]   --->   Operation 19 'specpipeline' 'specpipeline_ln154' <Predicate = (!icmp_ln153)> <Delay = 0.00>
+ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%speclooptripcount_ln153 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 16, i64 16, i64 16" [/home/emre/Documents/finn/deps/finn-hlslib/dma.h:153->/home/emre/Documents/finn/deps/finn-hlslib/dma.h:191]   --->   Operation 20 'speclooptripcount' 'speclooptripcount_ln153' <Predicate = (!icmp_ln153)> <Delay = 0.00>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%specloopname_ln153 = specloopname void @_ssdm_op_SpecLoopName, void @empty_10" [/home/emre/Documents/finn/deps/finn-hlslib/dma.h:153->/home/emre/Documents/finn/deps/finn-hlslib/dma.h:191]   --->   Operation 21 'specloopname' 'specloopname_ln153' <Predicate = (!icmp_ln153)> <Delay = 0.00>
+ST_3 : Operation 22 [1/1] (14.6ns)   --->   "%write_ln156 = write void @_ssdm_op_Write.m_axi.p1i8, i8 %gmem_addr, i8 %in0_V_read, i1 1" [/home/emre/Documents/finn/deps/finn-hlslib/dma.h:156->/home/emre/Documents/finn/deps/finn-hlslib/dma.h:191]   --->   Operation 22 'write' 'write_ln156' <Predicate = (!icmp_ln153)> <Delay = 14.6> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 5> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%br_ln153 = br void %for.inc.i" [/home/emre/Documents/finn/deps/finn-hlslib/dma.h:153->/home/emre/Documents/finn/deps/finn-hlslib/dma.h:191]   --->   Operation 23 'br' 'br_ln153' <Predicate = (!icmp_ln153)> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (1.58ns)   --->   "%ret_ln0 = ret"   --->   Operation 24 'ret' 'ret_ln0' <Predicate = (icmp_ln153)> <Delay = 1.58>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 20.000ns, clock uncertainty: 5.400ns.
+
+ <State 1>: 4.956ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln153', /home/emre/Documents/finn/deps/finn-hlslib/dma.h:153->/home/emre/Documents/finn/deps/finn-hlslib/dma.h:191) of constant 0 on local variable 'i', /home/emre/Documents/finn/deps/finn-hlslib/dma.h:153->/home/emre/Documents/finn/deps/finn-hlslib/dma.h:191 [8]  (1.588 ns)
+	'load' operation 5 bit ('i', /home/emre/Documents/finn/deps/finn-hlslib/dma.h:153->/home/emre/Documents/finn/deps/finn-hlslib/dma.h:191) on local variable 'i', /home/emre/Documents/finn/deps/finn-hlslib/dma.h:153->/home/emre/Documents/finn/deps/finn-hlslib/dma.h:191 [11]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln153', /home/emre/Documents/finn/deps/finn-hlslib/dma.h:153->/home/emre/Documents/finn/deps/finn-hlslib/dma.h:191) [12]  (1.780 ns)
+	'store' operation 0 bit ('store_ln153', /home/emre/Documents/finn/deps/finn-hlslib/dma.h:153->/home/emre/Documents/finn/deps/finn-hlslib/dma.h:191) of variable 'add_ln153', /home/emre/Documents/finn/deps/finn-hlslib/dma.h:153->/home/emre/Documents/finn/deps/finn-hlslib/dma.h:191 on local variable 'i', /home/emre/Documents/finn/deps/finn-hlslib/dma.h:153->/home/emre/Documents/finn/deps/finn-hlslib/dma.h:191 [22]  (1.588 ns)
+
+ <State 2>: 0.518ns
+The critical path consists of the following:
+	axis read operation ('in0_V_read', /home/emre/Documents/finn/deps/finn-hlslib/dma.h:155->/home/emre/Documents/finn/deps/finn-hlslib/dma.h:191) on port 'in0_V' (/home/emre/Documents/finn/deps/finn-hlslib/dma.h:155->/home/emre/Documents/finn/deps/finn-hlslib/dma.h:191) [20]  (0.518 ns)
+
+ <State 3>: 14.600ns
+The critical path consists of the following:
+	bus write operation ('write_ln156', /home/emre/Documents/finn/deps/finn-hlslib/dma.h:156->/home/emre/Documents/finn/deps/finn-hlslib/dma.h:191) on port 'gmem' (/home/emre/Documents/finn/deps/finn-hlslib/dma.h:156->/home/emre/Documents/finn/deps/finn-hlslib/dma.h:191) [21]  (14.600 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

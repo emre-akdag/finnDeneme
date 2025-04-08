@@ -1,0 +1,10 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="StreamingDataflowPartition_0_IODMA_hls_0" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="StreamingDataflowPartition_0_IODMA_hls_0"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

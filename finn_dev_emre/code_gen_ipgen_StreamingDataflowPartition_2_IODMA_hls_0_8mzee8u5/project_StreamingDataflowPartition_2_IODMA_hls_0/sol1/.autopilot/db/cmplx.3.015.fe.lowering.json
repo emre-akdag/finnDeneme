@@ -1,0 +1,20 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "1",
+    "file": "top_StreamingDataflowPartition_2_IODMA_hls_0.cpp",
+    "fileloc": 15,
+    "instructions": 12,
+    "name": "StreamingDataflowPartition_2_IODMA_hls_0",
+    "total_instructions": 42
+  },
+  "1": {
+    "basicblocks": 9,
+    "calls": "",
+    "file": "dma.h",
+    "fileloc": 182,
+    "instructions": 30,
+    "name": "Stream2Mem_Batch<8, 1>",
+    "total_instructions": 30
+  }
+}

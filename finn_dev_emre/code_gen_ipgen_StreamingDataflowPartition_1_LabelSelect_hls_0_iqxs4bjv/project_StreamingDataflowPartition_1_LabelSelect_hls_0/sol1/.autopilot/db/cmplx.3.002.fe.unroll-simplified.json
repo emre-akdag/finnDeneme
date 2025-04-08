@@ -1,0 +1,26 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "1",
+    "file": "top_StreamingDataflowPartition_1_LabelSelect_hls_0.cpp",
+    "fileloc": 12,
+    "instructions": 5,
+    "name": "StreamingDataflowPartition_1_LabelSelect_hls_0",
+    "total_instructions": 39
+  },
+  "1": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "maxpool.h",
+    "fileloc": 466,
+    "instructions": 34,
+    "loads": {
+      "L": 1
+    },
+    "name": "LabelSelect_Batch<10, 1, 1, ap_uint<4>, ap_uint<8> >",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 34
+  }
+}

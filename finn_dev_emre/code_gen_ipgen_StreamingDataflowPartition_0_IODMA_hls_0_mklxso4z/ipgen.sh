@@ -1,0 +1,4 @@
+#!/bin/bash 
+cd /tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_0_IODMA_hls_0_mklxso4z
+vitis_hls /tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_0_IODMA_hls_0_mklxso4z/hls_syn_StreamingDataflowPartition_0_IODMA_hls_0.tcl
+cd /home/emre/Documents/finn

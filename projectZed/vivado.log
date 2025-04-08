@@ -1,0 +1,694 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Tue Apr  8 22:33:29 2025
+# Process ID         : 4538
+# Current directory  : /home/emre/projectZed
+# Command line       : vivado projectZed.xpr
+# Log file           : /home/emre/projectZed/vivado.log
+# Journal file       : /home/emre/projectZed/vivado.jou
+# Running On         : emre-Ubuntu
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.2 LTS
+# Processor Detail   : AMD Ryzen 7 7840HS with Radeon 780M Graphics
+# CPU Frequency      : 1289.783 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 14318 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 18613 MB
+# Available Virtual  : 16755 MB
+#-----------------------------------------------------------
+start_gui
+open_project projectZed.xpr
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory '/tmp/finn_dev_emre'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/emre/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/emre/Documents/finn/finn-rtllib/memstream'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/tmp/finn_dev_emre'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2024.2/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'design_1.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+design_1_StreamingDataflowPar_0_0
+
+INFO: [Project 1-5579] Found utility IPs instantiated in one or more block designs which have equivalent inline hdl with improved performance and reduced diskspace. It is recommended to migrate these utility IPs to inline hdl using the command upgrade_project -migrate_to_inline_hdl. The utility IPs may be deprecated in future releases. More information on inline hdl is available in UG994.
+update_compile_order -fileset sources_1
+open_bd_design {/home/emre/projectZed/projectZed.srcs/sources_1/bd/design_1/design_1.bd}
+Reading block design file </home/emre/projectZed/projectZed.srcs/sources_1/bd/design_1/design_1.bd>...
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_mem_intercon
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_periph
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx_finn:finn:StreamingDataflowPartition_1:1.0 - StreamingDataflowPar_0
+Adding component instance block -- user.org:user:custom_fifo:1.0 - custom_fifo_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_1
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Successfully read diagram <design_1> from block design file </home/emre/projectZed/projectZed.srcs/sources_1/bd/design_1/design_1.bd>
+set_property  ip_repo_paths  {/home/emre/ip_repo /home/emre/Documents/finn/finn-rtllib/memstream} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/emre/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/emre/Documents/finn/finn-rtllib/memstream'.
+set_property  ip_repo_paths  {/home/emre/ip_repo /home/emre/Documents/finn/finn-rtllib/memstream /home/emre/Documents/finn_dev_emre} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/emre/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/emre/Documents/finn/finn-rtllib/memstream'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/emre/Documents/finn_dev_emre'.
+set_property  ip_repo_paths  {/home/emre/ip_repo /home/emre/Documents/finn/finn-rtllib/memstream} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/emre/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/emre/Documents/finn/finn-rtllib/memstream'.
+set_property  ip_repo_paths  {/home/emre/ip_repo /home/emre/Documents/finn/finn-rtllib/memstream /home/emre/Documents/finn_dev_emre_yedek} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/emre/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/emre/Documents/finn/finn-rtllib/memstream'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/emre/Documents/finn_dev_emre_yedek'.
+startgroup
+set_property -dict [list \
+  CONFIG.M00_HAS_DATA_FIFO {2} \
+  CONFIG.S00_HAS_DATA_FIFO {2} \
+  CONFIG.S01_HAS_DATA_FIFO {2} \
+] [get_bd_cells axi_mem_intercon]
+endgroup
+save_bd_design
+Wrote  : </home/emre/projectZed/projectZed.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/emre/projectZed/projectZed.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+startgroup
+set_property CONFIG.S00_HAS_DATA_FIFO {2} [get_bd_cells axi_periph]
+endgroup
+save_bd_design
+Wrote  : </home/emre/projectZed/projectZed.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/emre/projectZed/projectZed.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/emre/projectZed/projectZed.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp with file /home/emre/projectZed/projectZed.runs/synth_1/design_1_wrapper.dcp
+launch_runs synth_1 -jobs 8
+CRITICAL WARNING: [xilinx.com:ip:axi_dma:7.1-11] /axi_dma_0
+                   #################################### 
+                   S_AXIS_S2MM interface is unconnected
+                   ####################################
+Wrote  : </home/emre/projectZed/projectZed.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/emre/projectZed/projectZed.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
+Verilog Output written to : /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
+Verilog Output written to : /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/sim/design_1.v
+Verilog Output written to : /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/xbar .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_0/design_1_axi_mem_intercon_imp_auto_us_df_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_us_df .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_1/design_1_axi_mem_intercon_imp_auto_us_df_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/auto_us_df .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_m00_data_fifo_0/design_1_axi_mem_intercon_imp_m00_data_fifo_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/m00_data_fifo .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_0/design_1_axi_mem_intercon_imp_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_s00_data_fifo_0/design_1_axi_periph_imp_s00_data_fifo_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_periph/s00_couplers/s00_data_fifo .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_auto_pc_0/design_1_axi_periph_imp_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Hardware Definition File /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_mem_intercon_imp_auto_pc_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_mem_intercon_imp_auto_us_df_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_mem_intercon_imp_auto_us_df_1
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_mem_intercon_imp_m00_data_fifo_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_mem_intercon_imp_xbar_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_periph_imp_auto_pc_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_periph_imp_s00_data_fifo_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_mem_intercon_imp_auto_pc_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 3570e232ad8c4e2d to dir: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/3/5/3570e232ad8c4e2d/design_1_axi_mem_intercon_imp_auto_pc_0_sim_netlist.vhdl to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_0/design_1_axi_mem_intercon_imp_auto_pc_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_0/design_1_axi_mem_intercon_imp_auto_pc_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/3/5/3570e232ad8c4e2d/design_1_axi_mem_intercon_imp_auto_pc_0_stub.v to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_0/design_1_axi_mem_intercon_imp_auto_pc_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_0/design_1_axi_mem_intercon_imp_auto_pc_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/3/5/3570e232ad8c4e2d/design_1_axi_mem_intercon_imp_auto_pc_0_sim_netlist.v to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_0/design_1_axi_mem_intercon_imp_auto_pc_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_0/design_1_axi_mem_intercon_imp_auto_pc_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/3/5/3570e232ad8c4e2d/design_1_axi_mem_intercon_imp_auto_pc_0_stub.vhdl to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_0/design_1_axi_mem_intercon_imp_auto_pc_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_0/design_1_axi_mem_intercon_imp_auto_pc_0_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/3/5/3570e232ad8c4e2d/design_1_axi_mem_intercon_imp_auto_pc_0.dcp to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_0/design_1_axi_mem_intercon_imp_auto_pc_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_0/design_1_axi_mem_intercon_imp_auto_pc_0.dcp
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_mem_intercon_imp_auto_pc_0, cache-ID = 3570e232ad8c4e2d; cache size = 38.697 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_mem_intercon_imp_auto_us_df_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_mem_intercon_imp_auto_us_df_1
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_mem_intercon_imp_m00_data_fifo_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_mem_intercon_imp_xbar_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_periph_imp_auto_pc_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 89f73d8299260b5f to dir: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_auto_pc_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/8/9/89f73d8299260b5f/design_1_axi_periph_imp_auto_pc_0_stub.vhdl to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_auto_pc_0/design_1_axi_periph_imp_auto_pc_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_auto_pc_0/design_1_axi_periph_imp_auto_pc_0_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/8/9/89f73d8299260b5f/design_1_axi_periph_imp_auto_pc_0_stub.v to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_auto_pc_0/design_1_axi_periph_imp_auto_pc_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_auto_pc_0/design_1_axi_periph_imp_auto_pc_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/8/9/89f73d8299260b5f/design_1_axi_periph_imp_auto_pc_0_sim_netlist.vhdl to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_auto_pc_0/design_1_axi_periph_imp_auto_pc_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_auto_pc_0/design_1_axi_periph_imp_auto_pc_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/8/9/89f73d8299260b5f/design_1_axi_periph_imp_auto_pc_0.dcp to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_auto_pc_0/design_1_axi_periph_imp_auto_pc_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_auto_pc_0/design_1_axi_periph_imp_auto_pc_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/8/9/89f73d8299260b5f/design_1_axi_periph_imp_auto_pc_0_sim_netlist.v to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_auto_pc_0/design_1_axi_periph_imp_auto_pc_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_auto_pc_0/design_1_axi_periph_imp_auto_pc_0_sim_netlist.v
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_periph_imp_auto_pc_0, cache-ID = 89f73d8299260b5f; cache size = 38.697 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_periph_imp_s00_data_fifo_0
+[Tue Apr  8 22:36:44 2025] Launched design_1_axi_mem_intercon_imp_xbar_0_synth_1, design_1_axi_mem_intercon_imp_auto_us_df_1_synth_1, design_1_axi_mem_intercon_imp_m00_data_fifo_0_synth_1, design_1_axi_periph_imp_s00_data_fifo_0_synth_1, design_1_axi_mem_intercon_imp_auto_us_df_0_synth_1...
+Run output will be captured here:
+design_1_axi_mem_intercon_imp_xbar_0_synth_1: /home/emre/projectZed/projectZed.runs/design_1_axi_mem_intercon_imp_xbar_0_synth_1/runme.log
+design_1_axi_mem_intercon_imp_auto_us_df_1_synth_1: /home/emre/projectZed/projectZed.runs/design_1_axi_mem_intercon_imp_auto_us_df_1_synth_1/runme.log
+design_1_axi_mem_intercon_imp_m00_data_fifo_0_synth_1: /home/emre/projectZed/projectZed.runs/design_1_axi_mem_intercon_imp_m00_data_fifo_0_synth_1/runme.log
+design_1_axi_periph_imp_s00_data_fifo_0_synth_1: /home/emre/projectZed/projectZed.runs/design_1_axi_periph_imp_s00_data_fifo_0_synth_1/runme.log
+design_1_axi_mem_intercon_imp_auto_us_df_0_synth_1: /home/emre/projectZed/projectZed.runs/design_1_axi_mem_intercon_imp_auto_us_df_0_synth_1/runme.log
+[Tue Apr  8 22:36:44 2025] Launched synth_1...
+Run output will be captured here: /home/emre/projectZed/projectZed.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 8599.863 ; gain = 171.746 ; free physical = 8261 ; free virtual = 14900
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg484-1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-454] Reading design checkpoint '/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_StreamingDataflowPar_0_0/design_1_StreamingDataflowPar_0_0.dcp' for cell 'design_1_i/StreamingDataflowPar_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_1/design_1_axi_dma_0_1.dcp' for cell 'design_1_i/axi_dma_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_custom_fifo_0_1/design_1_custom_fifo_0_1.dcp' for cell 'design_1_i/custom_fifo_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0.dcp' for cell 'design_1_i/proc_sys_reset_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.dcp' for cell 'design_1_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_xbar_0/design_1_axi_mem_intercon_imp_xbar_0.dcp' for cell 'design_1_i/axi_mem_intercon/xbar'
+INFO: [Project 1-454] Reading design checkpoint '/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_0/design_1_axi_mem_intercon_imp_auto_pc_0.dcp' for cell 'design_1_i/axi_mem_intercon/m00_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_m00_data_fifo_0/design_1_axi_mem_intercon_imp_m00_data_fifo_0.dcp' for cell 'design_1_i/axi_mem_intercon/m00_couplers/m00_data_fifo'
+INFO: [Project 1-454] Reading design checkpoint '/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_0/design_1_axi_mem_intercon_imp_auto_us_df_0.dcp' for cell 'design_1_i/axi_mem_intercon/s00_couplers/auto_us_df'
+INFO: [Project 1-454] Reading design checkpoint '/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_1/design_1_axi_mem_intercon_imp_auto_us_df_1.dcp' for cell 'design_1_i/axi_mem_intercon/s01_couplers/auto_us_df'
+INFO: [Project 1-454] Reading design checkpoint '/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_auto_pc_0/design_1_axi_periph_imp_auto_pc_0.dcp' for cell 'design_1_i/axi_periph/s00_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_s00_data_fifo_0/design_1_axi_periph_imp_s00_data_fifo_0.dcp' for cell 'design_1_i/axi_periph/s00_couplers/s00_data_fifo'
+Netlist sorting complete. Time (s): cpu = 00:00:00.1 ; elapsed = 00:00:00.09 . Memory (MB): peak = 9568.801 ; gain = 0.000 ; free physical = 7965 ; free virtual = 14720
+INFO: [Netlist 29-17] Analyzing 270 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2024.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Finished Parsing XDC File [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Parsing XDC File [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_board.xdc] for cell 'design_1_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_board.xdc] for cell 'design_1_i/proc_sys_reset_0/U0'
+Parsing XDC File [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0.xdc] for cell 'design_1_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0.xdc] for cell 'design_1_i/proc_sys_reset_0/U0'
+Parsing XDC File [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_1/design_1_axi_dma_0_1.xdc] for cell 'design_1_i/axi_dma_0/U0'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_1/design_1_axi_dma_0_1.xdc:52]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_1/design_1_axi_dma_0_1.xdc:56]
+WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-1' -from list should not be empty. [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_1/design_1_axi_dma_0_1.xdc:61]
+Finished Parsing XDC File [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_1/design_1_axi_dma_0_1.xdc] for cell 'design_1_i/axi_dma_0/U0'
+Parsing XDC File [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_1/design_1_axi_dma_0_1_clocks.xdc] for cell 'design_1_i/axi_dma_0/U0'
+Finished Parsing XDC File [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_1/design_1_axi_dma_0_1_clocks.xdc] for cell 'design_1_i/axi_dma_0/U0'
+Parsing XDC File [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_0/design_1_axi_mem_intercon_imp_auto_us_df_0_clocks.xdc] for cell 'design_1_i/axi_mem_intercon/s00_couplers/auto_us_df/inst'
+WARNING: [Vivado_Tcl 4-935] Waiver ID 'CDC-1' is a duplicate and will not be added again. [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_0/design_1_axi_mem_intercon_imp_auto_us_df_0_clocks.xdc:18]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_0/design_1_axi_mem_intercon_imp_auto_us_df_0_clocks.xdc:24]
+WARNING: [Vivado_Tcl 4-920] Waiver ID 'CDC-1' -to list has >10000 objects! [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_0/design_1_axi_mem_intercon_imp_auto_us_df_0_clocks.xdc:27]
+WARNING: [Vivado_Tcl 4-920] Waiver ID 'CDC-1' -to list has >10000 objects! [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_0/design_1_axi_mem_intercon_imp_auto_us_df_0_clocks.xdc:30]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_0/design_1_axi_mem_intercon_imp_auto_us_df_0_clocks.xdc:33]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_0/design_1_axi_mem_intercon_imp_auto_us_df_0_clocks.xdc:36]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_0/design_1_axi_mem_intercon_imp_auto_us_df_0_clocks.xdc:39]
+WARNING: [Vivado_Tcl 4-935] Waiver ID 'CDC-10' is a duplicate and will not be added again. [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_0/design_1_axi_mem_intercon_imp_auto_us_df_0_clocks.xdc:45]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_0/design_1_axi_mem_intercon_imp_auto_us_df_0_clocks.xdc:48]
+WARNING: [Vivado_Tcl 4-935] Waiver ID 'CDC-11' is a duplicate and will not be added again. [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_0/design_1_axi_mem_intercon_imp_auto_us_df_0_clocks.xdc:54]
+Finished Parsing XDC File [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_0/design_1_axi_mem_intercon_imp_auto_us_df_0_clocks.xdc] for cell 'design_1_i/axi_mem_intercon/s00_couplers/auto_us_df/inst'
+Parsing XDC File [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_1/design_1_axi_mem_intercon_imp_auto_us_df_1_clocks.xdc] for cell 'design_1_i/axi_mem_intercon/s01_couplers/auto_us_df/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_1/design_1_axi_mem_intercon_imp_auto_us_df_1_clocks.xdc:15]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_1/design_1_axi_mem_intercon_imp_auto_us_df_1_clocks.xdc:18]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_1/design_1_axi_mem_intercon_imp_auto_us_df_1_clocks.xdc:24]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_1/design_1_axi_mem_intercon_imp_auto_us_df_1_clocks.xdc:33]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_1/design_1_axi_mem_intercon_imp_auto_us_df_1_clocks.xdc:36]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_1/design_1_axi_mem_intercon_imp_auto_us_df_1_clocks.xdc:39]
+WARNING: [Vivado_Tcl 4-935] Waiver ID 'CDC-10' is a duplicate and will not be added again. [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_1/design_1_axi_mem_intercon_imp_auto_us_df_1_clocks.xdc:45]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_1/design_1_axi_mem_intercon_imp_auto_us_df_1_clocks.xdc:48]
+WARNING: [Vivado_Tcl 4-935] Waiver ID 'CDC-11' is a duplicate and will not be added again. [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_1/design_1_axi_mem_intercon_imp_auto_us_df_1_clocks.xdc:54]
+Finished Parsing XDC File [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_1/design_1_axi_mem_intercon_imp_auto_us_df_1_clocks.xdc] for cell 'design_1_i/axi_mem_intercon/s01_couplers/auto_us_df/inst'
+Parsing XDC File [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_m00_data_fifo_0/design_1_axi_mem_intercon_imp_m00_data_fifo_0_clocks.xdc] for cell 'design_1_i/axi_mem_intercon/m00_couplers/m00_data_fifo/inst'
+WARNING: [Vivado_Tcl 4-939] Waiver ID 'LUTAR-1' object list should not be empty (perhaps an invalid wildcard was used or only unsupported objects). [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_m00_data_fifo_0/design_1_axi_mem_intercon_imp_m00_data_fifo_0_clocks.xdc:2]
+Finished Parsing XDC File [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_m00_data_fifo_0/design_1_axi_mem_intercon_imp_m00_data_fifo_0_clocks.xdc] for cell 'design_1_i/axi_mem_intercon/m00_couplers/m00_data_fifo/inst'
+Parsing XDC File [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_s00_data_fifo_0/design_1_axi_periph_imp_s00_data_fifo_0_clocks.xdc] for cell 'design_1_i/axi_periph/s00_couplers/s00_data_fifo/inst'
+WARNING: [Vivado_Tcl 4-939] Waiver ID 'LUTAR-1' object list should not be empty (perhaps an invalid wildcard was used or only unsupported objects). [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_s00_data_fifo_0/design_1_axi_periph_imp_s00_data_fifo_0_clocks.xdc:2]
+WARNING: [Vivado_Tcl 4-939] Waiver ID 'LUTAR-1' object list should not be empty (perhaps an invalid wildcard was used or only unsupported objects). [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_s00_data_fifo_0/design_1_axi_periph_imp_s00_data_fifo_0_clocks.xdc:6]
+Finished Parsing XDC File [/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_s00_data_fifo_0/design_1_axi_periph_imp_s00_data_fifo_0_clocks.xdc] for cell 'design_1_i/axi_periph/s00_couplers/s00_data_fifo/inst'
+INFO: [Project 1-1714] 15 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-1687] 17 scoped IP constraints or related sub-commands were skipped due to synthesis logic optimizations usually triggered by constant connectivity or unconnected output pins. To review the skipped constraints and messages, run the command 'set_param netlist.IPMsgFiltering false' before opening the design.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 10325.023 ; gain = 0.000 ; free physical = 7394 ; free virtual = 14162
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 66 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 54 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 8 instances
+
+open_run: Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 10687.734 ; gain = 1312.840 ; free physical = 6998 ; free virtual = 13770
+open_bd_design {/home/emre/projectZed/projectZed.srcs/sources_1/bd/design_1/design_1.bd}
+open_bd_design {/home/emre/projectZed/projectZed.srcs/sources_1/bd/design_1/design_1.bd}
+set_property mark_debug true [get_nets [list {design_1_i/custom_fifo_0/s_axis_tdata[1]} {design_1_i/custom_fifo_0/s_axis_tdata[2]} {design_1_i/custom_fifo_0/s_axis_tdata[3]} {design_1_i/custom_fifo_0/s_axis_tdata[4]} {design_1_i/custom_fifo_0/s_axis_tdata[0]} {design_1_i/custom_fifo_0/s_axis_tdata[7]} {design_1_i/custom_fifo_0/s_axis_tdata[5]} {design_1_i/custom_fifo_0/s_axis_tdata[6]}]]
+set_property mark_debug true [get_nets [list {design_1_i/custom_fifo_0/m_axis_tdata[6]} {design_1_i/custom_fifo_0/m_axis_tdata[0]} {design_1_i/custom_fifo_0/m_axis_tdata[1]} {design_1_i/custom_fifo_0/m_axis_tdata[2]} {design_1_i/custom_fifo_0/m_axis_tdata[3]} {design_1_i/custom_fifo_0/m_axis_tdata[4]} {design_1_i/custom_fifo_0/m_axis_tdata[5]} {design_1_i/custom_fifo_0/m_axis_tdata[7]}]]
+open_bd_design {/home/emre/projectZed/projectZed.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+connect_bd_net [get_bd_pins axi_dma_0/m_axis_mm2s_tdata] [get_bd_pins StreamingDataflowPar_0/s_axis_0_tdata]
+WARNING: [BD 41-1306] The connection to interface pin </axi_dma_0/m_axis_mm2s_tdata> is being overridden by the user with net <axi_dma_0_m_axis_mm2s_tdata>. This pin will not be connected as a part of interface connection <M_AXIS_MM2S>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </StreamingDataflowPar_0/s_axis_0_tdata> is being overridden by the user with net <axi_dma_0_m_axis_mm2s_tdata>. This pin will not be connected as a part of interface connection <s_axis_0>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+endgroup
+save_bd_design
+Wrote  : </home/emre/projectZed/projectZed.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/emre/projectZed/projectZed.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {StreamingDataflowPar_0_m_axis_0}]
+true
+delete_bd_objs [get_bd_nets axi_dma_0_m_axis_mm2s_tdata]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {axi_dma_0_M_AXIS_MM2S}]
+true
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {custom_fifo_0_m_axis_tdata }]
+true
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {processing_system7_0_M_AXI_GP0}]
+true
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {axi_dma_0_M_AXI_S2MM}]
+true
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {axi_dma_0_M_AXI_MM2S}]
+true
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {Conn}]
+true
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {axi_mem_intercon_M00_AXI}]
+true
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_intf_nets axi_dma_0_M_AXI_MM2S] {AXI_R_ADDRESS "Data and Trigger" AXI_R_DATA "Data and Trigger" AXI_W_ADDRESS "None" AXI_W_DATA "None" AXI_W_RESPONSE "None" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                          [get_bd_intf_nets axi_dma_0_M_AXI_S2MM] {AXI_R_ADDRESS "None" AXI_R_DATA "None" AXI_W_ADDRESS "Data and Trigger" AXI_W_DATA "Data and Trigger" AXI_W_RESPONSE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                          [get_bd_intf_nets axi_dma_0_M_AXIS_MM2S] {AXIS_SIGNALS "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                          [get_bd_intf_nets axi_mem_intercon_M00_AXI] {AXI_R_ADDRESS "Data and Trigger" AXI_R_DATA "Data and Trigger" AXI_W_ADDRESS "Data and Trigger" AXI_W_DATA "Data and Trigger" AXI_W_RESPONSE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                          [get_bd_intf_nets Conn] {AXI_R_ADDRESS "Data and Trigger" AXI_R_DATA "Data and Trigger" AXI_W_ADDRESS "Data and Trigger" AXI_W_DATA "Data and Trigger" AXI_W_RESPONSE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                          [get_bd_nets custom_fifo_0_m_axis_tdata] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_intf_nets processing_system7_0_M_AXI_GP0] {AXI_R_ADDRESS "Data and Trigger" AXI_R_DATA "Data and Trigger" AXI_W_ADDRESS "Data and Trigger" AXI_W_DATA "Data and Trigger" AXI_W_RESPONSE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                          [get_bd_intf_nets StreamingDataflowPar_0_m_axis_0] {AXIS_SIGNALS "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                         ]
+WARNING: [BD 5-1069] Please specify '-mon_dir' argument when interface mode is 'Monitor'. Using 'in' as default.
+WARNING: [BD 5-1069] Please specify '-mon_dir' argument when interface mode is 'Monitor'. Using 'in' as default.
+WARNING: [BD 5-1069] Please specify '-mon_dir' argument when interface mode is 'Monitor'. Using 'in' as default.
+WARNING: [BD 5-1069] Please specify '-mon_dir' argument when interface mode is 'Monitor'. Using 'in' as default.
+WARNING: [BD 5-1069] Please specify '-mon_dir' argument when interface mode is 'Monitor'. Using 'in' as default.
+WARNING: [BD 5-1069] Please specify '-mon_dir' argument when interface mode is 'Monitor'. Using 'in' as default.
+WARNING: [BD 5-1069] Please specify '-mon_dir' argument when interface mode is 'Monitor'. Using 'in' as default.
+Debug Automation : Instantiating new System ILA block '/system_ila_0' with mode MIX, 7 slot interface pins and 1 probe pins. Also setting parameters on this block, corresponding to newly enabled interface pins and probe pins as specified via Debug Automation.
+Debug Automation : Connecting source clock pin /processing_system7_0/FCLK_CLK0 to the following sink clock pins :
+/system_ila_0/clk
+Debug Automation : Connecting source reset pin /proc_sys_reset_0/peripheral_aresetn to the following sink reset pins :
+/system_ila_0/resetn
+Debug Automation : Connecting interface connection /axi_dma_0_M_AXI_MM2S, to System ILA slot interface pin /system_ila_0/SLOT_0_AXI for debug.
+Debug Automation : Connecting interface connection /axi_dma_0_M_AXI_S2MM, to System ILA slot interface pin /system_ila_0/SLOT_1_AXI for debug.
+Debug Automation : Connecting interface connection /axi_dma_0_M_AXIS_MM2S, to System ILA slot interface pin /system_ila_0/SLOT_2_AXIS for debug.
+Debug Automation : Connecting interface connection /axi_mem_intercon_M00_AXI, to System ILA slot interface pin /system_ila_0/SLOT_3_AXI for debug.
+Debug Automation : Connecting interface connection /Conn, to System ILA slot interface pin /system_ila_0/SLOT_4_AXI for debug.
+Debug Automation : Connecting interface connection /processing_system7_0_M_AXI_GP0, to System ILA slot interface pin /system_ila_0/SLOT_5_AXI for debug.
+Debug Automation : Connecting interface connection /StreamingDataflowPar_0_m_axis_0, to System ILA slot interface pin /system_ila_0/SLOT_6_AXIS for debug.
+Debug Automation : Connecting net /custom_fifo_0_m_axis_tdata, to System ILA probe pin /system_ila_0/probe0 for debug.
+endgroup
+save_bd_design
+Wrote  : </home/emre/projectZed/projectZed.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/emre/projectZed/projectZed.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+file mkdir /home/emre/projectZed/projectZed.srcs/constrs_1/new
+close [ open /home/emre/projectZed/projectZed.srcs/constrs_1/new/asd.xdc w ]
+add_files -fileset constrs_1 /home/emre/projectZed/projectZed.srcs/constrs_1/new/asd.xdc
+set_property target_constrs_file /home/emre/projectZed/projectZed.srcs/constrs_1/new/asd.xdc [current_fileset -constrset]
+save_constraints -force
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/emre/projectZed/projectZed.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp with file /home/emre/projectZed/projectZed.runs/synth_1/design_1_wrapper.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to any ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. 
+CRITICAL WARNING: [xilinx.com:ip:axi_dma:7.1-11] /axi_dma_0
+                   #################################### 
+                   S_AXIS_S2MM interface is unconnected
+                   ####################################
+Wrote  : </home/emre/projectZed/projectZed.srcs/sources_1/bd/design_1/design_1.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net Conn_WREADY as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net Conn_WDATA as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net Conn_RRESP as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net Conn_RREADY as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net Conn_BVALID as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net Conn_ARREADY as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net Conn_RVALID as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net Conn_BREADY as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net Conn_AWADDR as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net Conn_BRESP as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net Conn_ARVALID as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net Conn_RDATA as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net Conn_WVALID as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net Conn_ARADDR as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net Conn_AWVALID as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net Conn_AWREADY as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net StreamingDataflowPar_0_m_axis_0_TVALID as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net StreamingDataflowPar_0_m_axis_0_TREADY as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net StreamingDataflowPar_0_m_axis_0_TDATA as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXIS_MM2S_TDATA as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXIS_MM2S_TREADY as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXIS_MM2S_TVALID as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXIS_MM2S_TLAST as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXIS_MM2S_TKEEP as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_MM2S_RRESP as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_MM2S_RREADY as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_MM2S_RVALID as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_MM2S_ARLEN as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_MM2S_ARBURST as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_MM2S_ARCACHE as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_MM2S_ARADDR as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_MM2S_ARPROT as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_MM2S_ARREADY as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_MM2S_ARSIZE as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_MM2S_RDATA as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_MM2S_ARVALID as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_MM2S_RLAST as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_MM2S_BVALID as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_MM2S_WREADY as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_MM2S_AWREADY as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_S2MM_BREADY as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_S2MM_AWSIZE as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_S2MM_BRESP as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_S2MM_AWREADY as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_S2MM_AWVALID as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_S2MM_AWADDR as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_S2MM_AWPROT as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_S2MM_AWBURST as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_S2MM_WLAST as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_S2MM_BVALID as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_S2MM_WDATA as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_S2MM_AWCACHE as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_S2MM_WREADY as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_S2MM_WSTRB as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_S2MM_WVALID as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_S2MM_AWLEN as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_S2MM_RLAST as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_S2MM_ARREADY as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_S2MM_RDATA as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_dma_0_M_AXI_S2MM_RVALID as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_RID as it is marked for debug
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/system_ila_0/SLOT_3_AXI_rid'(1) to pin: '/processing_system7_0/S_AXI_HP0_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_ARREADY as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_ARPROT as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_RREADY as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_ARCACHE as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_ARLOCK as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_ARBURST as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_ARSIZE as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_ARLEN as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_AWID as it is marked for debug
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_AWSIZE as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_BRESP as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_AWLOCK as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_ARVALID as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_AWPROT as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_WID as it is marked for debug
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_AWBURST as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_WLAST as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_RDATA as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_AWLEN as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_RLAST as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_RRESP as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_AWVALID as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_AWADDR as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_AWQOS as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_BREADY as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_RVALID as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_ARADDR as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_AWREADY as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_WDATA as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_WSTRB as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_AWCACHE as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_WREADY as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_ARQOS as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_ARID as it is marked for debug
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_WVALID as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_BID as it is marked for debug
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/system_ila_0/SLOT_3_AXI_bid'(1) to pin: '/processing_system7_0/S_AXI_HP0_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net axi_mem_intercon_M00_AXI_BVALID as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net processing_system7_0_M_AXI_GP0_BRESP as it is marked for debug
+WARNING: [BD 41-3257] Drive strength cannot be preserved for ports connected to net processing_system7_0_M_AXI_GP0_RID as it is marked for debug
+INFO: [Common 17-14] Message 'BD 41-3257' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+Verilog Output written to : /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/system_ila_0/SLOT_3_AXI_rid'(1) to pin: '/processing_system7_0/S_AXI_HP0_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/system_ila_0/SLOT_3_AXI_bid'(1) to pin: '/processing_system7_0/S_AXI_HP0_BID'(6) - Only lower order bits will be connected.
+Verilog Output written to : /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/sim/design_1.v
+Verilog Output written to : /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/design_1_system_ila_0_0_ooc.xdc'
+Exporting to file /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/hw_handoff/design_1_system_ila_0_0.hwh
+Generated Hardware Definition File /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_0/bd_0/synth/design_1_system_ila_0_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_0/design_1_axi_mem_intercon_imp_auto_us_df_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_us_df .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_1/design_1_axi_mem_intercon_imp_auto_us_df_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/auto_us_df .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_m00_data_fifo_0/design_1_axi_mem_intercon_imp_m00_data_fifo_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/m00_data_fifo .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_0/design_1_axi_mem_intercon_imp_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_s00_data_fifo_0/design_1_axi_periph_imp_s00_data_fifo_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_periph/s00_couplers/s00_data_fifo .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_auto_pc_0/design_1_axi_periph_imp_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Hardware Definition File /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_mem_intercon_imp_auto_pc_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_mem_intercon_imp_auto_us_df_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_mem_intercon_imp_auto_us_df_1
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_mem_intercon_imp_m00_data_fifo_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_periph_imp_auto_pc_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_periph_imp_s00_data_fifo_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_system_ila_0_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_mem_intercon_imp_auto_pc_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 3570e232ad8c4e2d to dir: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/3/5/3570e232ad8c4e2d/design_1_axi_mem_intercon_imp_auto_pc_0_sim_netlist.vhdl to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_0/design_1_axi_mem_intercon_imp_auto_pc_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_0/design_1_axi_mem_intercon_imp_auto_pc_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/3/5/3570e232ad8c4e2d/design_1_axi_mem_intercon_imp_auto_pc_0_stub.v to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_0/design_1_axi_mem_intercon_imp_auto_pc_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_0/design_1_axi_mem_intercon_imp_auto_pc_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/3/5/3570e232ad8c4e2d/design_1_axi_mem_intercon_imp_auto_pc_0_sim_netlist.v to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_0/design_1_axi_mem_intercon_imp_auto_pc_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_0/design_1_axi_mem_intercon_imp_auto_pc_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/3/5/3570e232ad8c4e2d/design_1_axi_mem_intercon_imp_auto_pc_0_stub.vhdl to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_0/design_1_axi_mem_intercon_imp_auto_pc_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_0/design_1_axi_mem_intercon_imp_auto_pc_0_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/3/5/3570e232ad8c4e2d/design_1_axi_mem_intercon_imp_auto_pc_0.dcp to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_0/design_1_axi_mem_intercon_imp_auto_pc_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_0/design_1_axi_mem_intercon_imp_auto_pc_0.dcp
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_mem_intercon_imp_auto_pc_0, cache-ID = 3570e232ad8c4e2d; cache size = 45.196 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_mem_intercon_imp_auto_us_df_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 9721e95e86d5b4a4 to dir: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/9/7/9721e95e86d5b4a4/design_1_axi_mem_intercon_imp_auto_us_df_0_stub.v to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_0/design_1_axi_mem_intercon_imp_auto_us_df_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_0/design_1_axi_mem_intercon_imp_auto_us_df_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/9/7/9721e95e86d5b4a4/design_1_axi_mem_intercon_imp_auto_us_df_0_stub.vhdl to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_0/design_1_axi_mem_intercon_imp_auto_us_df_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_0/design_1_axi_mem_intercon_imp_auto_us_df_0_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/9/7/9721e95e86d5b4a4/design_1_axi_mem_intercon_imp_auto_us_df_0.dcp to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_0/design_1_axi_mem_intercon_imp_auto_us_df_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_0/design_1_axi_mem_intercon_imp_auto_us_df_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/9/7/9721e95e86d5b4a4/design_1_axi_mem_intercon_imp_auto_us_df_0_sim_netlist.v to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_0/design_1_axi_mem_intercon_imp_auto_us_df_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_0/design_1_axi_mem_intercon_imp_auto_us_df_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/9/7/9721e95e86d5b4a4/design_1_axi_mem_intercon_imp_auto_us_df_0_sim_netlist.vhdl to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_0/design_1_axi_mem_intercon_imp_auto_us_df_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_0/design_1_axi_mem_intercon_imp_auto_us_df_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_mem_intercon_imp_auto_us_df_0, cache-ID = 9721e95e86d5b4a4; cache size = 45.196 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_mem_intercon_imp_auto_us_df_1
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 9aa0d5cd7da48631 to dir: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/9/a/9aa0d5cd7da48631/design_1_axi_mem_intercon_imp_auto_us_df_1_stub.v to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_1/design_1_axi_mem_intercon_imp_auto_us_df_1_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_1/design_1_axi_mem_intercon_imp_auto_us_df_1_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/9/a/9aa0d5cd7da48631/design_1_axi_mem_intercon_imp_auto_us_df_1_sim_netlist.v to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_1/design_1_axi_mem_intercon_imp_auto_us_df_1_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_1/design_1_axi_mem_intercon_imp_auto_us_df_1_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/9/a/9aa0d5cd7da48631/design_1_axi_mem_intercon_imp_auto_us_df_1_sim_netlist.vhdl to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_1/design_1_axi_mem_intercon_imp_auto_us_df_1_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_1/design_1_axi_mem_intercon_imp_auto_us_df_1_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/9/a/9aa0d5cd7da48631/design_1_axi_mem_intercon_imp_auto_us_df_1_stub.vhdl to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_1/design_1_axi_mem_intercon_imp_auto_us_df_1_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_1/design_1_axi_mem_intercon_imp_auto_us_df_1_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/9/a/9aa0d5cd7da48631/design_1_axi_mem_intercon_imp_auto_us_df_1.dcp to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_1/design_1_axi_mem_intercon_imp_auto_us_df_1.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_df_1/design_1_axi_mem_intercon_imp_auto_us_df_1.dcp
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_mem_intercon_imp_auto_us_df_1, cache-ID = 9aa0d5cd7da48631; cache size = 45.196 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_mem_intercon_imp_m00_data_fifo_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 3cd5ad09f7f631dc to dir: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_m00_data_fifo_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/3/c/3cd5ad09f7f631dc/design_1_axi_mem_intercon_imp_m00_data_fifo_0_sim_netlist.v to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_m00_data_fifo_0/design_1_axi_mem_intercon_imp_m00_data_fifo_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_m00_data_fifo_0/design_1_axi_mem_intercon_imp_m00_data_fifo_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/3/c/3cd5ad09f7f631dc/design_1_axi_mem_intercon_imp_m00_data_fifo_0_stub.vhdl to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_m00_data_fifo_0/design_1_axi_mem_intercon_imp_m00_data_fifo_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_m00_data_fifo_0/design_1_axi_mem_intercon_imp_m00_data_fifo_0_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/3/c/3cd5ad09f7f631dc/design_1_axi_mem_intercon_imp_m00_data_fifo_0_stub.v to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_m00_data_fifo_0/design_1_axi_mem_intercon_imp_m00_data_fifo_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_m00_data_fifo_0/design_1_axi_mem_intercon_imp_m00_data_fifo_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/3/c/3cd5ad09f7f631dc/design_1_axi_mem_intercon_imp_m00_data_fifo_0.dcp to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_m00_data_fifo_0/design_1_axi_mem_intercon_imp_m00_data_fifo_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_m00_data_fifo_0/design_1_axi_mem_intercon_imp_m00_data_fifo_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/3/c/3cd5ad09f7f631dc/design_1_axi_mem_intercon_imp_m00_data_fifo_0_sim_netlist.vhdl to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_m00_data_fifo_0/design_1_axi_mem_intercon_imp_m00_data_fifo_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_m00_data_fifo_0/design_1_axi_mem_intercon_imp_m00_data_fifo_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_mem_intercon_imp_m00_data_fifo_0, cache-ID = 3cd5ad09f7f631dc; cache size = 45.196 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_periph_imp_auto_pc_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 89f73d8299260b5f to dir: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_auto_pc_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/8/9/89f73d8299260b5f/design_1_axi_periph_imp_auto_pc_0_stub.vhdl to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_auto_pc_0/design_1_axi_periph_imp_auto_pc_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_auto_pc_0/design_1_axi_periph_imp_auto_pc_0_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/8/9/89f73d8299260b5f/design_1_axi_periph_imp_auto_pc_0_stub.v to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_auto_pc_0/design_1_axi_periph_imp_auto_pc_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_auto_pc_0/design_1_axi_periph_imp_auto_pc_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/8/9/89f73d8299260b5f/design_1_axi_periph_imp_auto_pc_0_sim_netlist.vhdl to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_auto_pc_0/design_1_axi_periph_imp_auto_pc_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_auto_pc_0/design_1_axi_periph_imp_auto_pc_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/8/9/89f73d8299260b5f/design_1_axi_periph_imp_auto_pc_0.dcp to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_auto_pc_0/design_1_axi_periph_imp_auto_pc_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_auto_pc_0/design_1_axi_periph_imp_auto_pc_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/8/9/89f73d8299260b5f/design_1_axi_periph_imp_auto_pc_0_sim_netlist.v to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_auto_pc_0/design_1_axi_periph_imp_auto_pc_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_auto_pc_0/design_1_axi_periph_imp_auto_pc_0_sim_netlist.v
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_periph_imp_auto_pc_0, cache-ID = 89f73d8299260b5f; cache size = 45.196 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_periph_imp_s00_data_fifo_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 8ee07ccade9c8fa8 to dir: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_s00_data_fifo_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/8/e/8ee07ccade9c8fa8/design_1_axi_periph_imp_s00_data_fifo_0_sim_netlist.vhdl to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_s00_data_fifo_0/design_1_axi_periph_imp_s00_data_fifo_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_s00_data_fifo_0/design_1_axi_periph_imp_s00_data_fifo_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/8/e/8ee07ccade9c8fa8/design_1_axi_periph_imp_s00_data_fifo_0_stub.v to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_s00_data_fifo_0/design_1_axi_periph_imp_s00_data_fifo_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_s00_data_fifo_0/design_1_axi_periph_imp_s00_data_fifo_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/8/e/8ee07ccade9c8fa8/design_1_axi_periph_imp_s00_data_fifo_0.dcp to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_s00_data_fifo_0/design_1_axi_periph_imp_s00_data_fifo_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_s00_data_fifo_0/design_1_axi_periph_imp_s00_data_fifo_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/8/e/8ee07ccade9c8fa8/design_1_axi_periph_imp_s00_data_fifo_0_sim_netlist.v to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_s00_data_fifo_0/design_1_axi_periph_imp_s00_data_fifo_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_s00_data_fifo_0/design_1_axi_periph_imp_s00_data_fifo_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/emre/projectZed/projectZed.cache/ip/2024.2/8/e/8ee07ccade9c8fa8/design_1_axi_periph_imp_s00_data_fifo_0_stub.vhdl to /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_s00_data_fifo_0/design_1_axi_periph_imp_s00_data_fifo_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/emre/projectZed/projectZed.gen/sources_1/bd/design_1/ip/design_1_axi_periph_imp_s00_data_fifo_0/design_1_axi_periph_imp_s00_data_fifo_0_stub.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_periph_imp_s00_data_fifo_0, cache-ID = 8ee07ccade9c8fa8; cache size = 45.196 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_system_ila_0_0
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Apr  8 22:47:56 2025] Launched design_1_system_ila_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_system_ila_0_0_synth_1: /home/emre/projectZed/projectZed.runs/design_1_system_ila_0_0_synth_1/runme.log
+synth_1: /home/emre/projectZed/projectZed.runs/synth_1/runme.log
+[Tue Apr  8 22:47:56 2025] Launched impl_1...
+Run output will be captured here: /home/emre/projectZed/projectZed.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 11276.680 ; gain = 137.730 ; free physical = 6648 ; free virtual = 13513
+write_hw_platform -fixed -include_bit -force -file /home/emre/projectZed/design_1_wrapper.xsa
+INFO: [Project 1-1918] Creating Hardware Platform: /home/emre/projectZed/design_1_wrapper.xsa ...
+INFO: [Project 1-1943] The Hardware Platform can be used for Hardware
+INFO: [Project 1-1941] Successfully created Hardware Platform: /home/emre/projectZed/design_1_wrapper.xsa
+INFO: [Hsi 55-2053] elapsed time for repository (/opt/Xilinx/Vivado/2024.2/data/embeddedsw) loading 1 seconds
+INFO: [Vivado 12-8231] Launching Vitis
+INFO: [Vivado 12-417] Running vitis
+INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2024.2.0
+  ****** Build date   : Oct 30 2024-21:19:07
+    **** Build number : 2024.2.1730312347
+      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+      ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210248B4ABB4
+set_property PROGRAM.FILE {/home/emre/projectZed/projectZed.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {/home/emre/projectZed/projectZed.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/emre/projectZed/projectZed.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'design_1_i/system_ila_0/inst/ila_lib' at location 'uuid_CD4C83C823A6596D99AD09BE1335C6B0' from probes file, since it cannot be found on the programmed device.
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'design_1_i/system_ila_0/inst/ila_lib' at location 'uuid_CD4C83C823A6596D99AD09BE1335C6B0' from probes file, since it cannot be found on the programmed device.
+disconnect_hw_server localhost:3121
+open_bd_design {/home/emre/projectZed/projectZed.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+set_property HDL_ATTRIBUTE.DEBUG false [get_bd_intf_nets { axi_dma_0_M_AXIS_MM2S } ]
+disconnect_bd_intf_net [get_bd_intf_net axi_dma_0_M_AXIS_MM2S] [get_bd_intf_pins system_ila_0/SLOT_2_AXIS]
+apply_bd_automation -rule xilinx.com:bd_rule:resize [get_bd_cells system_ila_0]
+WARNING: [BD 5-1069] Please specify '-mon_dir' argument when interface mode is 'Monitor'. Using 'in' as default.
+WARNING: [BD 5-1069] Please specify '-mon_dir' argument when interface mode is 'Monitor'. Using 'in' as default.
+WARNING: [BD 5-1069] Please specify '-mon_dir' argument when interface mode is 'Monitor'. Using 'in' as default.
+WARNING: [BD 5-1069] Please specify '-mon_dir' argument when interface mode is 'Monitor'. Using 'in' as default.
+WARNING: [BD 5-1069] Please specify '-mon_dir' argument when interface mode is 'Monitor'. Using 'in' as default.
+WARNING: [BD 5-1069] Please specify '-mon_dir' argument when interface mode is 'Monitor'. Using 'in' as default.
+endgroup
+startgroup
+set_property HDL_ATTRIBUTE.DEBUG false [get_bd_intf_nets { axi_dma_0_M_AXI_S2MM } ]
+disconnect_bd_intf_net [get_bd_intf_net axi_dma_0_M_AXI_S2MM] [get_bd_intf_pins system_ila_0/SLOT_1_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:resize [get_bd_cells system_ila_0]
+WARNING: [BD 5-1069] Please specify '-mon_dir' argument when interface mode is 'Monitor'. Using 'in' as default.
+WARNING: [BD 5-1069] Please specify '-mon_dir' argument when interface mode is 'Monitor'. Using 'in' as default.
+WARNING: [BD 5-1069] Please specify '-mon_dir' argument when interface mode is 'Monitor'. Using 'in' as default.
+WARNING: [BD 5-1069] Please specify '-mon_dir' argument when interface mode is 'Monitor'. Using 'in' as default.
+WARNING: [BD 5-1069] Please specify '-mon_dir' argument when interface mode is 'Monitor'. Using 'in' as default.
+endgroup
+startgroup
+set_property HDL_ATTRIBUTE.DEBUG false [get_bd_intf_nets { axi_dma_0_M_AXI_MM2S } ]
+disconnect_bd_intf_net [get_bd_intf_net axi_dma_0_M_AXI_MM2S] [get_bd_intf_pins system_ila_0/SLOT_0_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:resize [get_bd_cells system_ila_0]
+WARNING: [BD 5-1069] Please specify '-mon_dir' argument when interface mode is 'Monitor'. Using 'in' as default.
+WARNING: [BD 5-1069] Please specify '-mon_dir' argument when interface mode is 'Monitor'. Using 'in' as default.
+WARNING: [BD 5-1069] Please specify '-mon_dir' argument when interface mode is 'Monitor'. Using 'in' as default.
+WARNING: [BD 5-1069] Please specify '-mon_dir' argument when interface mode is 'Monitor'. Using 'in' as default.
+endgroup
+startgroup
+set_property HDL_ATTRIBUTE.DEBUG false [get_bd_intf_nets { Conn } ]
+disconnect_bd_intf_net [get_bd_intf_net Conn] [get_bd_intf_pins system_ila_0/SLOT_1_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:resize [get_bd_cells system_ila_0]
+WARNING: [BD 5-1069] Please specify '-mon_dir' argument when interface mode is 'Monitor'. Using 'in' as default.
+WARNING: [BD 5-1069] Please specify '-mon_dir' argument when interface mode is 'Monitor'. Using 'in' as default.
+WARNING: [BD 5-1069] Please specify '-mon_dir' argument when interface mode is 'Monitor'. Using 'in' as default.
+endgroup
+startgroup
+set_property HDL_ATTRIBUTE.DEBUG false [get_bd_intf_nets { StreamingDataflowPar_0_m_axis_0 } ]
+disconnect_bd_intf_net [get_bd_intf_net StreamingDataflowPar_0_m_axis_0] [get_bd_intf_pins system_ila_0/SLOT_2_AXIS]
+apply_bd_automation -rule xilinx.com:bd_rule:resize [get_bd_cells system_ila_0]
+WARNING: [BD 5-1069] Please specify '-mon_dir' argument when interface mode is 'Monitor'. Using 'in' as default.
+WARNING: [BD 5-1069] Please specify '-mon_dir' argument when interface mode is 'Monitor'. Using 'in' as default.
+endgroup
+startgroup
+set_property HDL_ATTRIBUTE.DEBUG false [get_bd_intf_nets { processing_system7_0_M_AXI_GP0 } ]
+disconnect_bd_intf_net [get_bd_intf_net processing_system7_0_M_AXI_GP0] [get_bd_intf_pins system_ila_0/SLOT_1_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:resize [get_bd_cells system_ila_0]
+WARNING: [BD 5-1069] Please specify '-mon_dir' argument when interface mode is 'Monitor'. Using 'in' as default.
+endgroup
+startgroup
+set_property HDL_ATTRIBUTE.DEBUG false [get_bd_intf_nets { axi_mem_intercon_M00_AXI } ]
+disconnect_bd_intf_net [get_bd_intf_net axi_mem_intercon_M00_AXI] [get_bd_intf_pins system_ila_0/SLOT_0_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:resize [get_bd_cells system_ila_0]
+endgroup
+delete_bd_objs [get_bd_cells system_ila_0]
+startgroup
+set_property HDL_ATTRIBUTE.DEBUG false [get_bd_nets { custom_fifo_0_m_axis_tdata } ]
+endgroup
+startgroup
+set_property CONFIG.S00_HAS_DATA_FIFO {0} [get_bd_cells axi_periph]
+endgroup
+startgroup
+set_property -dict [list \
+  CONFIG.M00_HAS_DATA_FIFO {0} \
+  CONFIG.S00_HAS_DATA_FIFO {0} \
+  CONFIG.S01_HAS_DATA_FIFO {0} \
+] [get_bd_cells axi_mem_intercon]
+endgroup
+save_bd_design
+Wrote  : </home/emre/projectZed/projectZed.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/emre/projectZed/projectZed.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Apr  8 23:46:13 2025...

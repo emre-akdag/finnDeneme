@@ -1,0 +1,149 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Wed Mar 26 22:47:15 2025
+# Process ID         : 30727
+# Current directory  : /tmp/finn_dev_emre/vivado_stitch_proj_61b0zrs7
+# Command line       : vivado -mode batch -source make_project.tcl
+# Log file           : /tmp/finn_dev_emre/vivado_stitch_proj_61b0zrs7/vivado.log
+# Journal file       : /tmp/finn_dev_emre/vivado_stitch_proj_61b0zrs7/vivado.jou
+# Running On         : finn_dev_emre
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 22.04.1 LTS
+# Processor Detail   : AMD Ryzen 7 7840HS with Radeon 780M Graphics
+# CPU Frequency      : 3792.876 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 16
+# Host memory        : 7001 MB
+# Swap memory        : 1073 MB
+# Total Virtual      : 8075 MB
+# Available Virtual  : 6998 MB
+#-----------------------------------------------------------
+source make_project.tcl
+# create_project finn_vivado_stitch_proj /tmp/finn_dev_emre/vivado_stitch_proj_61b0zrs7 -part xc7z020clg400-1
+# set_msg_config -id {[BD 41-1753]} -suppress
+# set_property ip_repo_paths [list $::env(FINN_ROOT)/finn-rtllib/memstream /tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_0_IODMA_hls_0_mklxso4z/project_StreamingDataflowPartition_0_IODMA_hls_0/sol1/impl/ip] [current_project]
+# update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/emre/Documents/finn/finn-rtllib/memstream'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_0_IODMA_hls_0_mklxso4z/project_StreamingDataflowPartition_0_IODMA_hls_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2024.2/data/ip'.
+# create_bd_design StreamingDataflowPartition_0
+Wrote  : </tmp/finn_dev_emre/vivado_stitch_proj_61b0zrs7/finn_vivado_stitch_proj.srcs/sources_1/bd/StreamingDataflowPartition_0/StreamingDataflowPartition_0.bd> 
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_0_IODMA_hls_0:1.0 StreamingDataflowPartition_0_IODMA_hls_0
+# make_bd_pins_external [get_bd_pins StreamingDataflowPartition_0_IODMA_hls_0/ap_clk]
+# set_property name ap_clk [get_bd_ports ap_clk_0]
+# make_bd_pins_external [get_bd_pins StreamingDataflowPartition_0_IODMA_hls_0/ap_rst_n]
+# set_property name ap_rst_n [get_bd_ports ap_rst_n_0]
+# make_bd_intf_pins_external [get_bd_intf_pins StreamingDataflowPartition_0_IODMA_hls_0/s_axi_control]
+# make_bd_intf_pins_external [get_bd_intf_pins StreamingDataflowPartition_0_IODMA_hls_0/m_axi_gmem]
+# set_property name m_axi_gmem0 [get_bd_intf_ports m_axi_gmem_0]
+# assign_bd_address
+INFO: [BD 41-3093] Triggering Legacy Auto Assign Algorithm
+Slave segment '/StreamingDataflowPartition_0_IODMA_hls_0/s_axi_control/Reg' is being assigned into address space '/s_axi_control_0' at <0x0000_0000 [ 64K ]>.
+Slave segment '/m_axi_gmem0/Reg' is being assigned into address space '/StreamingDataflowPartition_0_IODMA_hls_0/Data_m_axi_gmem' at <0x44A0_0000 [ 64K ]>.
+# set_property offset 0 [get_bd_addr_segs {StreamingDataflowPartition_0_IODMA_hls_0/Data_m_axi_gmem/SEG_m_axi_gmem0_Reg}]
+# set_property range 4G [get_bd_addr_segs {StreamingDataflowPartition_0_IODMA_hls_0/Data_m_axi_gmem/SEG_m_axi_gmem0_Reg}]
+# make_bd_intf_pins_external [get_bd_intf_pins StreamingDataflowPartition_0_IODMA_hls_0/out_V]
+# set_property name m_axis_0 [get_bd_intf_ports out_V_0]
+# set_property CONFIG.FREQ_HZ 50000000 [get_bd_ports /ap_clk]
+# validate_bd_design
+# save_bd_design
+Wrote  : </tmp/finn_dev_emre/vivado_stitch_proj_61b0zrs7/finn_vivado_stitch_proj.srcs/sources_1/bd/StreamingDataflowPartition_0/StreamingDataflowPartition_0.bd> 
+# make_wrapper -files [get_files /tmp/finn_dev_emre/vivado_stitch_proj_61b0zrs7/finn_vivado_stitch_proj.srcs/sources_1/bd/StreamingDataflowPartition_0/StreamingDataflowPartition_0.bd] -top
+INFO: [BD 41-1662] The design 'StreamingDataflowPartition_0.bd' is already validated. Therefore parameter propagation will not be re-run.
+Verilog Output written to : /tmp/finn_dev_emre/vivado_stitch_proj_61b0zrs7/finn_vivado_stitch_proj.gen/sources_1/bd/StreamingDataflowPartition_0/synth/StreamingDataflowPartition_0.v
+Verilog Output written to : /tmp/finn_dev_emre/vivado_stitch_proj_61b0zrs7/finn_vivado_stitch_proj.gen/sources_1/bd/StreamingDataflowPartition_0/sim/StreamingDataflowPartition_0.v
+Verilog Output written to : /tmp/finn_dev_emre/vivado_stitch_proj_61b0zrs7/finn_vivado_stitch_proj.gen/sources_1/bd/StreamingDataflowPartition_0/hdl/StreamingDataflowPartition_0_wrapper.v
+# add_files -norecurse /tmp/finn_dev_emre/vivado_stitch_proj_61b0zrs7/finn_vivado_stitch_proj.srcs/sources_1/bd/StreamingDataflowPartition_0/hdl/StreamingDataflowPartition_0_wrapper.v
+INFO: [Project 1-1716] Could not find the wrapper file /tmp/finn_dev_emre/vivado_stitch_proj_61b0zrs7/finn_vivado_stitch_proj.srcs/sources_1/bd/StreamingDataflowPartition_0/hdl/StreamingDataflowPartition_0_wrapper.v, checking in project .gen location instead.
+INFO: [Vivado 12-12390] Found file /tmp/finn_dev_emre/vivado_stitch_proj_61b0zrs7/finn_vivado_stitch_proj.gen/sources_1/bd/StreamingDataflowPartition_0/hdl/StreamingDataflowPartition_0_wrapper.v, adding it to Project
+# set_property top StreamingDataflowPartition_0_wrapper [current_fileset]
+# ipx::package_project -root_dir /tmp/finn_dev_emre/vivado_stitch_proj_61b0zrs7/ip -vendor xilinx_finn -library finn -taxonomy /UserIP -module StreamingDataflowPartition_0 -import_files
+INFO: [BD 41-1662] The design 'StreamingDataflowPartition_0.bd' is already validated. Therefore parameter propagation will not be re-run.
+Verilog Output written to : /tmp/finn_dev_emre/vivado_stitch_proj_61b0zrs7/finn_vivado_stitch_proj.gen/sources_1/bd/StreamingDataflowPartition_0/synth/StreamingDataflowPartition_0.v
+Verilog Output written to : /tmp/finn_dev_emre/vivado_stitch_proj_61b0zrs7/finn_vivado_stitch_proj.gen/sources_1/bd/StreamingDataflowPartition_0/sim/StreamingDataflowPartition_0.v
+Verilog Output written to : /tmp/finn_dev_emre/vivado_stitch_proj_61b0zrs7/finn_vivado_stitch_proj.gen/sources_1/bd/StreamingDataflowPartition_0/hdl/StreamingDataflowPartition_0_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_0_IODMA_hls_0 .
+Exporting to file /tmp/finn_dev_emre/vivado_stitch_proj_61b0zrs7/finn_vivado_stitch_proj.gen/sources_1/bd/StreamingDataflowPartition_0/hw_handoff/StreamingDataflowPartition_0.hwh
+Generated Hardware Definition File /tmp/finn_dev_emre/vivado_stitch_proj_61b0zrs7/finn_vivado_stitch_proj.gen/sources_1/bd/StreamingDataflowPartition_0/synth/StreamingDataflowPartition_0.hwdef
+WARNING: [IP_Flow 19-11888] Component Definition 'xilinx_finn:finn:StreamingDataflowPartition_0:1.0 (StreamingDataflowPartition_0_v1_0)': IP description "StreamingDataflowPartition_0_v1_0" is not meaningful: same as name or display name
+INFO: [IP_Flow 19-7067] Note that bus interface 's_axi_control_0' has a fixed FREQ_HZ of '50000000'. This value will be respected whenever this IP is instantiated in IP Integrator.
+INFO: [IP_Flow 19-7067] Note that bus interface 'm_axi_gmem0' has a fixed FREQ_HZ of '50000000'. This value will be respected whenever this IP is instantiated in IP Integrator.
+INFO: [IP_Flow 19-7067] Note that bus interface 'm_axis_0' has a fixed FREQ_HZ of '50000000'. This value will be respected whenever this IP is instantiated in IP Integrator.
+INFO: [IP_Flow 19-7067] Note that bus interface 'CLK.AP_CLK' has a fixed FREQ_HZ of '50000000'. This value will be respected whenever this IP is instantiated in IP Integrator.
+INFO: [IP_Flow 19-2181] Payment is not required for this core.
+WARNING: [IP_Flow 19-2187] The Product Guide file is missing.
+# set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+# ipx::remove_segment -quiet m_axi_gmem0:APERTURE_0 [ipx::get_address_spaces m_axi_gmem0 -of_objects [ipx::current_core]]
+# set_property core_revision 2 [ipx::find_open_core xilinx_finn:finn:StreamingDataflowPartition_0:1.0]
+# ipx::create_xgui_files [ipx::find_open_core xilinx_finn:finn:StreamingDataflowPartition_0:1.0]
+# set_property value_resolve_type user [ipx::get_bus_parameters -of [ipx::get_bus_interfaces -of [ipx::current_core ]]]
+# set core [ipx::current_core]
+# file copy -force data ip/
+# set file_group [ipx::add_file_group -type software_driver {} $core]
+# set_property type mdd       [ipx::add_file data/finn_design.mdd $file_group]
+# set_property type tclSource [ipx::add_file data/finn_design.tcl $file_group]
+# set impl_files [ipx::get_file_groups xilinx_implementation -of $core]
+# foreach xci [ipx::get_files -of $impl_files {*.xci}] {
+#     ipx::remove_file [get_property NAME $xci] $impl_files
+# }
+# foreach port [get_bd_intf_ports -filter {CONFIG.PROTOCOL==AXI4LITE}] {
+#     set pin $port
+#     set awidth ""
+#     while { $awidth == "" } {
+#         set pins [get_bd_intf_pins -of [get_bd_intf_nets -boundary_type lower -of $pin]]
+#         set kill [lsearch $pins $pin]
+#         if { $kill >= 0 } { set pins [lreplace $pins $kill $kill] }
+#         if { [llength $pins] != 1 } { break }
+#         set pin [lindex $pins 0]
+#         set awidth [get_property CONFIG.ADDR_WIDTH $pin]
+#     }
+#     if { $awidth == "" } {
+#        puts "CRITICAL WARNING: Unable to construct address map for $port."
+#     } {
+#        set range [expr 2**$awidth]
+#        set range [expr $range < 4096 ? 4096 : $range]
+#        puts "INFO: Building address map for $port: 0+:$range"
+#        set name [get_property NAME $port]
+#        set addr_block [ipx::add_address_block Reg0 [ipx::add_memory_map $name $core]]
+#        set_property range $range $addr_block
+#        set_property slave_memory_map_ref $name [ipx::get_bus_interfaces $name -of $core]
+#     }
+# }
+INFO: Building address map for /s_axi_control_0: 0+:4096
+# ipx::update_checksums $core
+# ipx::save_core $core
+# file rename -force ip/component.xml ip/component.bak
+# set ifile [open ip/component.bak r]
+# set ofile [open ip/component.xml w]
+# set buf [list]
+# set kill 0
+# while { [eof $ifile] != 1 } {
+#     gets $ifile line
+#     if { [string match {*<spirit:fileSet>*} $line] == 1 } {
+#         foreach l $buf { puts $ofile $l }
+#         set buf [list $line]
+#     } elseif { [llength $buf] > 0 } {
+#         lappend buf $line
+# 
+#         if { [string match {*</spirit:fileSet>*} $line] == 1 } {
+#             if { $kill == 0 } { foreach l $buf { puts $ofile $l } }
+#             set buf [list]
+#             set kill 0
+#         } elseif { [string match {*<xilinx:subCoreRef>*} $line] == 1 } {
+#             set kill 1
+#         }
+#     } else {
+#         puts $ofile $line
+#     }
+# }
+# close $ifile
+# close $ofile
+# set all_v_files [get_files -filter {USED_IN_SYNTHESIS == 1 && (FILE_TYPE == Verilog || FILE_TYPE == SystemVerilog || FILE_TYPE =="Verilog Header")}]
+# set fp [open /tmp/finn_dev_emre/vivado_stitch_proj_61b0zrs7/all_verilog_srcs.txt w]
+# foreach vf $all_v_files {puts $fp $vf}
+# close $fp
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 26 22:47:21 2025...

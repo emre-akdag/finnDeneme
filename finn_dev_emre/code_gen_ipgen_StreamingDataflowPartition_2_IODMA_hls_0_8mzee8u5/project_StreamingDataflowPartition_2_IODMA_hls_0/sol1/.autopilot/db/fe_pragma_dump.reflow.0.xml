@@ -1,0 +1,12 @@
+<pragmas>
+<pragma file="top_StreamingDataflowPartition_2_IODMA_hls_0.cpp" line="22" pragmaType="dataflow" parentfunction="StreamingDataflowPartition_2_IODMA_hls_0" disable_start_propagation="0"/>
+<pragma file="top_StreamingDataflowPartition_2_IODMA_hls_0.cpp" line="17" pragmaType="interface" parentfunction="StreamingDataflowPartition_2_IODMA_hls_0" mode="s_axilite" port="numReps" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="top_StreamingDataflowPartition_2_IODMA_hls_0.cpp" line="18" pragmaType="interface" parentfunction="StreamingDataflowPartition_2_IODMA_hls_0" mode="s_axilite" port="" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="top_StreamingDataflowPartition_2_IODMA_hls_0.cpp" line="19" pragmaType="interface" parentfunction="StreamingDataflowPartition_2_IODMA_hls_0" mode="axis" port="in0_V" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="top_StreamingDataflowPartition_2_IODMA_hls_0.cpp" line="20" pragmaType="interface" parentfunction="StreamingDataflowPartition_2_IODMA_hls_0" mode="m_axi" port="out_V" bundle="" offset="slave" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="top_StreamingDataflowPartition_2_IODMA_hls_0.cpp" line="21" pragmaType="interface" parentfunction="StreamingDataflowPartition_2_IODMA_hls_0" mode="s_axilite" port="out_V" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="/home/emre/Documents/finn/deps/finn-hlslib/dma.h" line="154" pragmaType="pipeline" parentfunction="Stream2Mem" off="0" ii="1" rewind="0" style="flp"/>
+<pragma file="/home/emre/Documents/finn/deps/finn-hlslib/dma.h" line="154" pragmaType="pipeline" parentfunction="Stream2Mem" off="0" ii="1" rewind="0" style="flp"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+</pragmas>

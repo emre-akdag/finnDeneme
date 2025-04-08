@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "StreamingDataflowPartition_1_MVAU_hls_2",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "StreamingDataflowPartition_1_MVAU_hls_2"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_MVAU_hls_2_738qp6bw/hls_syn_StreamingDataflowPartition_1_MVAU_hls_2.tcl",
+    "sourceLine": 29,
+    "success": true
+  }
+]

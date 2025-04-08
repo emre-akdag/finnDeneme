@@ -1,0 +1,148 @@
+
+
+================================================================
+== Vitis HLS Report for 'StreamingDataflowPartition_1_LabelSelect_hls_0_Pipeline_VITIS_LOOP_488_3'
+================================================================
+* Date:           Wed Mar 26 22:47:51 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        project_StreamingDataflowPartition_1_LabelSelect_hls_0
+* Solution:       sol1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  20.00 ns|  6.159 ns|     5.40 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |       11|       11|  0.220 us|  0.220 us|   10|   10|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_488_3  |        9|        9|         1|          1|          1|    10|  yes(flp)|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     53|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|     72|    -|
+|Register         |        -|    -|      18|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      18|    125|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |block_fu_122_p2                   |         +|   0|  0|  13|           4|           1|
+    |cmp_fu_95_p2                      |      icmp|   0|  0|  13|           4|           4|
+    |icmp_ln488_fu_128_p2              |      icmp|   0|  0|  13|           4|           4|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    |select_ln509_1_fu_114_p3          |    select|   0|  0|   4|           1|           4|
+    |select_ln509_fu_105_p3            |    select|   0|  0|   8|           1|           8|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  53|          15|          22|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------------------+----+-----------+-----+-----------+
+    |                        Name                        | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                                         |   9|          2|    1|          2|
+    |ap_sig_allocacmp_block_13_load                      |   9|          2|    4|          8|
+    |ap_sig_allocacmp_conv2_i_i12_lcssa_lcssa17_i2_load  |   9|          2|    8|         16|
+    |ap_sig_allocacmp_p_load                             |   9|          2|    4|          8|
+    |block_13_fu_50                                      |   9|          2|    4|          8|
+    |conv2_i_i12_lcssa_lcssa17_i2_fu_46                  |   9|          2|    8|         16|
+    |empty_fu_42                                         |   9|          2|    4|          8|
+    |in0_V_TDATA_blk_n                                   |   9|          2|    1|          2|
+    +----------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                               |  72|         16|   34|         68|
+    +----------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------+---+----+-----+-----------+
+    |                Name                | FF| LUT| Bits| Const Bits|
+    +------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                           |  1|   0|    1|          0|
+    |ap_done_reg                         |  1|   0|    1|          0|
+    |block_13_fu_50                      |  4|   0|    4|          0|
+    |conv2_i_i12_lcssa_lcssa17_i2_fu_46  |  8|   0|    8|          0|
+    |empty_fu_42                         |  4|   0|    4|          0|
+    +------------------------------------+---+----+-----+-----------+
+    |Total                               | 18|   0|   18|          0|
+    +------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------+-----+-----+------------+--------------------------------------------------------------------------+--------------+
+|        RTL Ports        | Dir | Bits|  Protocol  |                               Source Object                              |    C Type    |
++-------------------------+-----+-----+------------+--------------------------------------------------------------------------+--------------+
+|ap_clk                   |   in|    1|  ap_ctrl_hs|  StreamingDataflowPartition_1_LabelSelect_hls_0_Pipeline_VITIS_LOOP_488_3|  return value|
+|ap_rst                   |   in|    1|  ap_ctrl_hs|  StreamingDataflowPartition_1_LabelSelect_hls_0_Pipeline_VITIS_LOOP_488_3|  return value|
+|ap_start                 |   in|    1|  ap_ctrl_hs|  StreamingDataflowPartition_1_LabelSelect_hls_0_Pipeline_VITIS_LOOP_488_3|  return value|
+|ap_done                  |  out|    1|  ap_ctrl_hs|  StreamingDataflowPartition_1_LabelSelect_hls_0_Pipeline_VITIS_LOOP_488_3|  return value|
+|ap_idle                  |  out|    1|  ap_ctrl_hs|  StreamingDataflowPartition_1_LabelSelect_hls_0_Pipeline_VITIS_LOOP_488_3|  return value|
+|ap_ready                 |  out|    1|  ap_ctrl_hs|  StreamingDataflowPartition_1_LabelSelect_hls_0_Pipeline_VITIS_LOOP_488_3|  return value|
+|in0_V_TVALID             |   in|    1|        axis|                                                                     in0_V|       pointer|
+|in0_V_TDATA              |   in|    8|        axis|                                                                     in0_V|       pointer|
+|in0_V_TREADY             |  out|    1|        axis|                                                                     in0_V|       pointer|
+|select_ln509_out         |  out|    8|      ap_vld|                                                          select_ln509_out|       pointer|
+|select_ln509_out_ap_vld  |  out|    1|      ap_vld|                                                          select_ln509_out|       pointer|
++-------------------------+-----+-----+------------+--------------------------------------------------------------------------+--------------+
+

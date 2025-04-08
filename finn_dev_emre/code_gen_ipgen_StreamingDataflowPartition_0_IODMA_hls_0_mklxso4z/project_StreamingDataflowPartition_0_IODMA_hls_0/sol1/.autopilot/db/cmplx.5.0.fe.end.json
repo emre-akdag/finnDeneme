@@ -1,0 +1,92 @@
+{
+    "1": {
+        "name": "Mem2Stream_Batch<64u, 784u>_Pipeline_VITIS_LOOP_140_1",
+        "file": "\/home\/emre\/Documents\/finn\/deps\/finn-hlslib\/dma.h",
+        "fileloc": "170",
+        "instructions": "20",
+        "total_instructions": "20",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "StreamingDataWidthConverter_Batch<64u, 8u, 98u>",
+        "file": "\/home\/emre\/Documents\/finn\/deps\/finn-hlslib\/streamtools.h",
+        "fileloc": "516",
+        "instructions": "12",
+        "total_instructions": "47",
+        "calls": "5",
+        "basicblocks": "1"
+    },
+    "3": {
+        "name": "Mem2Stream_Batch<64u, 784u>",
+        "file": "\/home\/emre\/Documents\/finn\/deps\/finn-hlslib\/dma.h",
+        "fileloc": "161",
+        "instructions": "40",
+        "total_instructions": "80",
+        "calls": "1 4",
+        "basicblocks": "7",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "StreamingDataflowPartition_0_IODMA_hls_0",
+        "file": "top_StreamingDataflowPartition_0_IODMA_hls_0.cpp",
+        "fileloc": "15",
+        "instructions": "23",
+        "total_instructions": "150",
+        "calls": "3 2",
+        "basicblocks": "1"
+    },
+    "4": {
+        "name": "Mem2Stream_Batch<64u, 784u>_Pipeline_VITIS_LOOP_140_11",
+        "file": "\/home\/emre\/Documents\/finn\/deps\/finn-hlslib\/dma.h",
+        "fileloc": "174",
+        "instructions": "20",
+        "total_instructions": "20",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "5": {
+        "name": "StreamingDataWidthConverter_Batch<64u, 8u, 98u>_Pipeline_VITIS_LOOP_526_1",
+        "file": "\/home\/emre\/Documents\/finn\/deps\/finn-hlslib\/streamtools.h",
+        "fileloc": "516",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "6",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

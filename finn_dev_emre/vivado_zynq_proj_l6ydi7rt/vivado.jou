@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Wed Mar 26 22:52:39 2025
+# Process ID         : 31556
+# Current directory  : /tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt
+# Command line       : vivado -mode batch -source /tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/ip_config.tcl
+# Log file           : /tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/vivado.log
+# Journal file       : /tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/vivado.jou
+# Running On         : finn_dev_emre
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 22.04.1 LTS
+# Processor Detail   : AMD Ryzen 7 7840HS with Radeon 780M Graphics
+# CPU Frequency      : 3792.876 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 16
+# Host memory        : 7001 MB
+# Swap memory        : 1073 MB
+# Total Virtual      : 8075 MB
+# Available Virtual  : 6940 MB
+#-----------------------------------------------------------
+source /tmp/finn_dev_emre/vivado_zynq_proj_l6ydi7rt/ip_config.tcl

@@ -1,0 +1,18 @@
+18:22:33 INFO  : updated workspace path: 
+18:22:35 INFO  : Successfully created repository data at /tmp/rigel_lopper_emre11348296001304725620
+18:22:35 INFO  : bash, -c, source /opt/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /opt/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_emre5599049328728119798 -r /tmp/rigel_lopper_emre11348296001304725620/.repo.yaml && deactivate
+18:22:35 INFO  : Embedded Template List generated successfully
+18:22:35 INFO  : bash, -c, source /opt/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /opt/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//repo.py -st  /opt/Xilinx/Vitis/2024.2/data/embeddedsw && deactivate
+18:22:36 INFO  : Successfully created repository data at /tmp/rigel_lopper_emre17677712331108648413
+18:22:36 INFO  : bash, -c, source /opt/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /opt/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_emre12842002662172882783 -r /tmp/rigel_lopper_emre17677712331108648413/.repo.yaml && deactivate
+18:22:36 INFO  : Embedded Template List generated successfully
+18:22:44 INFO  : bash, -c, source /opt/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /opt/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//repo.py -st  /opt/Xilinx/Vitis/2024.2/data/embeddedsw && deactivate
+22:55:09 INFO  : updated workspace path: 
+22:55:10 INFO  : Successfully created repository data at /tmp/rigel_lopper_emre12179464909069136039
+22:55:10 INFO  : bash, -c, source /opt/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /opt/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_emre7911173618251284318 -r /tmp/rigel_lopper_emre12179464909069136039/.repo.yaml && deactivate
+22:55:11 INFO  : Embedded Template List generated successfully
+22:55:11 INFO  : bash, -c, source /opt/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /opt/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//repo.py -st  /opt/Xilinx/Vitis/2024.2/data/embeddedsw && deactivate
+22:55:11 INFO  : Successfully created repository data at /tmp/rigel_lopper_emre115626155638230691
+22:55:11 INFO  : bash, -c, source /opt/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /opt/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_emre9573718869788284951 -r /tmp/rigel_lopper_emre115626155638230691/.repo.yaml && deactivate
+22:55:12 INFO  : Embedded Template List generated successfully
+22:55:21 INFO  : bash, -c, source /opt/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /opt/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//repo.py -st  /opt/Xilinx/Vitis/2024.2/data/embeddedsw && deactivate

@@ -1,0 +1,159 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.2 (64-bit)
+  **** SW Build 5238294 on Nov  8 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Wed Mar 26 22:47:35 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vitis/2024.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user '' on host 'finn_dev_emre' (Linux_x86_64 version 6.12.5-linuxkit) on Wed Mar 26 22:47:36 IST 2025
+INFO: [HLS 200-10] On os Ubuntu 22.04.1 LTS
+INFO: [HLS 200-10] In directory '/tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv'
+WARNING: [HLS 200-2053] The vitis_hls executable is deprecated. Consider using vitis-run --mode hls --tcl
+Sourcing Tcl script '/tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv/hls_syn_StreamingDataflowPartition_1_LabelSelect_hls_0.tcl'
+INFO: [HLS 200-1510] Running: source /tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv/hls_syn_StreamingDataflowPartition_1_LabelSelect_hls_0.tcl
+HLS project: project_StreamingDataflowPartition_1_LabelSelect_hls_0
+HW source dir: /tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv
+finn-hlslib dir: /home/emre/Documents/finn/deps/finn-hlslib
+custom HLS dir: /home/emre/Documents/finn/custom_hls
+INFO: [HLS 200-1510] Running: open_project project_StreamingDataflowPartition_1_LabelSelect_hls_0 
+INFO: [HLS 200-10] Creating and opening project '/tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv/project_StreamingDataflowPartition_1_LabelSelect_hls_0'.
+INFO: [HLS 200-1510] Running: add_files /tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv/top_StreamingDataflowPartition_1_LabelSelect_hls_0.cpp -cflags -std=c++14 -I/home/emre/Documents/finn/deps/finn-hlslib -I/home/emre/Documents/finn/custom_hls 
+INFO: [HLS 200-10] Adding design file '/tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv/top_StreamingDataflowPartition_1_LabelSelect_hls_0.cpp' to the project
+INFO: [HLS 200-1510] Running: set_top StreamingDataflowPartition_1_LabelSelect_hls_0 
+INFO: [HLS 200-1510] Running: open_solution sol1 
+INFO: [HLS 200-10] Creating and opening solution '/tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1510] Running: config_compile -disable_unroll_code_size_check -pipeline_style flp 
+WARNING: [XFORM 203-506] Disable code size check when do loop unroll.
+INFO: [HLS 200-1510] Running: config_interface -m_axi_addr64 
+INFO: [HLS 200-1510] Running: config_rtl -module_auto_prefix 
+INFO: [HLS 200-1510] Running: config_rtl -deadlock_detection none 
+INFO: [HLS 200-1510] Running: create_clock -period 20 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 20ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 307.844 MB.
+INFO: [HLS 200-10] Analyzing design file 'top_StreamingDataflowPartition_1_LabelSelect_hls_0.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 4.31 seconds. CPU system time: 0.97 seconds. Elapsed time: 5.77 seconds; current allocated memory: 314.871 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 356 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 96 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 39 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 31 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 31 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 18 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 18 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 18 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 18 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 19 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 19 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 18 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 18 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 18 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 21 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 30 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_491_4' is marked as complete unroll implied by the pipeline pragma (/home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:491:25)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_500_5' is marked as complete unroll implied by the pipeline pragma (/home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:500:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_507_6' is marked as complete unroll implied by the pipeline pragma (/home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:507:27)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_483_2' (/home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:483:23) in function 'LabelSelect_Batch<10u, 1u, 1u, ap_uint<4>, ap_uint<8> >' completely with a factor of 1 (/home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:467:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_491_4' (/home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:491:25) in function 'LabelSelect_Batch<10u, 1u, 1u, ap_uint<4>, ap_uint<8> >' completely with a factor of 1 (/home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:467:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_507_6' (/home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:507:27) in function 'LabelSelect_Batch<10u, 1u, 1u, ap_uint<4>, ap_uint<8> >' completely with a factor of 1 (/home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:467:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_500_5' (/home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:500:27) in function 'LabelSelect_Batch<10u, 1u, 1u, ap_uint<4>, ap_uint<8> >' completely with a factor of 1 (/home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:467:0)
+INFO: [HLS 214-178] Inlining function 'void LabelSelect_Batch<10u, 1u, 1u, ap_uint<4>, ap_uint<8> >(hls::stream<ap_uint<(1u) * (ap_uint<4>::width)>, 0>&, hls::stream<ap_uint<8>, 0>&, unsigned int)' into 'StreamingDataflowPartition_1_LabelSelect_hls_0(hls::stream<ap_uint<4>, 0>&, hls::stream<ap_uint<8>, 0>&)' (top_StreamingDataflowPartition_1_LabelSelect_hls_0.cpp:14:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.09 seconds. CPU system time: 0.53 seconds. Elapsed time: 7.33 seconds; current allocated memory: 323.750 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 323.750 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 323.930 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 324.953 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 347.387 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 348.520 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'StreamingDataflowPartition_1_LabelSelect_hls_0' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'StreamingDataflowPartition_1_LabelSelect_hls_0_Pipeline_VITIS_LOOP_488_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_488_3'.
+WARNING: [HLS 200-1843] Loop 'VITIS_LOOP_488_3' will not be implemented as Flushable Pipeline as it has been scheduled as a sequential circuit (II == depth). Changing pipeline style specification to 'style=stp'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'VITIS_LOOP_488_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.06 seconds; current allocated memory: 349.473 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 349.473 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'StreamingDataflowPartition_1_LabelSelect_hls_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 349.473 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 349.473 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'StreamingDataflowPartition_1_LabelSelect_hls_0_Pipeline_VITIS_LOOP_488_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'StreamingDataflowPartition_1_LabelSelect_hls_0_Pipeline_VITIS_LOOP_488_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 349.473 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'StreamingDataflowPartition_1_LabelSelect_hls_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'StreamingDataflowPartition_1_LabelSelect_hls_0/in0_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'StreamingDataflowPartition_1_LabelSelect_hls_0/out_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'StreamingDataflowPartition_1_LabelSelect_hls_0' to 'ap_ctrl_none'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'StreamingDataflowPartition_1_LabelSelect_hls_0'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 349.473 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.09 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.13 seconds; current allocated memory: 350.234 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.16 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.22 seconds; current allocated memory: 354.523 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for StreamingDataflowPartition_1_LabelSelect_hls_0.
+INFO: [VLOG 209-307] Generating Verilog RTL for StreamingDataflowPartition_1_LabelSelect_hls_0.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 162.36 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:13; Allocated memory: 46.680 MB.
+INFO: [HLS 200-1510] Running: export_design -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+WARNING: /opt/Xilinx/Vivado/2024.2/tps/lnx64/jre11.0.16_1 does not exist.
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Wed Mar 26 22:47:53 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: calling package_hls_ip ip_types=vitis sysgen json_file=/tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/sol1_data.json outdir=/tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/impl/ip srcdir=/tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1 sort_interfaces_ports=false
+INFO: Copied 1 ipmisc file(s) to /tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/impl/ip/misc
+INFO: Copied 4 verilog file(s) to /tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/impl/ip/hdl/verilog
+INFO: Copied 4 vhdl file(s) to /tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/impl/ip/hdl/vhdl
+INFO: Import ports from HDL: /tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/impl/ip/hdl/vhdl/StreamingDataflowPartition_1_LabelSelect_hls_0.vhd (StreamingDataflowPartition_1_LabelSelect_hls_0)
+INFO: Add clock interface ap_clk
+INFO: Add reset interface ap_rst_n
+INFO: Add axi4stream interface in0_V
+INFO: Add axi4stream interface out_V
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2024.2/data/ip'.
+INFO: Calling post_process_vitis to specialize IP
+INFO: Calling post_process_sysgen to specialize IP
+Generating sysgen info xml from json file
+INFO: Created IP /tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/impl/ip/component.xml
+INFO: Created IP archive /tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/impl/ip/xilinx_com_hls_StreamingDataflowPartition_1_LabelSelect_hls_0_1_0.zip
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 26 22:47:56 2025...
+INFO: [HLS 200-802] Generated output file project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/impl/export.zip
+INFO: [HLS 200-2161] Finished Command export_design Elapsed time: 00:00:15; Allocated memory: 3.551 MB.
+INFO: [HLS 200-112] Total CPU user time: 13.38 seconds. Total CPU system time: 3.08 seconds. Total elapsed time: 32.65 seconds; peak allocated memory: 358.074 MB.

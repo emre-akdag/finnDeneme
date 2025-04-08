@@ -1,0 +1,30 @@
+{
+  "Defaults": {},
+  "MVAU_hls_0": {
+    "PE": 32,
+    "SIMD": 16,
+    "ram_style": "auto",
+    "resType": "auto",
+    "mem_mode": "internal_decoupled",
+    "runtime_writeable_weights": 0
+  },
+  "MVAU_hls_1": {
+    "PE": 4,
+    "SIMD": 16,
+    "ram_style": "auto",
+    "resType": "auto",
+    "mem_mode": "internal_decoupled",
+    "runtime_writeable_weights": 0
+  },
+  "MVAU_hls_2": {
+    "PE": 1,
+    "SIMD": 8,
+    "ram_style": "auto",
+    "resType": "auto",
+    "mem_mode": "internal_decoupled",
+    "runtime_writeable_weights": 0
+  },
+  "LabelSelect_hls_0": {
+    "PE": 1
+  }
+}

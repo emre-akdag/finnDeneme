@@ -1,0 +1,224 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "12",
+    "file": "top_StreamingDataflowPartition_1_MVAU_hls_2.cpp",
+    "fileloc": 25,
+    "instructions": 16,
+    "name": "StreamingDataflowPartition_1_MVAU_hls_2",
+    "total_instructions": 801
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "7",
+    "file": "interpret.hpp",
+    "fileloc": 241,
+    "instructions": 2,
+    "name": "operator()<ap_uint<4> >",
+    "total_instructions": 6
+  },
+  "10": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 115,
+    "instructions": 1,
+    "name": "operator()<std::array<ap_int<4>, 1> >",
+    "total_instructions": 1
+  },
+  "11": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "mac.hpp",
+    "fileloc": 88,
+    "instructions": 4,
+    "name": "mul<ap_int<4>, ap_uint<4> >",
+    "total_instructions": 86
+  },
+  "12": {
+    "basicblocks": 40,
+    "calls": "18 1 5 10 20 15 16 4 2",
+    "file": "mvau.hpp",
+    "fileloc": 215,
+    "instructions": 221,
+    "loads": {
+      "L": 8
+    },
+    "name": "Matrix_Vector_Activate_Stream_Batch<64, 10, 1, 1, Slice<ap_uint<4>, 4>, Slice<ap_uint<4>, 4>, Identity, ap_int<4>, ap_uint<4>, ap_uint<4>, ThresholdsActivation<10, 1, 15, ap_int<32>, ap_uint<4>, 0, comp::less_equal<ap_int<32>, ap_int<32> > >, ap_resource_dflt>",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 785
+  },
+  "13": {
+    "basicblocks": 1,
+    "calls": "14",
+    "file": "array",
+    "fileloc": 185,
+    "instructions": 3,
+    "name": "operator[]",
+    "total_instructions": 5
+  },
+  "14": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "array",
+    "fileloc": 55,
+    "instructions": 2,
+    "name": "_S_ref",
+    "total_instructions": 2
+  },
+  "15": {
+    "basicblocks": 1,
+    "calls": "21",
+    "file": "interpret.hpp",
+    "fileloc": 236,
+    "instructions": 2,
+    "name": "operator()<ap_uint<4> >",
+    "total_instructions": 4
+  },
+  "16": {
+    "basicblocks": 7,
+    "calls": "6",
+    "file": "activations.hpp",
+    "fileloc": 213,
+    "instructions": 28,
+    "name": "activate",
+    "total_instructions": 85
+  },
+  "17": {
+    "basicblocks": 1,
+    "calls": "14",
+    "file": "array",
+    "fileloc": 189,
+    "instructions": 3,
+    "name": "operator[]",
+    "total_instructions": 5
+  },
+  "18": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "activations.hpp",
+    "fileloc": 207,
+    "instructions": 2,
+    "name": "init",
+    "total_instructions": 17
+  },
+  "19": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 181,
+    "instructions": 2,
+    "name": "cast<4>",
+    "total_instructions": 31
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 223,
+    "instructions": 2,
+    "name": "operator const ap_uint<4> &",
+    "total_instructions": 2
+  },
+  "20": {
+    "basicblocks": 7,
+    "calls": "17 8 11",
+    "file": "mac.hpp",
+    "fileloc": 164,
+    "instructions": 29,
+    "loads": {
+      "L": 1
+    },
+    "name": "mac<1, ap_int<32>, std::array<ap_int<4>, 1>, Slice<ap_uint<4>, 4>::Container<ap_uint<4> >, ap_resource_dflt>",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 265
+  },
+  "21": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 203,
+    "instructions": 2,
+    "name": "Container",
+    "total_instructions": 2
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "9",
+    "file": "top_StreamingDataflowPartition_1_MVAU_hls_2.pp.0.cpp",
+    "fileloc": 0,
+    "instructions": 2,
+    "name": "",
+    "total_instructions": 2403
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 210,
+    "instructions": 8,
+    "name": "operator()",
+    "total_instructions": 19
+  },
+  "5": {
+    "basicblocks": 7,
+    "calls": "13",
+    "file": "weights.hpp",
+    "fileloc": 156,
+    "instructions": 34,
+    "loads": {
+      "L": 1
+    },
+    "name": "operator[]",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 81
+  },
+  "6": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "activations.hpp",
+    "fileloc": 107,
+    "instructions": 5,
+    "name": "operator()",
+    "total_instructions": 28
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "interpret.hpp",
+    "fileloc": 206,
+    "instructions": 4,
+    "loads": {
+      "L": 1
+    },
+    "name": "Container",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 4
+  },
+  "8": {
+    "basicblocks": 1,
+    "calls": "19",
+    "file": "interpret.hpp",
+    "fileloc": 214,
+    "instructions": 26,
+    "name": "operator()",
+    "total_instructions": 135
+  },
+  "9": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "thresh.h",
+    "fileloc": 1,
+    "instructions": 151,
+    "name": "__cxx_global_var_init.1",
+    "total_instructions": 2401
+  }
+}

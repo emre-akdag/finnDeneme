@@ -1,0 +1,137 @@
+
+
+================================================================
+== Vitis HLS Report for 'StreamingDataflowPartition_1_MVAU_hls_0'
+================================================================
+* Date:           Wed Mar 26 22:51:12 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        project_StreamingDataflowPartition_1_MVAU_hls_0
+* Solution:       sol1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  |  20.00 ns|  11.547 ns|     5.40 ns|
+    +--------+----------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+    +---------+---------+----------+----------+-------+-------+---------+
+    |    50185|    50185|  1.004 ms|  1.004 ms|  50186|  50186|       no|
+    +---------+---------+----------+----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 0.51>
+ST_2 : Operation 5 [2/2] (0.51ns)   --->   "%call_ln37 = call void @Matrix_Vector_Activate_Stream_Batch, i8 %in0_V, i8 %out_V, i8 %weights_V, i15 %p_ZL7threshs_0, i16 %p_ZL7threshs_1, i15 %p_ZL7threshs_2, i15 %p_ZL7threshs_3, i15 %p_ZL7threshs_4, i16 %p_ZL7threshs_5, i16 %p_ZL7threshs_6, i16 %p_ZL7threshs_7, i16 %p_ZL7threshs_8, i17 %p_ZL7threshs_9, i17 %p_ZL7threshs_10, i17 %p_ZL7threshs_11, i17 %p_ZL7threshs_12, i17 %p_ZL7threshs_13, i17 %p_ZL7threshs_14" [top_StreamingDataflowPartition_1_MVAU_hls_0.cpp:37]   --->   Operation 5 'call' 'call_ln37' <Predicate = true> <Delay = 0.51> <CoreType = "Generic">   --->   Generic Core
+
+State 3 <SV = 2> <Delay = 4.88>
+ST_3 : Operation 6 [1/2] (4.88ns)   --->   "%call_ln37 = call void @Matrix_Vector_Activate_Stream_Batch, i8 %in0_V, i8 %out_V, i8 %weights_V, i15 %p_ZL7threshs_0, i16 %p_ZL7threshs_1, i15 %p_ZL7threshs_2, i15 %p_ZL7threshs_3, i15 %p_ZL7threshs_4, i16 %p_ZL7threshs_5, i16 %p_ZL7threshs_6, i16 %p_ZL7threshs_7, i16 %p_ZL7threshs_8, i17 %p_ZL7threshs_9, i17 %p_ZL7threshs_10, i17 %p_ZL7threshs_11, i17 %p_ZL7threshs_12, i17 %p_ZL7threshs_13, i17 %p_ZL7threshs_14" [top_StreamingDataflowPartition_1_MVAU_hls_0.cpp:37]   --->   Operation 6 'call' 'call_ln37' <Predicate = true> <Delay = 4.88> <CoreType = "Generic">   --->   Generic Core
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 7 [1/1] (0.00ns)   --->   "%spectopmodule_ln25 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_2" [top_StreamingDataflowPartition_1_MVAU_hls_0.cpp:25]   --->   Operation 7 'spectopmodule' 'spectopmodule_ln25' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln25 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_3, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0" [top_StreamingDataflowPartition_1_MVAU_hls_0.cpp:25]   --->   Operation 8 'specinterface' 'specinterface_ln25' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %in0_V, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 10 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %in0_V"   --->   Operation 10 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %weights_V, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 12 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %weights_V"   --->   Operation 12 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %out_V, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 14 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %out_V"   --->   Operation 14 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 15 [1/1] (0.00ns)   --->   "%ret_ln39 = ret" [top_StreamingDataflowPartition_1_MVAU_hls_0.cpp:39]   --->   Operation 15 'ret' 'ret_ln39' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 20.000ns, clock uncertainty: 5.400ns.
+
+ <State 1>: 0.000ns
+The critical path consists of the following:
+
+ <State 2>: 0.518ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln37', top_StreamingDataflowPartition_1_MVAU_hls_0.cpp:37) to 'Matrix_Vector_Activate_Stream_Batch' [27]  (0.518 ns)
+
+ <State 3>: 4.889ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln37', top_StreamingDataflowPartition_1_MVAU_hls_0.cpp:37) to 'Matrix_Vector_Activate_Stream_Batch' [27]  (4.889 ns)
+
+ <State 4>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

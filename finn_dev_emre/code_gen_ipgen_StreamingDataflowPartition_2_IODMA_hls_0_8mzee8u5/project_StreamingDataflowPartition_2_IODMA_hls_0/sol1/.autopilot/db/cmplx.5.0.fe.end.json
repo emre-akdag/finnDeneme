@@ -1,0 +1,47 @@
+{
+    "1": {
+        "name": "Stream2Mem_Batch<8u, 1u>_Pipeline_VITIS_LOOP_153_1",
+        "file": "\/home\/emre\/Documents\/finn\/deps\/finn-hlslib\/dma.h",
+        "fileloc": "182",
+        "instructions": "19",
+        "total_instructions": "19",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "StreamingDataflowPartition_2_IODMA_hls_0",
+        "file": "top_StreamingDataflowPartition_2_IODMA_hls_0.cpp",
+        "fileloc": "15",
+        "instructions": "16",
+        "total_instructions": "69",
+        "calls": "2",
+        "basicblocks": "1"
+    },
+    "2": {
+        "name": "Stream2Mem_Batch<8, 1>",
+        "file": "dma.h",
+        "fileloc": "182",
+        "instructions": "34",
+        "total_instructions": "53",
+        "calls": "1",
+        "basicblocks": "7",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

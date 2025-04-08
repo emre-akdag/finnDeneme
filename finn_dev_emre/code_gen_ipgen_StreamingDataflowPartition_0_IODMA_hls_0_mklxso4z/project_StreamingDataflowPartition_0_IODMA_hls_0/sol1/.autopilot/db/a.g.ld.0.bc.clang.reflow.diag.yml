@@ -1,0 +1,469 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                   Line: 170, Column: 7 }
+Function:        _Z16Mem2Stream_BatchILj64ELj784EEvP7ap_uintIXT_EERN3hls6streamIS1_Li0EEEj
+Args:            
+  - Callee:          'void Mem2Stream<64u, 12544u>(ap_uint<64u>*, hls::stream<ap_uint<64u>, 0>&)'
+    DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                       Line: 136, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void Mem2Stream_Batch<64u, 784u>(ap_uint<64u>*, hls::stream<ap_uint<64u>, 0>&, unsigned int)'
+    DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                       Line: 161, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                   Line: 174, Column: 7 }
+Function:        _Z16Mem2Stream_BatchILj64ELj784EEvP7ap_uintIXT_EERN3hls6streamIS1_Li0EEEj
+Args:            
+  - Callee:          'void Mem2Stream<64u, 784u>(ap_uint<64u>*, hls::stream<ap_uint<64u>, 0>&)'
+    DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                       Line: 136, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void Mem2Stream_Batch<64u, 784u>(ap_uint<64u>*, hls::stream<ap_uint<64u>, 0>&, unsigned int)'
+    DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                       Line: 161, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: top_StreamingDataflowPartition_0_IODMA_hls_0.cpp, 
+                   Line: 24, Column: 1 }
+Function:        _Z40StreamingDataflowPartition_0_IODMA_hls_0P7ap_uintILi64EERN3hls6streamIS_ILi8EELi0EEEj
+Args:            
+  - Callee:          'void Mem2Stream_Batch<64u, 784u>(ap_uint<64u>*, hls::stream<ap_uint<64u>, 0>&, unsigned int)'
+    DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                       Line: 161, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'StreamingDataflowPartition_0_IODMA_hls_0(ap_uint<64>*, hls::stream<ap_uint<8>, 0>&, unsigned int)'
+    DebugLoc:        { File: top_StreamingDataflowPartition_0_IODMA_hls_0.cpp, 
+                       Line: 16, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: top_StreamingDataflowPartition_0_IODMA_hls_0.cpp, 
+                   Line: 25, Column: 1 }
+Function:        _Z40StreamingDataflowPartition_0_IODMA_hls_0P7ap_uintILi64EERN3hls6streamIS_ILi8EELi0EEEj
+Args:            
+  - Callee:          'void StreamingDataWidthConverter_Batch<64u, 8u, 98u>(hls::stream<ap_uint<64u>, 0>&, hls::stream<ap_uint<8u>, 0>&, unsigned int)'
+    DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/streamtools.h, 
+                       Line: 517, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'StreamingDataflowPartition_0_IODMA_hls_0(ap_uint<64>*, hls::stream<ap_uint<8>, 0>&, unsigned int)'
+    DebugLoc:        { File: top_StreamingDataflowPartition_0_IODMA_hls_0.cpp, 
+                       Line: 16, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                   Line: 170, Column: 7 }
+Function:        _Z16Mem2Stream_BatchILj64ELj784EEvP7ap_uintIXT_EERN3hls6streamIS1_Li0EEEj
+Args:            
+  - Callee:          'void Mem2Stream<64u, 12544u>(ap_uint<64u>*, hls::stream<ap_uint<64u>, 0>&)'
+    DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                       Line: 136, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void Mem2Stream_Batch<64u, 784u>(ap_uint<64u>*, hls::stream<ap_uint<64u>, 0>&, unsigned int)'
+    DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                       Line: 161, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                   Line: 174, Column: 7 }
+Function:        _Z16Mem2Stream_BatchILj64ELj784EEvP7ap_uintIXT_EERN3hls6streamIS1_Li0EEEj
+Args:            
+  - Callee:          'void Mem2Stream<64u, 784u>(ap_uint<64u>*, hls::stream<ap_uint<64u>, 0>&)'
+    DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                       Line: 136, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void Mem2Stream_Batch<64u, 784u>(ap_uint<64u>*, hls::stream<ap_uint<64u>, 0>&, unsigned int)'
+    DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                       Line: 161, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: top_StreamingDataflowPartition_0_IODMA_hls_0.cpp, 
+                   Line: 24, Column: 1 }
+Function:        _Z40StreamingDataflowPartition_0_IODMA_hls_0P7ap_uintILi64EERN3hls6streamIS_ILi8EELi0EEEj
+Args:            
+  - Callee:          'void Mem2Stream_Batch<64u, 784u>(ap_uint<64u>*, hls::stream<ap_uint<64u>, 0>&, unsigned int)'
+    DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                       Line: 161, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'StreamingDataflowPartition_0_IODMA_hls_0(ap_uint<64>*, hls::stream<ap_uint<8>, 0>&, unsigned int)'
+    DebugLoc:        { File: top_StreamingDataflowPartition_0_IODMA_hls_0.cpp, 
+                       Line: 16, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: top_StreamingDataflowPartition_0_IODMA_hls_0.cpp, 
+                   Line: 25, Column: 1 }
+Function:        _Z40StreamingDataflowPartition_0_IODMA_hls_0P7ap_uintILi64EERN3hls6streamIS_ILi8EELi0EEEj
+Args:            
+  - Callee:          'void StreamingDataWidthConverter_Batch<64u, 8u, 98u>(hls::stream<ap_uint<64u>, 0>&, hls::stream<ap_uint<8u>, 0>&, unsigned int)'
+    DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/streamtools.h, 
+                       Line: 517, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'StreamingDataflowPartition_0_IODMA_hls_0(ap_uint<64>*, hls::stream<ap_uint<8>, 0>&, unsigned int)'
+    DebugLoc:        { File: top_StreamingDataflowPartition_0_IODMA_hls_0.cpp, 
+                       Line: 16, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_StreamingDataflowPartition_0_IODMA_hls_0_ir
+Args:            
+  - Callee:          'StreamingDataflowPartition_0_IODMA_hls_0(ap_uint<64>*, hls::stream<ap_uint<8>, 0>&, unsigned int)'
+    DebugLoc:        { File: top_StreamingDataflowPartition_0_IODMA_hls_0.cpp, 
+                       Line: 16, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_StreamingDataflowPartition_0_IODMA_hls_0_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                   Line: 161, Column: 0 }
+Function:        _Z16Mem2Stream_BatchILj64ELj784EEvP7ap_uintIXT_EERN3hls6streamIS1_Li0EEEj
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void Mem2Stream<64u, 12544u>(ap_uint<64u>*, hls::stream<ap_uint<64u>, 0>&)'
+    DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                       Line: 136, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void Mem2Stream_Batch<64u, 784u>(ap_uint<64u>*, hls::stream<ap_uint<64u>, 0>&, unsigned int)'
+    DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                       Line: 161, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                   Line: 161, Column: 0 }
+Function:        _Z16Mem2Stream_BatchILj64ELj784EEvP7ap_uintIXT_EERN3hls6streamIS1_Li0EEEj
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void Mem2Stream<64u, 784u>(ap_uint<64u>*, hls::stream<ap_uint<64u>, 0>&)'
+    DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                       Line: 136, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void Mem2Stream_Batch<64u, 784u>(ap_uint<64u>*, hls::stream<ap_uint<64u>, 0>&, unsigned int)'
+    DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                       Line: 161, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                   Line: 140, Column: 21 }
+Function:        _Z16Mem2Stream_BatchILj64ELj784EEvP7ap_uintIXT_EERN3hls6streamIS1_Li0EEEj
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '1568'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - ArrayName:       in
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_140_1
+  - String:          ' '
+  - LoopLoc:         '/home/emre/Documents/finn/deps/finn-hlslib/dma.h:140:21'
+  - String:          ' '
+  - Function:        'void Mem2Stream_Batch<64u, 784u>(ap_uint<64u>*, hls::stream<ap_uint<64u>, 0>&, unsigned int)'
+    DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                       Line: 161, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                       Line: 142, Column: 25 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.i.load.5
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                   Line: 140, Column: 21 }
+Function:        _Z16Mem2Stream_BatchILj64ELj784EEvP7ap_uintIXT_EERN3hls6streamIS1_Li0EEEj
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '98'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep12seq
+  - ArrayName:       in
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_140_1
+  - String:          ' '
+  - LoopLoc:         '/home/emre/Documents/finn/deps/finn-hlslib/dma.h:140:21'
+  - String:          ' '
+  - Function:        'void Mem2Stream_Batch<64u, 784u>(ap_uint<64u>*, hls::stream<ap_uint<64u>, 0>&, unsigned int)'
+    DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                       Line: 161, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                       Line: 142, Column: 25 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.i8.load.5
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                   Line: 166, Column: 21 }
+Function:        _Z16Mem2Stream_BatchILj64ELj784EEvP7ap_uintIXT_EERN3hls6streamIS1_Li0EEEj
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_166_1
+  - String:          ' '
+  - LoopLoc:         '/home/emre/Documents/finn/deps/finn-hlslib/dma.h:166:21'
+  - String:          ' '
+  - Function:        'void Mem2Stream_Batch<64u, 784u>(ap_uint<64u>*, hls::stream<ap_uint<64u>, 0>&, unsigned int)'
+    DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                       Line: 161, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                   Line: 140, Column: 21 }
+Function:        _Z16Mem2Stream_BatchILj64ELj784EEvP7ap_uintIXT_EERN3hls6streamIS1_Li0EEEj
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i64
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                       Line: 140, Column: 21 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       in
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_140_1
+  - String:          ' '
+  - LoopLoc:         '/home/emre/Documents/finn/deps/finn-hlslib/dma.h:140:21'
+  - String:          ' '
+  - Function:        'void Mem2Stream_Batch<64u, 784u>(ap_uint<64u>*, hls::stream<ap_uint<64u>, 0>&, unsigned int)'
+    DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                       Line: 161, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                   Line: 140, Column: 21 }
+Function:        _Z16Mem2Stream_BatchILj64ELj784EEvP7ap_uintIXT_EERN3hls6streamIS1_Li0EEEj
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i64
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                       Line: 140, Column: 21 }
+  - OrigDirection:   read
+  - OrigID:          scevgep12seq
+  - ArrayName:       in
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_140_1
+  - String:          ' '
+  - LoopLoc:         '/home/emre/Documents/finn/deps/finn-hlslib/dma.h:140:21'
+  - String:          ' '
+  - Function:        'void Mem2Stream_Batch<64u, 784u>(ap_uint<64u>*, hls::stream<ap_uint<64u>, 0>&, unsigned int)'
+    DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                       Line: 161, Column: 0 }
+  - String:          ' '
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                   Line: 166, Column: 21 }
+Function:        _Z16Mem2Stream_BatchILj64ELj784EEvP7ap_uintIXT_EERN3hls6streamIS1_Li0EEEj
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_166_1
+  - String:          '''('
+  - LoopLoc:         '/home/emre/Documents/finn/deps/finn-hlslib/dma.h:166:21'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                   Line: 140, Column: 21 }
+Function:        _Z16Mem2Stream_BatchILj64ELj784EEvP7ap_uintIXT_EERN3hls6streamIS1_Li0EEEj.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '1568'
+  - String:          ' and bit width '
+  - Width:           '64'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_140_1
+  - String:          ' '
+  - LoopLoc:         '/home/emre/Documents/finn/deps/finn-hlslib/dma.h:140:21'
+  - String:          ' '
+  - Function:        'void Mem2Stream_Batch<64u, 784u>(ap_uint<64u>*, hls::stream<ap_uint<64u>, 0>&, unsigned int) (.1)'
+    DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                       Line: 161, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                   Line: 140, Column: 21 }
+Function:        _Z16Mem2Stream_BatchILj64ELj784EEvP7ap_uintIXT_EERN3hls6streamIS1_Li0EEEj.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '1568'
+  - String:          ' and bit width '
+  - Width:           '64'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_140_1
+  - String:          '''('
+  - LoopLoc:         '/home/emre/Documents/finn/deps/finn-hlslib/dma.h:140:21'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                   Line: 140, Column: 21 }
+Function:        _Z16Mem2Stream_BatchILj64ELj784EEvP7ap_uintIXT_EERN3hls6streamIS1_Li0EEEj.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '98'
+  - String:          ' and bit width '
+  - Width:           '64'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_140_1
+  - String:          ' '
+  - LoopLoc:         '/home/emre/Documents/finn/deps/finn-hlslib/dma.h:140:21'
+  - String:          ' '
+  - Function:        'void Mem2Stream_Batch<64u, 784u>(ap_uint<64u>*, hls::stream<ap_uint<64u>, 0>&, unsigned int) (.1)'
+    DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                       Line: 161, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                   Line: 140, Column: 21 }
+Function:        _Z16Mem2Stream_BatchILj64ELj784EEvP7ap_uintIXT_EERN3hls6streamIS1_Li0EEEj.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '98'
+  - String:          ' and bit width '
+  - Width:           '64'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_140_1
+  - String:          '''('
+  - LoopLoc:         '/home/emre/Documents/finn/deps/finn-hlslib/dma.h:140:21'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: top_StreamingDataflowPartition_0_IODMA_hls_0.cpp, 
+                   Line: 24, Column: 1 }
+Function:        _Z40StreamingDataflowPartition_0_IODMA_hls_0P7ap_uintILi64EERN3hls6streamIS_ILi8EELi0EEEj
+Args:            
+  - Callee:          'void Mem2Stream_Batch<64u, 784u>(ap_uint<64u>*, hls::stream<ap_uint<64u>, 0>&, unsigned int) (.1)'
+    DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/dma.h, 
+                       Line: 161, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'StreamingDataflowPartition_0_IODMA_hls_0(ap_uint<64>*, hls::stream<ap_uint<8>, 0>&, unsigned int)'
+    DebugLoc:        { File: top_StreamingDataflowPartition_0_IODMA_hls_0.cpp, 
+                       Line: 16, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: top_StreamingDataflowPartition_0_IODMA_hls_0.cpp, 
+                   Line: 25, Column: 1 }
+Function:        _Z40StreamingDataflowPartition_0_IODMA_hls_0P7ap_uintILi64EERN3hls6streamIS_ILi8EELi0EEEj
+Args:            
+  - Callee:          'void StreamingDataWidthConverter_Batch<64u, 8u, 98u>(hls::stream<ap_uint<64u>, 0>&, hls::stream<ap_uint<8u>, 0>&, unsigned int) (.1)'
+    DebugLoc:        { File: /home/emre/Documents/finn/deps/finn-hlslib/streamtools.h, 
+                       Line: 517, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'StreamingDataflowPartition_0_IODMA_hls_0(ap_uint<64>*, hls::stream<ap_uint<8>, 0>&, unsigned int)'
+    DebugLoc:        { File: top_StreamingDataflowPartition_0_IODMA_hls_0.cpp, 
+                       Line: 16, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...

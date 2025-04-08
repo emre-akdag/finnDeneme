@@ -1,0 +1,570 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x2B0000A082332E10",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../finn_vivado_stitch_proj.gen/sources_1/bd/StreamingDataflowPartition_1",
+      "name": "StreamingDataflowPartition_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2024.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "StreamingDataflowPartition_1_MVAU_hls_0": {
+        "StreamingDataflowPartition_1_MVAU_hls_0": "",
+        "StreamingDataflowPartition_1_MVAU_hls_0_wstrm": ""
+      },
+      "StreamingDataflowPartition_1_MVAU_hls_1": {
+        "StreamingDataflowPartition_1_MVAU_hls_1": "",
+        "StreamingDataflowPartition_1_MVAU_hls_1_wstrm": ""
+      },
+      "StreamingDataflowPartition_1_MVAU_hls_2": {
+        "StreamingDataflowPartition_1_MVAU_hls_2": "",
+        "StreamingDataflowPartition_1_MVAU_hls_2_wstrm": ""
+      },
+      "StreamingDataflowPartition_1_LabelSelect_hls_0": ""
+    },
+    "interface_ports": {
+      "s_axis_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "StreamingDataflowPartition_1_ap_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "50000000"
+          },
+          "HAS_TKEEP": {
+            "value": "0"
+          },
+          "HAS_TLAST": {
+            "value": "0"
+          },
+          "HAS_TREADY": {
+            "value": "1"
+          },
+          "HAS_TSTRB": {
+            "value": "0"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "LAYERED_METADATA": {
+            "value": "undef"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          },
+          "TDATA_NUM_BYTES": {
+            "value": "1"
+          },
+          "TDEST_WIDTH": {
+            "value": "0"
+          },
+          "TID_WIDTH": {
+            "value": "0"
+          },
+          "TUSER_WIDTH": {
+            "value": "0"
+          }
+        },
+        "port_maps": {
+          "TDATA": {
+            "physical_name": "s_axis_0_tdata",
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "TREADY": {
+            "physical_name": "s_axis_0_tready",
+            "direction": "O"
+          },
+          "TVALID": {
+            "physical_name": "s_axis_0_tvalid",
+            "direction": "I"
+          }
+        }
+      },
+      "m_axis_0": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "StreamingDataflowPartition_1_ap_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "50000000"
+          },
+          "HAS_TKEEP": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "HAS_TLAST": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "HAS_TREADY": {
+            "value": "1",
+            "value_src": "const_prop"
+          },
+          "HAS_TSTRB": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          },
+          "TDATA_NUM_BYTES": {
+            "value": "1",
+            "value_src": "const_prop"
+          },
+          "TDEST_WIDTH": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "TID_WIDTH": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "TUSER_WIDTH": {
+            "value": "0",
+            "value_src": "const_prop"
+          }
+        },
+        "port_maps": {
+          "TDATA": {
+            "physical_name": "m_axis_0_tdata",
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "TREADY": {
+            "physical_name": "m_axis_0_tready",
+            "direction": "I"
+          },
+          "TVALID": {
+            "physical_name": "m_axis_0_tvalid",
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "ports": {
+      "ap_clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_BUSIF": {
+            "value": "s_axis_0:m_axis_0",
+            "value_src": "default"
+          },
+          "ASSOCIATED_RESET": {
+            "value": "ap_rst_n",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "StreamingDataflowPartition_1_ap_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "50000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "-1"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "ap_rst_n": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "StreamingDataflowPartition_1_MVAU_hls_0": {
+        "interface_ports": {
+          "out_V": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
+          },
+          "in0_V": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
+          }
+        },
+        "ports": {
+          "ap_clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "ap_rst_n": {
+            "type": "rst",
+            "direction": "I"
+          }
+        },
+        "components": {
+          "StreamingDataflowPartition_1_MVAU_hls_0": {
+            "vlnv": "xilinx.com:hls:StreamingDataflowPartition_1_MVAU_hls_0:1.0",
+            "ip_revision": "2114012931",
+            "xci_name": "StreamingDataflowPartition_1_StreamingDataflowPartition_1_MVAU_hls_0_0",
+            "xci_path": "ip/StreamingDataflowPartition_1_StreamingDataflowPartition_1_MVAU_hls_0_0/StreamingDataflowPartition_1_StreamingDataflowPartition_1_MVAU_hls_0_0.xci",
+            "inst_hier_path": "StreamingDataflowPartition_1_MVAU_hls_0/StreamingDataflowPartition_1_MVAU_hls_0"
+          },
+          "StreamingDataflowPartition_1_MVAU_hls_0_wstrm": {
+            "vlnv": "amd.com:finn:memstream:1.0",
+            "ip_revision": "5",
+            "xci_name": "StreamingDataflowPartition_1_StreamingDataflowPartition_1_MVAU_hls_0_wstrm_0",
+            "xci_path": "ip/StreamingDataflowPartition_1_StreamingDataflowPartition_1_MVAU_hls_0_wstrm_0/StreamingDataflowPartition_1_StreamingDataflowPartition_1_MVAU_hls_0_wstrm_0.xci",
+            "inst_hier_path": "StreamingDataflowPartition_1_MVAU_hls_0/StreamingDataflowPartition_1_MVAU_hls_0_wstrm",
+            "parameters": {
+              "DEPTH": {
+                "value": "50176"
+              },
+              "INIT_FILE": {
+                "value": "/tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_MVAU_hls_0_vpjpp7ae/memblock.dat"
+              },
+              "RAM_STYLE": {
+                "value": "auto"
+              },
+              "WIDTH": {
+                "value": "8"
+              }
+            },
+            "interface_ports": {
+              "s_axilite": {
+                "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+                "mode": "Slave",
+                "memory_map_ref": "interface_aximm"
+              }
+            }
+          }
+        },
+        "interface_nets": {
+          "StreamingDataflowPartition_1_MVAU_hls_0_out_V": {
+            "interface_ports": [
+              "out_V",
+              "StreamingDataflowPartition_1_MVAU_hls_0/out_V"
+            ]
+          },
+          "StreamingDataflowPartition_1_MVAU_hls_0_wstrm_m_axis_0": {
+            "interface_ports": [
+              "StreamingDataflowPartition_1_MVAU_hls_0_wstrm/m_axis_0",
+              "StreamingDataflowPartition_1_MVAU_hls_0/weights_V"
+            ]
+          },
+          "in0_V_1": {
+            "interface_ports": [
+              "in0_V",
+              "StreamingDataflowPartition_1_MVAU_hls_0/in0_V"
+            ]
+          }
+        },
+        "nets": {
+          "ap_clk_1": {
+            "ports": [
+              "ap_clk",
+              "StreamingDataflowPartition_1_MVAU_hls_0_wstrm/ap_clk",
+              "StreamingDataflowPartition_1_MVAU_hls_0/ap_clk"
+            ]
+          },
+          "ap_rst_n_1": {
+            "ports": [
+              "ap_rst_n",
+              "StreamingDataflowPartition_1_MVAU_hls_0_wstrm/ap_rst_n",
+              "StreamingDataflowPartition_1_MVAU_hls_0/ap_rst_n"
+            ]
+          }
+        }
+      },
+      "StreamingDataflowPartition_1_MVAU_hls_1": {
+        "interface_ports": {
+          "out_V": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
+          },
+          "in0_V": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
+          }
+        },
+        "ports": {
+          "ap_clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "ap_rst_n": {
+            "type": "rst",
+            "direction": "I"
+          }
+        },
+        "components": {
+          "StreamingDataflowPartition_1_MVAU_hls_1": {
+            "vlnv": "xilinx.com:hls:StreamingDataflowPartition_1_MVAU_hls_1:1.0",
+            "ip_revision": "2114012927",
+            "xci_name": "StreamingDataflowPartition_1_StreamingDataflowPartition_1_MVAU_hls_1_0",
+            "xci_path": "ip/StreamingDataflowPartition_1_StreamingDataflowPartition_1_MVAU_hls_1_0/StreamingDataflowPartition_1_StreamingDataflowPartition_1_MVAU_hls_1_0.xci",
+            "inst_hier_path": "StreamingDataflowPartition_1_MVAU_hls_1/StreamingDataflowPartition_1_MVAU_hls_1"
+          },
+          "StreamingDataflowPartition_1_MVAU_hls_1_wstrm": {
+            "vlnv": "amd.com:finn:memstream:1.0",
+            "ip_revision": "5",
+            "xci_name": "StreamingDataflowPartition_1_StreamingDataflowPartition_1_MVAU_hls_1_wstrm_0",
+            "xci_path": "ip/StreamingDataflowPartition_1_StreamingDataflowPartition_1_MVAU_hls_1_wstrm_0/StreamingDataflowPartition_1_StreamingDataflowPartition_1_MVAU_hls_1_wstrm_0.xci",
+            "inst_hier_path": "StreamingDataflowPartition_1_MVAU_hls_1/StreamingDataflowPartition_1_MVAU_hls_1_wstrm",
+            "parameters": {
+              "DEPTH": {
+                "value": "4096"
+              },
+              "INIT_FILE": {
+                "value": "/tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_MVAU_hls_1_2hlhfuts/memblock.dat"
+              },
+              "RAM_STYLE": {
+                "value": "auto"
+              },
+              "WIDTH": {
+                "value": "8"
+              }
+            },
+            "interface_ports": {
+              "s_axilite": {
+                "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+                "mode": "Slave",
+                "memory_map_ref": "interface_aximm"
+              }
+            }
+          }
+        },
+        "interface_nets": {
+          "StreamingDataflowPartition_1_MVAU_hls_1_out_V": {
+            "interface_ports": [
+              "out_V",
+              "StreamingDataflowPartition_1_MVAU_hls_1/out_V"
+            ]
+          },
+          "StreamingDataflowPartition_1_MVAU_hls_1_wstrm_m_axis_0": {
+            "interface_ports": [
+              "StreamingDataflowPartition_1_MVAU_hls_1_wstrm/m_axis_0",
+              "StreamingDataflowPartition_1_MVAU_hls_1/weights_V"
+            ]
+          },
+          "in0_V_1": {
+            "interface_ports": [
+              "in0_V",
+              "StreamingDataflowPartition_1_MVAU_hls_1/in0_V"
+            ]
+          }
+        },
+        "nets": {
+          "ap_clk_1": {
+            "ports": [
+              "ap_clk",
+              "StreamingDataflowPartition_1_MVAU_hls_1_wstrm/ap_clk",
+              "StreamingDataflowPartition_1_MVAU_hls_1/ap_clk"
+            ]
+          },
+          "ap_rst_n_1": {
+            "ports": [
+              "ap_rst_n",
+              "StreamingDataflowPartition_1_MVAU_hls_1_wstrm/ap_rst_n",
+              "StreamingDataflowPartition_1_MVAU_hls_1/ap_rst_n"
+            ]
+          }
+        }
+      },
+      "StreamingDataflowPartition_1_MVAU_hls_2": {
+        "interface_ports": {
+          "out_V": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
+          },
+          "in0_V": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
+          }
+        },
+        "ports": {
+          "ap_clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "ap_rst_n": {
+            "type": "rst",
+            "direction": "I"
+          }
+        },
+        "components": {
+          "StreamingDataflowPartition_1_MVAU_hls_2": {
+            "vlnv": "xilinx.com:hls:StreamingDataflowPartition_1_MVAU_hls_2:1.0",
+            "ip_revision": "2114012927",
+            "xci_name": "StreamingDataflowPartition_1_StreamingDataflowPartition_1_MVAU_hls_2_0",
+            "xci_path": "ip/StreamingDataflowPartition_1_StreamingDataflowPartition_1_MVAU_hls_2_0/StreamingDataflowPartition_1_StreamingDataflowPartition_1_MVAU_hls_2_0.xci",
+            "inst_hier_path": "StreamingDataflowPartition_1_MVAU_hls_2/StreamingDataflowPartition_1_MVAU_hls_2"
+          },
+          "StreamingDataflowPartition_1_MVAU_hls_2_wstrm": {
+            "vlnv": "amd.com:finn:memstream:1.0",
+            "ip_revision": "5",
+            "xci_name": "StreamingDataflowPartition_1_StreamingDataflowPartition_1_MVAU_hls_2_wstrm_0",
+            "xci_path": "ip/StreamingDataflowPartition_1_StreamingDataflowPartition_1_MVAU_hls_2_wstrm_0/StreamingDataflowPartition_1_StreamingDataflowPartition_1_MVAU_hls_2_wstrm_0.xci",
+            "inst_hier_path": "StreamingDataflowPartition_1_MVAU_hls_2/StreamingDataflowPartition_1_MVAU_hls_2_wstrm",
+            "parameters": {
+              "DEPTH": {
+                "value": "640"
+              },
+              "INIT_FILE": {
+                "value": "/tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_MVAU_hls_2_738qp6bw/memblock.dat"
+              },
+              "RAM_STYLE": {
+                "value": "auto"
+              },
+              "WIDTH": {
+                "value": "8"
+              }
+            },
+            "interface_ports": {
+              "s_axilite": {
+                "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+                "mode": "Slave",
+                "memory_map_ref": "interface_aximm"
+              }
+            }
+          }
+        },
+        "interface_nets": {
+          "StreamingDataflowPartition_1_MVAU_hls_2_out_V": {
+            "interface_ports": [
+              "out_V",
+              "StreamingDataflowPartition_1_MVAU_hls_2/out_V"
+            ]
+          },
+          "StreamingDataflowPartition_1_MVAU_hls_2_wstrm_m_axis_0": {
+            "interface_ports": [
+              "StreamingDataflowPartition_1_MVAU_hls_2_wstrm/m_axis_0",
+              "StreamingDataflowPartition_1_MVAU_hls_2/weights_V"
+            ]
+          },
+          "in0_V_1": {
+            "interface_ports": [
+              "in0_V",
+              "StreamingDataflowPartition_1_MVAU_hls_2/in0_V"
+            ]
+          }
+        },
+        "nets": {
+          "ap_clk_1": {
+            "ports": [
+              "ap_clk",
+              "StreamingDataflowPartition_1_MVAU_hls_2_wstrm/ap_clk",
+              "StreamingDataflowPartition_1_MVAU_hls_2/ap_clk"
+            ]
+          },
+          "ap_rst_n_1": {
+            "ports": [
+              "ap_rst_n",
+              "StreamingDataflowPartition_1_MVAU_hls_2_wstrm/ap_rst_n",
+              "StreamingDataflowPartition_1_MVAU_hls_2/ap_rst_n"
+            ]
+          }
+        }
+      },
+      "StreamingDataflowPartition_1_LabelSelect_hls_0": {
+        "vlnv": "xilinx.com:hls:StreamingDataflowPartition_1_LabelSelect_hls_0:1.0",
+        "ip_revision": "2114012927",
+        "xci_name": "StreamingDataflowPartition_1_StreamingDataflowPartition_1_LabelSelect_hls_0_0",
+        "xci_path": "ip/StreamingDataflowPartition_1_StreamingDataflowPartition_1_LabelSelect_hls_0_0/StreamingDataflowPartition_1_StreamingDataflowPartition_1_LabelSelect_hls_0_0.xci",
+        "inst_hier_path": "StreamingDataflowPartition_1_LabelSelect_hls_0"
+      }
+    },
+    "interface_nets": {
+      "StreamingDataflowPartition_1_LabelSelect_hls_0_out_V": {
+        "interface_ports": [
+          "m_axis_0",
+          "StreamingDataflowPartition_1_LabelSelect_hls_0/out_V"
+        ]
+      },
+      "StreamingDataflowPartition_1_MVAU_hls_0_out_V": {
+        "interface_ports": [
+          "StreamingDataflowPartition_1_MVAU_hls_0/out_V",
+          "StreamingDataflowPartition_1_MVAU_hls_1/in0_V"
+        ]
+      },
+      "StreamingDataflowPartition_1_MVAU_hls_1_out_V": {
+        "interface_ports": [
+          "StreamingDataflowPartition_1_MVAU_hls_1/out_V",
+          "StreamingDataflowPartition_1_MVAU_hls_2/in0_V"
+        ]
+      },
+      "StreamingDataflowPartition_1_MVAU_hls_2_out_V": {
+        "interface_ports": [
+          "StreamingDataflowPartition_1_MVAU_hls_2/out_V",
+          "StreamingDataflowPartition_1_LabelSelect_hls_0/in0_V"
+        ]
+      },
+      "in0_V_0_1": {
+        "interface_ports": [
+          "s_axis_0",
+          "StreamingDataflowPartition_1_MVAU_hls_0/in0_V"
+        ]
+      }
+    },
+    "nets": {
+      "ap_clk_0_1": {
+        "ports": [
+          "ap_clk",
+          "StreamingDataflowPartition_1_MVAU_hls_0/ap_clk",
+          "StreamingDataflowPartition_1_MVAU_hls_1/ap_clk",
+          "StreamingDataflowPartition_1_MVAU_hls_2/ap_clk",
+          "StreamingDataflowPartition_1_LabelSelect_hls_0/ap_clk"
+        ]
+      },
+      "ap_rst_n_0_1": {
+        "ports": [
+          "ap_rst_n",
+          "StreamingDataflowPartition_1_MVAU_hls_0/ap_rst_n",
+          "StreamingDataflowPartition_1_MVAU_hls_1/ap_rst_n",
+          "StreamingDataflowPartition_1_MVAU_hls_2/ap_rst_n",
+          "StreamingDataflowPartition_1_LabelSelect_hls_0/ap_rst_n"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+#!/bin/bash 
+cd /tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv
+vitis_hls /tmp/finn_dev_emre/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_iqxs4bjv/hls_syn_StreamingDataflowPartition_1_LabelSelect_hls_0.tcl
+cd /home/emre/Documents/finn

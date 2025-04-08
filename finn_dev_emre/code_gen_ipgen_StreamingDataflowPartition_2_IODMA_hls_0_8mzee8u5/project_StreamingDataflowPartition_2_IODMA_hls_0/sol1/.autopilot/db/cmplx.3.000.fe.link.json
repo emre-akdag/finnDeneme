@@ -1,0 +1,50 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "3",
+    "file": "top_StreamingDataflowPartition_2_IODMA_hls_0.cpp",
+    "fileloc": 15,
+    "instructions": 8,
+    "name": "StreamingDataflowPartition_2_IODMA_hls_0",
+    "total_instructions": 84
+  },
+  "1": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "dma.h",
+    "fileloc": 149,
+    "instructions": 20,
+    "loads": {
+      "L": 1
+    },
+    "name": "Stream2Mem<8, 16>",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 26
+  },
+  "2": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "dma.h",
+    "fileloc": 149,
+    "instructions": 20,
+    "loads": {
+      "L": 1
+    },
+    "name": "Stream2Mem<8, 1>",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 26
+  },
+  "3": {
+    "basicblocks": 8,
+    "calls": "1 2",
+    "file": "dma.h",
+    "fileloc": 182,
+    "instructions": 24,
+    "name": "Stream2Mem_Batch<8, 1>",
+    "total_instructions": 76
+  }
+}

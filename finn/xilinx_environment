@@ -1,0 +1,7 @@
+PATH=$PATH:/opt/Xilinx/Vitis/2024.2/bin
+PATH=$PATH:/opt/Xilinx/Vitis_HLS/2024.2/bin
+PATH=$PATH:/opt/Xilinx/Vivado/2024.2/bin
+
+export FINN_XILINX_PATH=/opt/Xilinx
+export FINN_XILINX_VERSION=2024.2
+export FINN_ROOT=/home/emre/Documents/finn

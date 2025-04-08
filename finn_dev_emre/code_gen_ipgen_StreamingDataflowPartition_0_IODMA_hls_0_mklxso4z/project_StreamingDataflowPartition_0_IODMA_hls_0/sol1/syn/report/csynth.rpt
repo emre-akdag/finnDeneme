@@ -1,0 +1,442 @@
+
+
+================================================================
+== Synthesis Summary Report of 'StreamingDataflowPartition_0_IODMA_hls_0'
+================================================================
++ General Information: 
+    * Date:           Wed Mar 26 22:46:56 2025
+    * Version:        2024.2 (Build 5238294 on Nov  8 2024)
+    * Project:        project_StreamingDataflowPartition_0_IODMA_hls_0
+    * Solution:       sol1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------------------------------------------------------------+------+-------+---------+-----------+----------+---------+------+----------+--------+----+-----------+-----------+-----+
+    |                                   Modules                                  | Issue|       | Latency |  Latency  | Iteration|         | Trip |          |        |    |           |           |     |
+    |                                   & Loops                                  | Type | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM  | DSP|     FF    |    LUT    | URAM|
+    +----------------------------------------------------------------------------+------+-------+---------+-----------+----------+---------+------+----------+--------+----+-----------+-----------+-----+
+    |+ StreamingDataflowPartition_0_IODMA_hls_0*                                 |     -|   0.00|        -|          -|         -|        -|     -|  dataflow|  4 (1%)|   -|  1656 (1%)|  2558 (4%)|    -|
+    | + Mem2Stream_Batch_64u_784u_s                                              |     -|   0.00|        -|          -|         -|        -|     -|        no|       -|   -|  384 (~0%)|   883 (1%)|    -|
+    |  o VITIS_LOOP_166_1                                                        |     -|  14.60|        -|          -|      1582|        -|     -|        no|       -|   -|          -|          -|    -|
+    |   + Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_11                   |     -|   0.00|      101|  2.020e+03|         -|      101|     -|        no|       -|   -|   81 (~0%)|  116 (~0%)|    -|
+    |    o VITIS_LOOP_140_1                                                      |     -|  14.60|       99|  1.980e+03|         3|        1|    98|  yes(flp)|       -|   -|          -|          -|    -|
+    |   + Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1                    |     -|   0.00|     1571|  3.142e+04|         -|     1571|     -|        no|       -|   -|   85 (~0%)|  112 (~0%)|    -|
+    |    o VITIS_LOOP_140_1                                                      |     -|  14.60|     1569|  3.138e+04|         3|        1|  1568|  yes(flp)|       -|   -|          -|          -|    -|
+    | + StreamingDataWidthConverter_Batch_64u_8u_98u_s                           |     -|   5.62|        -|          -|         -|        -|     -|        no|       -|   -|  205 (~0%)|  462 (~0%)|    -|
+    |  + StreamingDataWidthConverter_Batch_64u_8u_98u_Pipeline_VITIS_LOOP_526_1  |     -|   5.62|        -|          -|         -|        -|     -|        no|       -|   -|  127 (~0%)|  342 (~0%)|    -|
+    |   o VITIS_LOOP_526_1                                                       |     -|  14.60|        -|          -|         2|        1|     -|  yes(flp)|       -|   -|          -|          -|    -|
+    +----------------------------------------------------------------------------+------+-------+---------+-----------+----------+---------+------+----------+--------+----+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface  | Read/Write | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|            |            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem | READ_ONLY  | 64 -> 64   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
++------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 6             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | in0_V_1  | 0x10   | 32    | W      | Data signal of in0_V             |                                                                      |
+| s_axi_control | in0_V_2  | 0x14   | 32    | W      | Data signal of in0_V             |                                                                      |
+| s_axi_control | numReps  | 0x1c   | 32    | W      | Data signal of numReps           |                                                                      |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* AXIS
++-----------+-----------+---------------+-------+--------+--------+
+| Interface | Direction | Register Mode | TDATA | TREADY | TVALID |
++-----------+-----------+---------------+-------+--------+--------+
+| out_V     | out       | both          | 8     | 1      | 1      |
++-----------+-----------+---------------+-------+--------+--------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+------------------------+
+| Argument | Direction | Datatype               |
++----------+-----------+------------------------+
+| in0_V    | in        | ap_uint<64>*           |
+| out_V    | out       | stream<ap_uint<8>, 0>& |
+| numReps  | in        | unsigned int           |
++----------+-----------+------------------------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+----------+-----------------------------------+
+| Argument | HW Interface  | HW Type   | HW Usage | HW Info                           |
++----------+---------------+-----------+----------+-----------------------------------+
+| in0_V    | m_axi_gmem    | interface |          | channel=0                         |
+| in0_V    | s_axi_control | register  | offset   | name=in0_V_1 offset=0x10 range=32 |
+| in0_V    | s_axi_control | register  | offset   | name=in0_V_2 offset=0x14 range=32 |
+| out_V    | out_V         | interface |          |                                   |
+| numReps  | s_axi_control | register  |          | name=numReps offset=0x1c range=32 |
++----------+---------------+-----------+----------+-----------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------+--------+-------+------------------+---------------------------------------------------------+
+| HW Interface | Direction | Length | Width | Loop             | Loop Location                                           |
++--------------+-----------+--------+-------+------------------+---------------------------------------------------------+
+| m_axi_gmem   | read      | 98     | 64    | VITIS_LOOP_140_1 | /home/emre/Documents/finn/deps/finn-hlslib/dma.h:140:21 |
+| m_axi_gmem   | read      | 1568   | 64    | VITIS_LOOP_140_1 | /home/emre/Documents/finn/deps/finn-hlslib/dma.h:140:21 |
++--------------+-----------+--------+-------+------------------+---------------------------------------------------------+
+
+* All M_AXI Variable Accesses
++--------------+----------+---------------------------------------------------------+-----------+--------------+--------+------------------+---------------------------------------------------------+------------+-------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable | Access Location                                         | Direction | Burst Status | Length | Loop             | Loop Location                                           | Resolution | Problem                                                                                               |
++--------------+----------+---------------------------------------------------------+-----------+--------------+--------+------------------+---------------------------------------------------------+------------+-------------------------------------------------------------------------------------------------------+
+| m_axi_gmem   | in       | /home/emre/Documents/finn/deps/finn-hlslib/dma.h:142:25 | read      | Widen Fail   |        | VITIS_LOOP_140_1 | /home/emre/Documents/finn/deps/finn-hlslib/dma.h:140:21 | 214-353    | Could not widen since type i64 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | in       | /home/emre/Documents/finn/deps/finn-hlslib/dma.h:142:25 | read      | Inferred     | 98     | VITIS_LOOP_140_1 | /home/emre/Documents/finn/deps/finn-hlslib/dma.h:140:21 |            |                                                                                                       |
+| m_axi_gmem   | in       | /home/emre/Documents/finn/deps/finn-hlslib/dma.h:142:25 | read      | Inferred     | 1568   | VITIS_LOOP_140_1 | /home/emre/Documents/finn/deps/finn-hlslib/dma.h:140:21 |            |                                                                                                       |
++--------------+----------+---------------------------------------------------------+-----------+--------------+--------+------------------+---------------------------------------------------------+------------+-------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------------------------------------------------------+-----+--------+------------+--------+----------+---------+
+| Name                                                                       | DSP | Pragma | Variable   | Op     | Impl     | Latency |
++----------------------------------------------------------------------------+-----+--------+------------+--------+----------+---------+
+| + StreamingDataflowPartition_0_IODMA_hls_0                                 | 0   |        |            |        |          |         |
+|  + Mem2Stream_Batch_64u_784u_s                                             | 0   |        |            |        |          |         |
+|    icmp_ln166_fu_134_p2                                                    |     |        | icmp_ln166 | seteq  | auto     | 0       |
+|    icmp_ln168_fu_143_p2                                                    |     |        | icmp_ln168 | seteq  | auto     | 0       |
+|    add_ln140_fu_190_p2                                                     |     |        | add_ln140  | add    | fabric   | 0       |
+|    rep_3_fu_215_p2                                                         |     |        | rep_3      | add    | fabric   | 0       |
+|    rep_2_fu_225_p2                                                         |     |        | rep_2      | add    | fabric   | 0       |
+|   + Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_11                   | 0   |        |            |        |          |         |
+|     icmp_ln140_fu_84_p2                                                    |     |        | icmp_ln140 | seteq  | auto     | 0       |
+|     add_ln140_fu_90_p2                                                     |     |        | add_ln140  | add    | fabric   | 0       |
+|   + Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1                    | 0   |        |            |        |          |         |
+|     icmp_ln140_fu_84_p2                                                    |     |        | icmp_ln140 | seteq  | auto     | 0       |
+|     add_ln140_fu_90_p2                                                     |     |        | add_ln140  | add    | fabric   | 0       |
+|  + StreamingDataWidthConverter_Batch_64u_8u_98u_s                          | 0   |        |            |        |          |         |
+|   + StreamingDataWidthConverter_Batch_64u_8u_98u_Pipeline_VITIS_LOOP_526_1 | 0   |        |            |        |          |         |
+|     icmp_ln526_fu_106_p2                                                   |     |        | icmp_ln526 | seteq  | auto     | 0       |
+|     t_1_fu_112_p2                                                          |     |        | t_1        | add    | fabric   | 0       |
+|     icmp_ln529_fu_118_p2                                                   |     |        | icmp_ln529 | seteq  | auto     | 0       |
+|     o_4_fu_124_p2                                                          |     |        | o_4        | add    | fabric   | 0       |
+|     icmp_ln540_fu_130_p2                                                   |     |        | icmp_ln540 | seteq  | auto     | 0       |
+|     o_5_fu_136_p3                                                          |     |        | o_5        | select | auto_sel | 0       |
++----------------------------------------------------------------------------+-----+--------+------------+--------+----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++--------------------------------------------+--------------+-------------+------+------+--------+-----------+------+---------+------------------+
+| Name                                       | Usage        | Type        | BRAM | URAM | Pragma | Variable  | Impl | Latency | Bitwidth, Depth, |
+|                                            |              |             |      |      |        |           |      |         | Banks            |
++--------------------------------------------+--------------+-------------+------+------+--------+-----------+------+---------+------------------+
+| + StreamingDataflowPartition_0_IODMA_hls_0 |              |             | 4    | 0    |        |           |      |         |                  |
+|   control_s_axi_U                          | interface    | s_axilite   |      |      |        |           |      |         |                  |
+|   gmem_m_axi_U                             | interface    | m_axi       | 4    |      |        |           |      |         |                  |
+|   dma2dwc_U                                | fifo channel | stream      |      |      |        | dma2dwc   | srl  | 0       | 64, 2, 1         |
+|   numReps_c_U                              | fifo channel | scalar prop |      |      |        | numReps_c | srl  | 0       | 32, 2, 1         |
++--------------------------------------------+--------------+-------------+------+------+--------+-----------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+-----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+| Type            | Options                                       | Location                                                                                                                                    |
++-----------------+-----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/convlayer.h:113 in convlayer_batch                                                       |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/convlayer.h:198 in convlayer_batch_tmr                                                   |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/convlayer.h:284 in convlayer_batch_mmv                                                   |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/dma.h:141 in mem2stream                                                                  |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/dma.h:154 in stream2mem                                                                  |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/dma.h:224 in genparamstream                                                              |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:62 in xnormul                                                              |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:67 in operator*                                                            |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:72 in operator*                                                            |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:80 in binary                                                               |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:89 in operator*                                                            |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:97 in operator*                                                            |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:102 in operator*                                                           |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:116 in operator()                                                          |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:122 in operator()                                                          |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:138 in container<tv>                                                       |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:143 in operator[]                                                          |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:147 in operator[]                                                          |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:151 in operator()                                                          |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:155 in operator const type-parameter-1-0 &                                 |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:163 in operator()                                                          |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:168 in operator()                                                          |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:173 in operator()                                                          |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:204 in container<tv>                                                       |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:207 in container<tv>                                                       |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:211 in operator()                                                          |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:215 in operator()                                                          |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:220 in operator[]                                                          |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:224 in operator const type-parameter-1-0 &                                 |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:232 in operator()                                                          |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:237 in operator()                                                          |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:242 in operator()                                                          |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:261 in container<tv>                                                       |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:264 in container<tv>                                                       |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:267 in container<tv>                                                       |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:271 in operator const type-parameter-1-0 &                                 |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:275 in operator()                                                          |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:279 in operator()                                                          |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:284 in operator[]                                                          |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:292 in operator()                                                          |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:297 in operator()                                                          |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/interpret.hpp:302 in operator()                                                          |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/mac.hpp:89 in mul                                                                        |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/mac.hpp:114 in mul                                                                       |
+| bind_op         | variable=res op=mul impl=fabric               | ../../../home/emre/Documents/finn/deps/finn-hlslib/mac.hpp:116 in mul, res                                                                  |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/mac.hpp:140 in mul                                                                       |
+| bind_op         | variable=res op=mul impl=dsp                  | ../../../home/emre/Documents/finn/deps/finn-hlslib/mac.hpp:142 in mul, res                                                                  |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/mac.hpp:165 in mac                                                                       |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/mac.hpp:168 in mac                                                                       |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/mac.hpp:192 in mac                                                                       |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/mac.hpp:195 in mac                                                                       |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/mac.hpp:202 in mac                                                                       |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:74 in streamingmaxpool                                                         |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:83 in streamingmaxpool                                                         |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:91 in streamingmaxpool                                                         |
+| array_partition | variable=buf complete dim=2                   | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:146 in streamingmaxpool_precision, buf                                         |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:149 in streamingmaxpool_precision                                              |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:159 in streamingmaxpool_precision                                              |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:162 in streamingmaxpool_precision                                              |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:176 in streamingmaxpool_precision                                              |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:210 in streamingmaxpool_precision_batch                                        |
+| array_partition | variable=buf complete dim=2                   | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:255 in streamingmaxpool_precision_1d, buf                                      |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:258 in streamingmaxpool_precision_1d                                           |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:260 in streamingmaxpool_precision_1d                                           |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:272 in streamingmaxpool_precision_1d                                           |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:275 in streamingmaxpool_precision_1d                                           |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:288 in streamingmaxpool_precision_1d                                           |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:290 in streamingmaxpool_precision_1d                                           |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:302 in streamingmaxpool_precision_1d                                           |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:331 in streamingmaxpool_precision_batch_1d                                     |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:370 in relu_batch                                                              |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:373 in relu_batch                                                              |
+| bind_storage    | variable=accumulators type=RAM_2P impl=LUTRAM | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:415 in accpool_batch, accumulators                                             |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:421 in accpool_batch                                                           |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:425 in accpool_batch                                                           |
+| array_partition | variable=topval complete dim=1                | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:477 in labelselect_batch, topval                                               |
+| array_partition | variable=toplabels complete dim=1             | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:479 in labelselect_batch, toplabels                                            |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:484 in labelselect_batch                                                       |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:489 in labelselect_batch                                                       |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:492 in labelselect_batch                                                       |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:501 in labelselect_batch                                                       |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:508 in labelselect_batch                                                       |
+| array_partition | variable=accu complete dim=0                  | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:570 in pool_batch, accu                                                        |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:576 in pool_batch                                                              |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:583 in pool_batch                                                              |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:590 in pool_batch                                                              |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/maxpool.h:599 in pool_batch                                                              |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/mmv.hpp:53 in operator[]                                                                 |
+| array_partition | variable=inputBuf complete dim=0              | ../../../home/emre/Documents/finn/deps/finn-hlslib/mvau.hpp:110 in matrix_vector_activate_batch, inputBuf                                   |
+| array_partition | variable=accu complete dim=0                  | ../../../home/emre/Documents/finn/deps/finn-hlslib/mvau.hpp:114 in matrix_vector_activate_batch, accu                                       |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/mvau.hpp:124 in matrix_vector_activate_batch                                             |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/mvau.hpp:140 in matrix_vector_activate_batch                                             |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/mvau.hpp:142 in matrix_vector_activate_batch                                             |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/mvau.hpp:151 in matrix_vector_activate_batch                                             |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/mvau.hpp:165 in matrix_vector_activate_batch                                             |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/mvau.hpp:167 in matrix_vector_activate_batch                                             |
+| array_partition | variable=inputBuf complete dim=1              | ../../../home/emre/Documents/finn/deps/finn-hlslib/mvau.hpp:232 in matrix_vector_activate_stream_batch, inputBuf                            |
+| array_partition | variable=accu complete dim=0                  | ../../../home/emre/Documents/finn/deps/finn-hlslib/mvau.hpp:235 in matrix_vector_activate_stream_batch, accu                                |
+| array_partition | variable=w.m_weights complete dim=0           | ../../../home/emre/Documents/finn/deps/finn-hlslib/mvau.hpp:238 in matrix_vector_activate_stream_batch, w.m_weights                         |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/mvau.hpp:250 in matrix_vector_activate_stream_batch                                      |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/mvau.hpp:267 in matrix_vector_activate_stream_batch                                      |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/mvau.hpp:274 in matrix_vector_activate_stream_batch                                      |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/mvau.hpp:281 in matrix_vector_activate_stream_batch                                      |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/mvau.hpp:294 in matrix_vector_activate_stream_batch                                      |
+| bind_storage    | variable=inputBuf type=RAM_2P                 | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:74 in memory_resource, inputBuf                                          |
+| bind_storage    | variable=inputBuf type=RAM_S2P impl=BRAM      | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:95 in memory_resource, inputBuf                                          |
+| bind_storage    | variable=inputBuf type=RAM_S2P impl=URAM      | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:116 in memory_resource, inputBuf                                         |
+| bind_storage    | variable=inputBuf type=RAM_S2P impl=LUTRAM    | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:137 in memory_resource, inputBuf                                         |
+| array_partition | variable=inputBuf complete dim=1              | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:177 in convolutioninputgenerator, inputBuf                               |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:192 in convolutioninputgenerator                                         |
+| dependence      | variable=inputBuf intra false                 | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:243 in convolutioninputgenerator, inputBuf                               |
+| dependence      | variable=inputBuf inter false                 | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:244 in convolutioninputgenerator, inputBuf                               |
+| dependence      | variable=current_block_write intra false      | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:254 in convolutioninputgenerator, current_block_write                    |
+| dependence      | variable=inputBuf inter false                 | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:308 in convolutioninputgenerator_mmv, inputBuf                           |
+| dependence      | variable=inputBuf intra false                 | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:309 in convolutioninputgenerator_mmv, inputBuf                           |
+| array_partition | variable=inputBuf complete dim=1              | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:310 in convolutioninputgenerator_mmv, inputBuf                           |
+| array_partition | variable=inputBuf complete dim=2              | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:311 in convolutioninputgenerator_mmv, inputBuf                           |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:326 in convolutioninputgenerator_mmv                                     |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:333 in convolutioninputgenerator_mmv                                     |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:359 in convolutioninputgenerator_mmv                                     |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:392 in convolutioninputgenerator_mmv                                     |
+| dependence      | variable=inputBuf intra false                 | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:394 in convolutioninputgenerator_mmv, inputBuf                           |
+| dependence      | variable=inputBuf inter false                 | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:395 in convolutioninputgenerator_mmv, inputBuf                           |
+| dependence      | variable=current_block_write intra false      | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:406 in convolutioninputgenerator_mmv, current_block_write                |
+| array_partition | variable=inputBuf complete dim=1              | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:466 in convolutioninputgenerator_kernel_stride, inputBuf                 |
+| dependence      | variable=inputBuf inter false                 | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:467 in convolutioninputgenerator_kernel_stride, inputBuf                 |
+| dependence      | variable=inputBuf intra false                 | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:468 in convolutioninputgenerator_kernel_stride, inputBuf                 |
+| dependence      | variable=current_block_write intra false      | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:476 in convolutioninputgenerator_kernel_stride, current_block_write      |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:479 in convolutioninputgenerator_kernel_stride                           |
+| dependence      | variable=inputBuf inter false                 | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:544 in convolutioninputgenerator_kernel_stride, inputBuf                 |
+| dependence      | variable=inputBuf intra false                 | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:545 in convolutioninputgenerator_kernel_stride, inputBuf                 |
+| dependence      | variable=current_block_write intra false      | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:554 in convolutioninputgenerator_kernel_stride, current_block_write      |
+| dependence      | variable=inputBuf inter false                 | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:610 in convolutioninputgenerator_kernel_stride_mmv, inputBuf             |
+| dependence      | variable=inputBuf intra false                 | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:611 in convolutioninputgenerator_kernel_stride_mmv, inputBuf             |
+| array_partition | variable=inputBuf complete dim=1              | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:612 in convolutioninputgenerator_kernel_stride_mmv, inputBuf             |
+| array_partition | variable=inputBuf complete dim=2              | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:613 in convolutioninputgenerator_kernel_stride_mmv, inputBuf             |
+| dependence      | variable=current_block_write intra false      | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:628 in convolutioninputgenerator_kernel_stride_mmv, current_block_write  |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:631 in convolutioninputgenerator_kernel_stride_mmv                       |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:638 in convolutioninputgenerator_kernel_stride_mmv                       |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:672 in convolutioninputgenerator_kernel_stride_mmv                       |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:705 in convolutioninputgenerator_kernel_stride_mmv                       |
+| dependence      | variable=current_block_write intra false      | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:716 in convolutioninputgenerator_kernel_stride_mmv, current_block_write  |
+| array_partition | variable=inputBuf complete dim=1              | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:767 in convolutioninputgenerator_dws, inputBuf                           |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:782 in convolutioninputgenerator_dws                                     |
+| dependence      | variable=inputBuf intra false                 | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:833 in convolutioninputgenerator_dws, inputBuf                           |
+| dependence      | variable=inputBuf inter false                 | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:834 in convolutioninputgenerator_dws, inputBuf                           |
+| dependence      | variable=current_block_write intra false      | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:844 in convolutioninputgenerator_dws, current_block_write                |
+| array_partition | variable=inputBuf complete dim=1              | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:903 in convolutioninputgenerator_kernel_stride_dws, inputBuf             |
+| dependence      | variable=inputBuf inter false                 | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:904 in convolutioninputgenerator_kernel_stride_dws, inputBuf             |
+| dependence      | variable=inputBuf intra false                 | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:905 in convolutioninputgenerator_kernel_stride_dws, inputBuf             |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:915 in convolutioninputgenerator_kernel_stride_dws                       |
+| dependence      | variable=current_block_write intra false      | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:917 in convolutioninputgenerator_kernel_stride_dws, current_block_write  |
+| dependence      | variable=inputBuf inter false                 | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:983 in convolutioninputgenerator_kernel_stride_dws, inputBuf             |
+| dependence      | variable=inputBuf intra false                 | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:984 in convolutioninputgenerator_kernel_stride_dws, inputBuf             |
+| dependence      | variable=current_block_write intra false      | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:993 in convolutioninputgenerator_kernel_stride_dws, current_block_write  |
+| dependence      | variable=inputBuf inter false                 | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1048 in convolutioninputgenerator_dws_mmv, inputBuf                      |
+| dependence      | variable=inputBuf intra false                 | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1049 in convolutioninputgenerator_dws_mmv, inputBuf                      |
+| array_partition | variable=inputBuf complete dim=1              | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1050 in convolutioninputgenerator_dws_mmv, inputBuf                      |
+| array_partition | variable=inputBuf complete dim=2              | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1051 in convolutioninputgenerator_dws_mmv, inputBuf                      |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1066 in convolutioninputgenerator_dws_mmv                                |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1073 in convolutioninputgenerator_dws_mmv                                |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1099 in convolutioninputgenerator_dws_mmv                                |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1132 in convolutioninputgenerator_dws_mmv                                |
+| dependence      | variable=inputBuf intra false                 | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1134 in convolutioninputgenerator_dws_mmv, inputBuf                      |
+| dependence      | variable=inputBuf inter false                 | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1135 in convolutioninputgenerator_dws_mmv, inputBuf                      |
+| dependence      | variable=current_block_write intra false      | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1146 in convolutioninputgenerator_dws_mmv, current_block_write           |
+| performance     | target_ti=IFMDim*IFMDim*IFMChannels/SIMD      | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1191 in convolutioninputgenerator_2d_kernel1                             |
+| pipeline        | style=flp II=IFMChannels/SIMD                 | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1198 in convolutioninputgenerator_2d_kernel1                             |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1245 in convolutioninputgenerator_1d_kernel1                             |
+| array_partition | variable=inputBuf complete dim=1              | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1300 in convolutioninputgenerator_nonsquare, inputBuf                    |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1315 in convolutioninputgenerator_nonsquare                              |
+| dependence      | variable=inputBuf intra false                 | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1366 in convolutioninputgenerator_nonsquare, inputBuf                    |
+| dependence      | variable=inputBuf inter false                 | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1367 in convolutioninputgenerator_nonsquare, inputBuf                    |
+| dependence      | variable=current_block_write intra false      | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1377 in convolutioninputgenerator_nonsquare, current_block_write         |
+| array_partition | variable=inputBuf complete dim=1              | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1434 in convolutioninputgenerator_nonsquare_dws, inputBuf                |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1449 in convolutioninputgenerator_nonsquare_dws                          |
+| dependence      | variable=inputBuf intra false                 | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1500 in convolutioninputgenerator_nonsquare_dws, inputBuf                |
+| dependence      | variable=inputBuf inter false                 | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1501 in convolutioninputgenerator_nonsquare_dws, inputBuf                |
+| dependence      | variable=current_block_write intra false      | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1511 in convolutioninputgenerator_nonsquare_dws, current_block_write     |
+| array_partition | variable=inputBuf complete dim=1              | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1575 in convolutioninputgenerator_nonsquare_dilated, inputBuf            |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1590 in convolutioninputgenerator_nonsquare_dilated                      |
+| dependence      | variable=inputBuf intra false                 | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1642 in convolutioninputgenerator_nonsquare_dilated, inputBuf            |
+| dependence      | variable=inputBuf inter false                 | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1643 in convolutioninputgenerator_nonsquare_dilated, inputBuf            |
+| dependence      | variable=current_block_write intra false      | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1653 in convolutioninputgenerator_nonsquare_dilated, current_block_write |
+| array_partition | variable=inputBuf complete                    | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1710 in convolutioninputgenerator_1d_parallel, inputBuf                  |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1718 in convolutioninputgenerator_1d_parallel                            |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1739 in convolutioninputgenerator_1d_parallel                            |
+| dependence      | variable=inputBuf intra false                 | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1760 in convolutioninputgenerator_1d_parallel, inputBuf                  |
+| dependence      | variable=inputBuf inter false                 | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1761 in convolutioninputgenerator_1d_parallel, inputBuf                  |
+| dependence      | variable=current_block_write intra false      | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1768 in convolutioninputgenerator_1d_parallel, current_block_write       |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1824 in convolutioninputgenerator_1d_dws_naive                           |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1908 in convolutioninputgenerator_1d                                     |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:1984 in convolutioninputgenerator_1d_dws                                 |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/slidingwindow.h:2063 in convolutioninputgenerator_1d_dws_stride                          |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/streamtools.h:77 in streamlimiter                                                        |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/streamtools.h:160 in sameresize                                                          |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/streamtools.h:234 in streamingcast                                                       |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/streamtools.h:280 in fmpadding_nonsquare                                                 |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/streamtools.h:374 in fmpadding                                                           |
+| pipeline        | II=1 style=flp                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/streamtools.h:457 in fmpadding_pixel_nonsquare                                           |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/streamtools.h:527 in streamingdatawidthconverter_batch                                   |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/streamtools.h:547 in streamingdatawidthconverter_batch                                   |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/streamtools.h:558 in streamingdatawidthconverter_batch                                   |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/streamtools.h:667 in duplicatestreams                                                    |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/streamtools.h:725 in addstreams                                                          |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/streamtools.h:730 in addstreams                                                          |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/streamtools.h:799 in addstreamslayer_batch                                               |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/streamtools.h:846 in multichandatawidthconverter_batch                                   |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/streamtools.h:853 in multichandatawidthconverter_batch                                   |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/streamtools.h:869 in multichandatawidthconverter_batch                                   |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/streamtools.h:875 in multichandatawidthconverter_batch                                   |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/streamtools.h:887 in multichandatawidthconverter_batch                                   |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/streamtools.h:891 in multichandatawidthconverter_batch                                   |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/streamtools.h:927 in flattenmultichandata                                                |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/streamtools.h:931 in flattenmultichandata                                                |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/streamtools.h:958 in packmultichandata                                                   |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/streamtools.h:962 in packmultichandata                                                   |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/streamtools.h:1051 in qdma2stream_batch                                                  |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/streamtools.h:1074 in stream2qdma_batch                                                  |
+| array_partition | variable=red_ch_index complete dim=0          | ../../../home/emre/Documents/finn/deps/finn-hlslib/tmrcheck.hpp:82 in tmrcheck, red_ch_index                                                |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/tmrcheck.hpp:91 in tmrcheck                                                              |
+| array_partition | variable=numerrors complete dim=0             | ../../../home/emre/Documents/finn/deps/finn-hlslib/tmrcheck.hpp:99 in tmrcheck, numerrors                                                   |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/tmrcheck.hpp:103 in tmrcheck                                                             |
+| array_partition | variable=compute complete dim=0               | ../../../home/emre/Documents/finn/deps/finn-hlslib/tmrcheck.hpp:129 in tmrcheck, compute                                                    |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/tmrcheck.hpp:132 in tmrcheck                                                             |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/upsample.hpp:86 in upsamplenearestneighbour                                              |
+| pipeline        | II=1 style=flp                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/upsample.hpp:175 in upsamplenearestneighbour_1d                                          |
+| array_partition | variable=accu complete dim=0                  | ../../../home/emre/Documents/finn/deps/finn-hlslib/vvau.hpp:101 in vector_vector_activate_batch, accu                                       |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/vvau.hpp:110 in vector_vector_activate_batch                                             |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/vvau.hpp:117 in vector_vector_activate_batch                                             |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/vvau.hpp:126 in vector_vector_activate_batch                                             |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/vvau.hpp:147 in vector_vector_activate_batch                                             |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/vvau.hpp:149 in vector_vector_activate_batch                                             |
+| array_partition | variable=accu complete dim=0                  | ../../../home/emre/Documents/finn/deps/finn-hlslib/vvau.hpp:216 in vector_vector_activate_stream_batch, accu                                |
+| pipeline        | style=flp II=1                                | ../../../home/emre/Documents/finn/deps/finn-hlslib/vvau.hpp:226 in vector_vector_activate_stream_batch                                      |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/vvau.hpp:233 in vector_vector_activate_stream_batch                                      |
+| array_partition | variable=w.m_weights complete dim=0           | ../../../home/emre/Documents/finn/deps/finn-hlslib/vvau.hpp:242 in vector_vector_activate_stream_batch, w.m_weights                         |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/vvau.hpp:244 in vector_vector_activate_stream_batch                                      |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/vvau.hpp:249 in vector_vector_activate_stream_batch                                      |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/vvau.hpp:270 in vector_vector_activate_stream_batch                                      |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/vvau.hpp:272 in vector_vector_activate_stream_batch                                      |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/weights.hpp:83 in tileindex                                                              |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/weights.hpp:88 in operator[]                                                             |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/weights.hpp:95 in weights                                                                |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/weights.hpp:127 in tileindex                                                             |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/weights.hpp:132 in operator[]                                                            |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/weights.hpp:135 in operator[]                                                            |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/weights.hpp:145 in weights                                                               |
+| inline          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/weights.hpp:157 in operator[]                                                            |
+| unroll          |                                               | ../../../home/emre/Documents/finn/deps/finn-hlslib/weights.hpp:160 in operator[]                                                            |
+| interface       | s_axilite port=numReps bundle=control         | top_StreamingDataflowPartition_0_IODMA_hls_0.cpp:17 in streamingdataflowpartition_0_iodma_hls_0, numReps                                    |
+| interface       | s_axilite port=return bundle=control          | top_StreamingDataflowPartition_0_IODMA_hls_0.cpp:18 in streamingdataflowpartition_0_iodma_hls_0, return                                     |
+| interface       | m_axi offset=slave port=in0_V                 | top_StreamingDataflowPartition_0_IODMA_hls_0.cpp:19 in streamingdataflowpartition_0_iodma_hls_0, in0_V                                      |
+| interface       | s_axilite port=in0_V bundle=control           | top_StreamingDataflowPartition_0_IODMA_hls_0.cpp:20 in streamingdataflowpartition_0_iodma_hls_0, in0_V                                      |
+| interface       | axis port=out_V                               | top_StreamingDataflowPartition_0_IODMA_hls_0.cpp:21 in streamingdataflowpartition_0_iodma_hls_0, out_V                                      |
+| dataflow        |                                               | top_StreamingDataflowPartition_0_IODMA_hls_0.cpp:22 in streamingdataflowpartition_0_iodma_hls_0                                             |
++-----------------+-----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+

@@ -1,0 +1,25 @@
+<AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <name>
+        <value string="sol1"/>
+    </name>
+    <project>
+        <value string="project_StreamingDataflowPartition_1_MVAU_hls_0"/>
+    </project>
+    <flowTarget value="vivado"/>
+    <targetInfo>
+        <TargetInfo value="xc7z020:-clg400:-1"/>
+    </targetInfo>
+    <libraryList>
+        <library value="xilinx/zynq/zynq" name="DefaultPlatform"/>
+    </libraryList>
+    <config>
+        <config_compile complex-mul-dsp="0" disable_unroll_code_size_check="1" pipeline_style="flp"/>
+        <config_interface m_axi_addr64="1"/>
+        <config_rtl module_auto_prefix="1" deadlock_detection="none"/>
+        <config_export format="ip_catalog"/>
+    </config>
+    <clockList>
+        <clock name="default" period="20" default="false"/>
+    </clockList>
+</AutoPilot:solution>
+

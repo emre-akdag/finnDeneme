@@ -1,0 +1,37 @@
+<pragmas>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<4>::ap_uint<4, false>(ap_range_ref<4, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="top_StreamingDataflowPartition_1_LabelSelect_hls_0.cpp" line="15" pragmaType="interface" parentfunction="StreamingDataflowPartition_1_LabelSelect_hls_0" mode="axis" port="in0_V" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="top_StreamingDataflowPartition_1_LabelSelect_hls_0.cpp" line="16" pragmaType="interface" parentfunction="StreamingDataflowPartition_1_LabelSelect_hls_0" mode="axis" port="out_V" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="top_StreamingDataflowPartition_1_LabelSelect_hls_0.cpp" line="17" pragmaType="interface" parentfunction="StreamingDataflowPartition_1_LabelSelect_hls_0" mode="ap_ctrl_none" port="return" name=""/>
+<pragma file="/opt/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_common.h" line="523" pragmaType="inline" parentfunction="_ZN8ssdm_intILi4ELb0EEC2EDq4_j" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool ap_int_base<4, false>::operator<<32, true>(ap_int_base<32, true> const&) const" off="0" region="0" recursive="0"/>
+<pragma file="/opt/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_common.h" line="515" pragmaType="inline" parentfunction="ssdm_int<32, true>::ssdm_int(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<4, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<8, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="/opt/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_common.h" line="523" pragmaType="inline" parentfunction="ssdm_int<8, false>::ssdm_int(unsigned char)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<4, false>::ap_int_base<4, false>(ap_range_ref<4, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<8, false>::ap_int_base(unsigned int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool ap_int_base<4, false>::operator><4, false>(ap_int_base<4, false> const&) const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<4, false>::ap_range_ref(ap_int_base<4, false>*, int, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<8>::ap_uint(unsigned int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="range" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<4, false>::operator()(int, int) const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<4>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool operator<<4, false>(ap_int_base<4, false> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<8>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="/home/emre/Documents/finn/deps/finn-hlslib/maxpool.h" line="484" pragmaType="unroll" parentfunction="LabelSelect_Batch" factor="-1" skip_exit_check="0"/>
+<pragma file="/home/emre/Documents/finn/deps/finn-hlslib/maxpool.h" line="489" pragmaType="pipeline" parentfunction="LabelSelect_Batch" off="0" ii="1" rewind="0" style="flp"/>
+<pragma file="/home/emre/Documents/finn/deps/finn-hlslib/maxpool.h" line="492" pragmaType="unroll" parentfunction="LabelSelect_Batch" factor="-1" skip_exit_check="0"/>
+<pragma file="/home/emre/Documents/finn/deps/finn-hlslib/maxpool.h" line="501" pragmaType="unroll" parentfunction="LabelSelect_Batch" factor="-1" skip_exit_check="0"/>
+<pragma file="/home/emre/Documents/finn/deps/finn-hlslib/maxpool.h" line="508" pragmaType="unroll" parentfunction="LabelSelect_Batch" factor="-1" skip_exit_check="0"/>
+<pragma file="/home/emre/Documents/finn/deps/finn-hlslib/maxpool.h" line="477" pragmaType="array_partition" parentfunction="LabelSelect_Batch" dim="1" factor="0" mode="complete" dynamic="0" variable="topval"/>
+<pragma file="/home/emre/Documents/finn/deps/finn-hlslib/maxpool.h" line="479" pragmaType="array_partition" parentfunction="LabelSelect_Batch" dim="1" factor="0" mode="complete" dynamic="0" variable="toplabels"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+</pragmas>

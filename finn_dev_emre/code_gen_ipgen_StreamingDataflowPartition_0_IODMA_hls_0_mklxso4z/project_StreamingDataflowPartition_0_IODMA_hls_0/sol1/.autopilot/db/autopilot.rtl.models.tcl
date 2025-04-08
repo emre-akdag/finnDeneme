@@ -1,0 +1,24 @@
+set SynModuleInfo {
+  {SRCNAME {Mem2Stream_Batch<64u, 784u>_Pipeline_VITIS_LOOP_140_11} MODELNAME Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_11 RTLNAME StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_11
+    SUBMODULES {
+      {MODELNAME StreamingDataflowPartition_0_IODMA_hls_0_flow_control_loop_pipe_sequential_init RTLNAME StreamingDataflowPartition_0_IODMA_hls_0_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME StreamingDataflowPartition_0_IODMA_hls_0_flow_control_loop_pipe_sequential_init_U}
+    }
+  }
+  {SRCNAME {Mem2Stream_Batch<64u, 784u>_Pipeline_VITIS_LOOP_140_1} MODELNAME Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1 RTLNAME StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_Pipeline_VITIS_LOOP_140_1}
+  {SRCNAME {Mem2Stream_Batch<64u, 784u>} MODELNAME Mem2Stream_Batch_64u_784u_s RTLNAME StreamingDataflowPartition_0_IODMA_hls_0_Mem2Stream_Batch_64u_784u_s}
+  {SRCNAME {StreamingDataWidthConverter_Batch<64u, 8u, 98u>_Pipeline_VITIS_LOOP_526_1} MODELNAME StreamingDataWidthConverter_Batch_64u_8u_98u_Pipeline_VITIS_LOOP_526_1 RTLNAME StreamingDataflowPartition_0_IODMA_hls_0_StreamingDataWidthConverter_Batch_64u_8u_98u_Pipeline_VITIS_LOOP_526_1}
+  {SRCNAME {StreamingDataWidthConverter_Batch<64u, 8u, 98u>} MODELNAME StreamingDataWidthConverter_Batch_64u_8u_98u_s RTLNAME StreamingDataflowPartition_0_IODMA_hls_0_StreamingDataWidthConverter_Batch_64u_8u_98u_s
+    SUBMODULES {
+      {MODELNAME StreamingDataflowPartition_0_IODMA_hls_0_regslice_both RTLNAME StreamingDataflowPartition_0_IODMA_hls_0_regslice_both BINDTYPE interface TYPE adapter IMPL reg_slice}
+    }
+  }
+  {SRCNAME StreamingDataflowPartition_0_IODMA_hls_0 MODELNAME StreamingDataflowPartition_0_IODMA_hls_0 RTLNAME StreamingDataflowPartition_0_IODMA_hls_0 IS_TOP 1
+    SUBMODULES {
+      {MODELNAME StreamingDataflowPartition_0_IODMA_hls_0_fifo_w64_d2_S RTLNAME StreamingDataflowPartition_0_IODMA_hls_0_fifo_w64_d2_S BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME dma2dwc_U}
+      {MODELNAME StreamingDataflowPartition_0_IODMA_hls_0_fifo_w32_d2_S RTLNAME StreamingDataflowPartition_0_IODMA_hls_0_fifo_w32_d2_S BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME numReps_c_U}
+      {MODELNAME StreamingDataflowPartition_0_IODMA_hls_0_start_for_StreamingDataWidthConverter_Batch_64u_8u_98u_U0 RTLNAME StreamingDataflowPartition_0_IODMA_hls_0_start_for_StreamingDataWidthConverter_Batch_64u_8u_98u_U0 BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME start_for_StreamingDataWidthConverter_Batch_64u_8u_98u_U0_U}
+      {MODELNAME StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi RTLNAME StreamingDataflowPartition_0_IODMA_hls_0_gmem_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}
+      {MODELNAME StreamingDataflowPartition_0_IODMA_hls_0_control_s_axi RTLNAME StreamingDataflowPartition_0_IODMA_hls_0_control_s_axi BINDTYPE interface TYPE interface_s_axilite}
+    }
+  }
+}

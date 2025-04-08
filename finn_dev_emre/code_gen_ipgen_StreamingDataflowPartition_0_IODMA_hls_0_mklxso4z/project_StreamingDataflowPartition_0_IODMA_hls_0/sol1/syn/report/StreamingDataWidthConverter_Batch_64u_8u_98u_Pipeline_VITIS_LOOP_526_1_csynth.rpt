@@ -1,0 +1,162 @@
+
+
+================================================================
+== Vitis HLS Report for 'StreamingDataWidthConverter_Batch_64u_8u_98u_Pipeline_VITIS_LOOP_526_1'
+================================================================
+* Date:           Wed Mar 26 22:46:56 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        project_StreamingDataflowPartition_0_IODMA_hls_0
+* Solution:       sol1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  20.00 ns|  8.978 ns|     5.40 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind flp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_526_1  |        ?|        ?|         2|          1|          1|     ?|  yes(flp)|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    233|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|    109|    -|
+|Register         |        -|    -|     127|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|     127|    342|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |o_4_fu_124_p2                     |         +|   0|  0|  39|          32|           1|
+    |t_1_fu_112_p2                     |         +|   0|  0|  39|          32|           1|
+    |ap_condition_67                   |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op31_read_state2     |       and|   0|  0|   2|           1|           1|
+    |icmp_ln526_fu_106_p2              |      icmp|   0|  0|  39|          32|          32|
+    |icmp_ln529_fu_118_p2              |      icmp|   0|  0|  39|          32|           1|
+    |icmp_ln540_fu_130_p2              |      icmp|   0|  0|  39|          32|           4|
+    |ap_block_state2_pp0_stage0_iter1  |        or|   0|  0|   2|           1|           1|
+    |o_5_fu_136_p3                     |    select|   0|  0|  32|           1|           1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0| 233|         164|          43|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------+----+-----------+-----+-----------+
+    |               Name               | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------+----+-----------+-----+-----------+
+    |ap_NS_iter1_fsm                   |  14|          3|    2|          6|
+    |ap_done_int                       |   9|          2|    1|          2|
+    |ap_loop_exit_ready_pp0_iter1_reg  |   9|          2|    1|          2|
+    |ap_phi_mux_ei_1_phi_fu_78_p4      |  14|          3|   64|        192|
+    |ap_sig_allocacmp_o_3              |   9|          2|   32|         64|
+    |ap_sig_allocacmp_t_2              |   9|          2|   32|         64|
+    |dma2dwc_blk_n                     |   9|          2|    1|          2|
+    |ei_fu_44                          |   9|          2|   56|        112|
+    |o_fu_48                           |   9|          2|   32|         64|
+    |out_V_TDATA_blk_n                 |   9|          2|    1|          2|
+    |t_fu_52                           |   9|          2|   32|         64|
+    +----------------------------------+----+-----------+-----+-----------+
+    |Total                             | 109|         24|  254|        574|
+    +----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+----+----+-----+-----------+
+    |               Name               | FF | LUT| Bits| Const Bits|
+    +----------------------------------+----+----+-----+-----------+
+    |ap_CS_iter0_fsm                   |   1|   0|    1|          0|
+    |ap_CS_iter1_fsm                   |   2|   0|    2|          0|
+    |ap_done_reg                       |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg  |   1|   0|    1|          0|
+    |ei_fu_44                          |  56|   0|   56|          0|
+    |icmp_ln526_reg_203                |   1|   0|    1|          0|
+    |icmp_ln529_reg_207                |   1|   0|    1|          0|
+    |o_fu_48                           |  32|   0|   32|          0|
+    |t_fu_52                           |  32|   0|   32|          0|
+    +----------------------------------+----+----+-----+-----------+
+    |Total                             | 127|   0|  127|          0|
+    +----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+---------------------------------------------------------------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |                               Source Object                               |    C Type    |
++------------------------+-----+-----+------------+---------------------------------------------------------------------------+--------------+
+|ap_clk                  |   in|    1|  ap_ctrl_hs|  StreamingDataWidthConverter_Batch<64u, 8u, 98u>_Pipeline_VITIS_LOOP_526_1|  return value|
+|ap_rst                  |   in|    1|  ap_ctrl_hs|  StreamingDataWidthConverter_Batch<64u, 8u, 98u>_Pipeline_VITIS_LOOP_526_1|  return value|
+|ap_start                |   in|    1|  ap_ctrl_hs|  StreamingDataWidthConverter_Batch<64u, 8u, 98u>_Pipeline_VITIS_LOOP_526_1|  return value|
+|ap_done                 |  out|    1|  ap_ctrl_hs|  StreamingDataWidthConverter_Batch<64u, 8u, 98u>_Pipeline_VITIS_LOOP_526_1|  return value|
+|ap_idle                 |  out|    1|  ap_ctrl_hs|  StreamingDataWidthConverter_Batch<64u, 8u, 98u>_Pipeline_VITIS_LOOP_526_1|  return value|
+|ap_ready                |  out|    1|  ap_ctrl_hs|  StreamingDataWidthConverter_Batch<64u, 8u, 98u>_Pipeline_VITIS_LOOP_526_1|  return value|
+|dma2dwc_dout            |   in|   64|     ap_fifo|                                                                    dma2dwc|       pointer|
+|dma2dwc_empty_n         |   in|    1|     ap_fifo|                                                                    dma2dwc|       pointer|
+|dma2dwc_read            |  out|    1|     ap_fifo|                                                                    dma2dwc|       pointer|
+|dma2dwc_num_data_valid  |   in|    3|     ap_fifo|                                                                    dma2dwc|       pointer|
+|dma2dwc_fifo_cap        |   in|    3|     ap_fifo|                                                                    dma2dwc|       pointer|
+|out_V_TREADY            |   in|    1|        axis|                                                                      out_V|       pointer|
+|out_V_TDATA             |  out|    8|        axis|                                                                      out_V|       pointer|
+|out_V_TVALID            |  out|    1|        axis|                                                                      out_V|       pointer|
+|totalIters              |   in|   32|     ap_none|                                                                 totalIters|        scalar|
++------------------------+-----+-----+------------+---------------------------------------------------------------------------+--------------+
+

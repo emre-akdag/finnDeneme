@@ -1,0 +1,53 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "4 2",
+    "file": "top_StreamingDataflowPartition_0_IODMA_hls_0.cpp",
+    "fileloc": 15,
+    "instructions": 10,
+    "name": "StreamingDataflowPartition_0_IODMA_hls_0",
+    "total_instructions": 75
+  },
+  "1": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "dma.h",
+    "fileloc": 136,
+    "instructions": 10,
+    "loads": {
+      "L": 1
+    },
+    "name": "Mem2Stream<64, 784>",
+    "total_instructions": 10
+  },
+  "2": {
+    "basicblocks": 6,
+    "calls": "",
+    "file": "streamtools.h",
+    "fileloc": 516,
+    "instructions": 22,
+    "name": "StreamingDataWidthConverter_Batch<64, 8, 98>",
+    "total_instructions": 22
+  },
+  "3": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "dma.h",
+    "fileloc": 136,
+    "instructions": 10,
+    "loads": {
+      "L": 1
+    },
+    "name": "Mem2Stream<64, 12544>",
+    "total_instructions": 10
+  },
+  "4": {
+    "basicblocks": 7,
+    "calls": "3 1",
+    "file": "dma.h",
+    "fileloc": 161,
+    "instructions": 23,
+    "name": "Mem2Stream_Batch<64, 784>",
+    "total_instructions": 43
+  }
+}

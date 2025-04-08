@@ -1,0 +1,14 @@
+{
+  "0": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "top_StreamingDataflowPartition_1_LabelSelect_hls_0.cpp",
+    "fileloc": 12,
+    "instructions": 31,
+    "name": "StreamingDataflowPartition_1_LabelSelect_hls_0",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 31
+  }
+}

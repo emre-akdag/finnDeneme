@@ -1,0 +1,12 @@
+set SynModuleInfo {
+  {SRCNAME StreamingDataflowPartition_1_LabelSelect_hls_0_Pipeline_VITIS_LOOP_488_3 MODELNAME StreamingDataflowPartition_1_LabelSelect_hls_0_Pipeline_VITIS_LOOP_488_3 RTLNAME StreamingDataflowPartition_1_LabelSelect_hls_0_StreamingDataflowPartition_1_LabelSelect_hls_0_Pipeline_VITIS_LOOP_488_3
+    SUBMODULES {
+      {MODELNAME StreamingDataflowPartition_1_LabelSelect_hls_0_flow_control_loop_pipe_sequential_init RTLNAME StreamingDataflowPartition_1_LabelSelect_hls_0_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME StreamingDataflowPartition_1_LabelSelect_hls_0_flow_control_loop_pipe_sequential_init_U}
+    }
+  }
+  {SRCNAME StreamingDataflowPartition_1_LabelSelect_hls_0 MODELNAME StreamingDataflowPartition_1_LabelSelect_hls_0 RTLNAME StreamingDataflowPartition_1_LabelSelect_hls_0 IS_TOP 1
+    SUBMODULES {
+      {MODELNAME StreamingDataflowPartition_1_LabelSelect_hls_0_regslice_both RTLNAME StreamingDataflowPartition_1_LabelSelect_hls_0_regslice_both BINDTYPE interface TYPE adapter IMPL reg_slice}
+    }
+  }
+}

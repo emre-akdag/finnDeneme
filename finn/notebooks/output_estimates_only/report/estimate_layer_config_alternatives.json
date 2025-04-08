@@ -1,0 +1,66 @@
+{
+  "MVAU_hls_0": [
+    {
+      "BRAM_18K": 57,
+      "BRAM_efficiency": 0.19103313840155944,
+      "LUT": 14063,
+      "URAM": 0,
+      "URAM_efficiency": 1,
+      "DSP": 512
+    },
+    {
+      "BRAM_18K": 57,
+      "BRAM_efficiency": 0.19103313840155944,
+      "LUT": 34338,
+      "URAM": 0,
+      "URAM_efficiency": 1,
+      "DSP": 0
+    }
+  ],
+  "MVAU_hls_1": [
+    {
+      "BRAM_18K": 8,
+      "BRAM_efficiency": 0.1111111111111111,
+      "LUT": 1444,
+      "URAM": 0,
+      "URAM_efficiency": 1,
+      "DSP": 64
+    },
+    {
+      "BRAM_18K": 8,
+      "BRAM_efficiency": 0.1111111111111111,
+      "LUT": 3133,
+      "URAM": 0,
+      "URAM_efficiency": 1,
+      "DSP": 0
+    }
+  ],
+  "MVAU_hls_2": [
+    {
+      "BRAM_18K": 1,
+      "BRAM_efficiency": 0.1388888888888889,
+      "LUT": 446,
+      "URAM": 0,
+      "URAM_efficiency": 1,
+      "DSP": 8
+    },
+    {
+      "BRAM_18K": 1,
+      "BRAM_efficiency": 0.1388888888888889,
+      "LUT": 657,
+      "URAM": 0,
+      "URAM_efficiency": 1,
+      "DSP": 0
+    }
+  ],
+  "LabelSelect_hls_0": [
+    {
+      "BRAM_18K": 0,
+      "BRAM_efficiency": 1,
+      "LUT": 0,
+      "URAM": 0,
+      "URAM_efficiency": 1,
+      "DSP": 0
+    }
+  ]
+}
